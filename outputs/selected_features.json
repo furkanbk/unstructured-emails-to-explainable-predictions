@@ -1,0 +1,398 @@
+[
+  {
+    "name": "rollback_status",
+    "type": "boolean",
+    "description": "Whether a rollback is required to resolve the issue",
+    "values": [],
+    "cluster_id": 0,
+    "source_features": 2,
+    "original_names": [
+      "rollback_required",
+      "rollback_status"
+    ]
+  },
+  {
+    "name": "cache_clear_status",
+    "type": "boolean",
+    "description": "Whether the customer has tried clearing the cache",
+    "values": [],
+    "cluster_id": 2,
+    "source_features": 2,
+    "original_names": [
+      "cache_clear_status",
+      "cache_clear_status"
+    ]
+  },
+  {
+    "name": "diagnostics_required",
+    "type": "boolean",
+    "description": "Whether diagnostics from production systems are required to resolve the issue",
+    "values": [],
+    "cluster_id": 3,
+    "source_features": 6,
+    "original_names": [
+      "diagnostic_session_required",
+      "hardware_inspection_required",
+      "remote_session_required",
+      "diagnostics_required",
+      "remote_access_required",
+      "remote_access_required"
+    ]
+  },
+  {
+    "name": "device_consistency",
+    "type": "categorical",
+    "description": "Whether the issue affects multiple devices or browsers",
+    "values": [
+      "consistent across both Chrome and Firefox"
+    ],
+    "cluster_id": 4,
+    "source_features": 3,
+    "original_names": [
+      "device_consistency",
+      "browser_consistency",
+      "multi_device_issue"
+    ]
+  },
+  {
+    "name": "browser_version",
+    "type": "categorical",
+    "description": "Version of the browser being used by the customer",
+    "values": [
+      "98.0.4758.102",
+      "Chrome 122"
+    ],
+    "cluster_id": 5,
+    "source_features": 2,
+    "original_names": [
+      "browser_version",
+      "browser_version"
+    ]
+  },
+  {
+    "name": "browser_type",
+    "type": "categorical",
+    "description": "Type of browser being used by the customer",
+    "values": [
+      "Chrome",
+      "Edge",
+      "Firefox",
+      "Google Chrome",
+      "Microsoft Edge"
+    ],
+    "cluster_id": 6,
+    "source_features": 2,
+    "original_names": [
+      "browser_type",
+      "browser_type"
+    ]
+  },
+  {
+    "name": "issue_reproduction",
+    "type": "boolean",
+    "description": "Whether the issue has been reproduced in a staging environment",
+    "values": [],
+    "cluster_id": 7,
+    "source_features": 2,
+    "original_names": [
+      "reproduction_status",
+      "issue_reproduction"
+    ]
+  },
+  {
+    "name": "support_required",
+    "type": "boolean",
+    "description": "Whether the support team is already involved in the issue",
+    "values": [],
+    "cluster_id": 8,
+    "source_features": 3,
+    "original_names": [
+      "technical_support_needed",
+      "support_required",
+      "support_team_involvement"
+    ]
+  },
+  {
+    "name": "os_type",
+    "type": "categorical",
+    "description": "The type of operating system being used by the customer",
+    "values": [
+      "Linux",
+      "Windows Server 2019",
+      "macOS",
+      "windows_10",
+      "windows_11"
+    ],
+    "cluster_id": 9,
+    "source_features": 3,
+    "original_names": [
+      "os_type",
+      "server_os",
+      "server_os"
+    ]
+  },
+  {
+    "name": "system_change",
+    "type": "categorical",
+    "description": "Whether there have been any recent changes or updates that may be related to the issue",
+    "values": [
+      "No recent changes",
+      "configuration_change",
+      "hardware_upgrade",
+      "software_update",
+      "yes"
+    ],
+    "cluster_id": 10,
+    "source_features": 9,
+    "original_names": [
+      "recent_changes",
+      "recent_changes",
+      "system_change",
+      "recent_changes",
+      "recent_changes",
+      "recent_system_changes",
+      "recent_changes",
+      "recent_update",
+      "recent_changes"
+    ]
+  },
+  {
+    "name": "upgrade_related",
+    "type": "boolean",
+    "description": "Whether the issue is related to a recent upgrade or not",
+    "values": [],
+    "cluster_id": 11,
+    "source_features": 2,
+    "original_names": [
+      "upgrade_related",
+      "upgrade_related"
+    ]
+  },
+  {
+    "name": "ticket_priority",
+    "type": "categorical",
+    "description": "Whether the ticket is marked as high priority",
+    "values": [
+      "high"
+    ],
+    "cluster_id": 12,
+    "source_features": 2,
+    "original_names": [
+      "ticket_priority",
+      "prioritized_ticket"
+    ]
+  },
+  {
+    "name": "escalation_status",
+    "type": "boolean",
+    "description": "Whether the issue has been escalated to a higher-level support team.",
+    "values": [],
+    "cluster_id": 13,
+    "source_features": 2,
+    "original_names": [
+      "escalation_status",
+      "escalation_status"
+    ]
+  },
+  {
+    "name": "software_version",
+    "type": "categorical",
+    "description": "Version of the software or system impacted by the issue",
+    "values": [
+      "3.2.1",
+      "3.2.2",
+      "3.3.0",
+      "CRM Pro v3.2.4",
+      "PostgreSQL 12.7+",
+      "unknown"
+    ],
+    "cluster_id": 14,
+    "source_features": 2,
+    "original_names": [
+      "software_version",
+      "software_version"
+    ]
+  },
+  {
+    "name": "escalation_needed",
+    "type": "boolean",
+    "description": "Whether the issue requires escalation to a higher-level support team or technical expert",
+    "values": [],
+    "cluster_id": 15,
+    "source_features": 3,
+    "original_names": [
+      "escalation_needed",
+      "escalation_required",
+      "escalation_required"
+    ]
+  },
+  {
+    "name": "crm_version",
+    "type": "categorical",
+    "description": "The version of the CRM system being used.",
+    "values": [
+      "2.5.3",
+      "3.2.1",
+      "4.1.9",
+      "4.2.0",
+      "4.2.1",
+      "4.8.2",
+      "other"
+    ],
+    "cluster_id": 18,
+    "source_features": 5,
+    "original_names": [
+      "crm_version",
+      "system_version",
+      "crm_version",
+      "system_version",
+      "crm_version"
+    ]
+  },
+  {
+    "name": "software_version",
+    "type": "categorical",
+    "description": "The version of the CRM software being used",
+    "values": [
+      "2.5.3",
+      "v3.14.2"
+    ],
+    "cluster_id": 21,
+    "source_features": 3,
+    "original_names": [
+      "software_version",
+      "software_version",
+      "software_version"
+    ]
+  },
+  {
+    "name": "technical_complexity",
+    "type": "categorical",
+    "description": "Technical complexity of the issue (e.g., simple, complex, high-level)",
+    "values": [
+      "High",
+      "Low",
+      "Medium"
+    ],
+    "cluster_id": 23,
+    "source_features": 4,
+    "original_names": [
+      "technical_complexity",
+      "technical_complexity",
+      "technical_complexity",
+      "technical_complexity"
+    ]
+  },
+  {
+    "name": "resolution_time",
+    "type": "numerical",
+    "description": "Timeframe within which the issue is expected to be resolved",
+    "values": [],
+    "cluster_id": 24,
+    "source_features": 5,
+    "original_names": [
+      "estimated_resolution_time",
+      "estimated_resolution_time",
+      "resolution_timeframe",
+      "resolution_time",
+      "resolution_time_estimate"
+    ]
+  },
+  {
+    "name": "error_type",
+    "type": "categorical",
+    "description": "Type of error encountered (e.g. database connection failure, timeout)",
+    "values": [
+      "configuration_error",
+      "database_connection_failed",
+      "timeout",
+      "unknown_error"
+    ],
+    "cluster_id": 27,
+    "source_features": 2,
+    "original_names": [
+      "error_type",
+      "error_message_type"
+    ]
+  },
+  {
+    "name": "issue_history",
+    "type": "categorical",
+    "description": "Whether the issue is a recurring problem or a one-time occurrence",
+    "values": [
+      "one-time",
+      "recurring"
+    ],
+    "cluster_id": 28,
+    "source_features": 2,
+    "original_names": [
+      "issue_history",
+      "issue_history"
+    ]
+  },
+  {
+    "name": "error_type",
+    "type": "categorical",
+    "description": "Type of error encountered",
+    "values": [
+      "503: Service Unavailable",
+      "API timeout after webhook validation fails",
+      "Database connection timeout",
+      "Database migration conflict",
+      "Other",
+      "database_connection_timeout_exception",
+      "system_error"
+    ],
+    "cluster_id": 30,
+    "source_features": 3,
+    "original_names": [
+      "error_type",
+      "error_type",
+      "error_type"
+    ]
+  },
+  {
+    "name": "issue_severity",
+    "type": "categorical",
+    "description": "The level of severity of the issue, indicating the impact on the business or users.",
+    "values": [
+      "critical",
+      "high",
+      "low",
+      "medium"
+    ],
+    "cluster_id": 33,
+    "source_features": 2,
+    "original_names": [
+      "issue_severity",
+      "issue_severity"
+    ]
+  },
+  {
+    "name": "system_affected",
+    "type": "categorical",
+    "description": "Number of systems or components impacted by the issue",
+    "values": [
+      "API",
+      "B2B platform",
+      "CNC equipment",
+      "CRM",
+      "CRM platform",
+      "Database",
+      "Stripe gateway",
+      "crm_system",
+      "inventory_module",
+      "multiple systems",
+      "single system",
+      "unknown"
+    ],
+    "cluster_id": 34,
+    "source_features": 4,
+    "original_names": [
+      "system_affected",
+      "affected_systems",
+      "affected_systems",
+      "system_affected"
+    ]
+  }
+]

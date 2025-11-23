@@ -1,0 +1,722 @@
+From Unstructured Emails to Explainable Predictions:
+Automating Customer Support Ticket Escalation
+Berat Furkan Kocak and Gyunam Park
+Eindhoven University of Technology, Eindhoven, The Netherlands
+g.park@tue.nl
+Abstract. Customer support systems accumulate vast amounts of unstructured email data, yet converting this raw data into actionable structured datasets
+remains a labor-intensive challenge. We present an automated four-stage pipeline
+that leverages large language models (LLMs) to extract structured features from
+customer support emails and employs explainable machine learning to predict
+the optimal timing of ticket creation within email conversations. Our pipeline
+generates an initial feature schema from sample threads, consolidates semantically similar features through embedding-based clustering, extracts cumulative
+feature values at each email point, and constructs a structured dataset ready for
+machine learning. We introduce a SHAP-based active feature learning strategy
+that identifies which missing features, when acquired, would most improve
+prediction confidence, enabling principled decisions about when to request
+additional information versus making immediate predictions. We validate our
+approach on 1,500 email instances from 800 real-world email threads from
+Nosco, a commercial CRM platform serving small- to medium-sized businesses.
+Keywords: Feature Extraction · Explainable AI · Active Learning · Customer
+Support Automation · Large Language Models
+1 Introduction
+Modern customer support systems generate substantial volumes of unstructured email
+data capturing interactions between support agents and customers. Many small- to
+medium-sized businesses do not explicitly document their business processes; instead,
+they rely on human experience and tacit knowledge for decision-making. A critical
+decision in customer support workflows is determining at which point in an email
+conversation a support ticket should be created for formal tracking and resolution. This
+timing decision requires assessing the cumulative technical complexity, urgency and
+business impact, multi-step resolution requirements, and historical patterns as they
+evolve throughout the conversation (i.e., knowledge that typically resides in experienced
+agents’ expertise rather than explicit documentation).
+Recent advances in large language models (LLMs) have demonstrated remarkable
+capabilities in understanding and processing natural language at scale. However, their
+deployment in business-critical applications faces several fundamental challenges. First,
+LLMs exhibit hallucination problems, producing confident but incorrect outputs that can
+undermine trust in automated systems [6]. Second, they function as black-box models
+with billions of parameters, making their decision-making processes opaque and difficult
+to audit, maintain, or improve [10]. Third, many state-of-the-art LLMs are hosted as
+2 Kocak and Park
+proprietary cloud services, raising legitimate privacy concerns when processing sensitive
+customer communications [17]. Fourth, traditional supervised learning approaches require
+large manually labeled datasets, which are expensive and time-consuming to create.
+These limitations create a clear need for automated methods that can: (1) transform
+raw, unstructured email data into structured representations suitable for traditional
+machine learning, (2) build explainable models that support transparency and enable
+human oversight, (3) handle missing or uncertain information gracefully by identifying when additional data collection is warranted, and (4) operate effectively with
+moderate-sized datasets typical of real-world business contexts.
+This paper addresses the challenge of automating optimal ticket creation timing in customer support by proposing a comprehensive pipeline that combines LLM-based feature
+extraction with explainable machine learning and active feature learning. Our approach
+uses LLMs as feature extractors rather than end-to-end decision makers, enabling transparency while leveraging their natural language understanding capabilities to capture
+the evolving context within email conversations. Our key contributions are as follows:
+– We present a systematic pipeline that automatically identifies features from sample
+threads, consolidates semantically similar features through embedding-based clustering, extracts values from all threads, and constructs structured datasets, reducing
+785 initial features to 35 consolidated representations (95.5% reduction).
+– We introduce a two-stage confidence assessment strategy that uses SHAP values to
+identify when predictions should be withheld pending acquisition of specific missing
+features, improving precision from 0.67 to 0.74 while maintaining interpretability.
+– We validate the complete pipeline on 1,500 email instances from 800 real email
+threads from Nosco, a commercial CRM platform.
+The remainder of this paper is organized as follows. Sect. 2 reviews related work.
+Sect. 3 presents the automated feature extraction pipeline. Sect. 4 describes our explainable prediction approach with SHAP-based active feature learning. Sect. 5 details
+the application to Nosco and presents experimental results. Finally, Sect. 6 concludes
+the paper with practical implications and future research directions.
+2 Related Work
+Our work combines three research areas: LLM-based structured data extraction, machine
+learning for ticket escalation, and active feature learning.
+LLM-Based Feature Extraction from Unstructured Text Recent research demonstrates
+that LLMs can automate transformation of unstructured text into structured representations. EVAPORATE-DIRECT [1] uses LLMs to extract values from documents, achieving competitive performance but facing scalability challenges when processing large document collections. They propose separating schema identification (on small samples) from
+value extraction (using generated code). However, this assumes a fixed schema and does
+not address consolidating redundant features that emerge when LLMs analyze diverse
+documents. GraphRAG [4] and KGGen [15] construct knowledge graphs by extracting
+subject-predicate-object triples, followed by pruning to reduce redundancy. Healthcare
+applications [3] show promise but reveal accuracy limitations in 38% of reviewed studies.
+These approaches lack mechanisms for: (1) systematically addressing semantic redundancy in extracted features, (2) consolidating similar features into coherent schemas,
+From Unstructured Emails to Explainable Predictions 3
+and (3) handling missing or uncertain extractions. Our pipeline addresses these gaps
+through embedding-based semantic clustering and SHAP-based active feature learning.
+Machine Learning for Ticket Escalation Montgomery et al. [16] trained XGBoost on
+2.5 million IBM support tickets, achieving 87.36% recall and 2.79% precision while
+reducing analyst workload by 88.23%. They converted implicit business knowledge
+from analyst interviews into explicit features, requiring substantial domain expert
+involvement that small- to medium-sized businesses cannot afford. Gupta [5] used
+exploratory data analysis for feature extraction and SHAP for interpretability, but
+still required manual feature engineering. These studies validate ML feasibility for
+ticket prediction but assume pre-existing structured data or require extensive manual
+feature engineering. Our work automates feature extraction from raw emails using
+LLMs, eliminating upfront domain expert involvement while maintaining explainability.
+Active Learning and Feature Acquisition Active learning traditionally focuses on selecting
+which instances to label [18]. The related problem of active feature acquisition—deciding
+which missing feature values to query—has received less practical attention [9]. EDDI [13]
+applies Bayesian experimental design using variational autoencoders, but its complexity
+challenges interpretability in business contexts. Recent LLM-based approaches like
+Active-LLM [2] and LLM-Select [7] sacrifice interpretability due to their black-box
+nature. Our SHAP-based approach prioritizes interpretability by assessing both missing
+feature importance and prediction stability, providing transparent, auditable criteria
+for requesting additional information.
+Research Gap No existing research combines: (1) LLM-based automated feature extraction from raw support emails, (2) semantic consolidation through embedding-based
+clustering, (3) explainable tree-based models for ticket prediction, and (4) SHAP-based
+active feature learning for uncertain predictions. Our work bridges these areas, demonstrating that LLMs can serve as feature extractors (not end-to-end decision makers),
+that semantic clustering systematically reduces redundancy, and that SHAP provides
+interpretable criteria for active feature acquisition.
+3 Automated Feature Extraction Pipeline
+We present a systematic pipeline for transforming raw customer support emails into structured datasets suitable for machine learning. As illustrated in Fig. 3, the pipeline consists
+of four stages: (1) feature identification produces an initial feature schema from sample
+threads, (2) semantic clustering and consolidation refines this into a consolidated feature
+schema, (3) feature extraction generates feature mappings for all threads, and (4) dataset
+construction produces the final structured dataset. Each stage processes the output of
+the previous stage, progressively refining raw email data into a structured representation.
+The input to the pipeline is a collection of email threads E ={E1,E2,...,EN}, where
+each thread Ei={ei,1,ei,2,...,ei,ni } is a sequence of emails exchanged between customer
+and support agent. Each email ei,j contains fields (sender,subject,body,timestamp).
+The output is a structured dataset D={(xi,j,yi,j)} where each instance corresponds
+to the cumulative knowledge available up to email ei,j in thread Ei
+. Here, xi,j ∈R
+q
+is
+a feature vector representing the cumulative information from emails {ei,1,ei,2,...,ei,j},
+4 Kocak and Park
+Feature
+Identification
+Semantic
+Clustering &
+Consolidation
+Feature
+Extraction
+Dataset
+Construction
+Initial
+Feature Schema
+𝐹!"!#
+Consolidated
+Feature Schema
+𝐹∗
+Feature
+Mappings
+𝑀
+Structured Dataset
+𝐷
+Email Threads
+ϵ
+𝑓% = 𝑖𝑠𝑠𝑢𝑒_𝑡𝑦𝑝𝑒
+𝑓& = 𝑢𝑟𝑔𝑒𝑛𝑐𝑦_𝑙𝑒𝑣𝑒𝑙
+𝑓' = 𝑏𝑢𝑠𝑖𝑛𝑒𝑠𝑠_𝑖𝑚𝑝𝑎𝑐𝑡
+𝑓( = 𝑒𝑟𝑟𝑜𝑟_𝑝𝑟𝑒𝑠𝑒𝑛𝑡
+…
+𝐶𝑙𝑢𝑠𝑡𝑒𝑟1:
+{𝑝𝑟𝑖𝑜𝑟𝑖𝑡𝑦_𝑖𝑛𝑑𝑖𝑐𝑎𝑡𝑜𝑟,
+𝑢𝑟𝑔𝑒𝑛𝑐𝑦_𝑙𝑒𝑣𝑒𝑙,
+𝑐𝑢𝑠𝑡𝑜𝑚𝑒𝑟_𝑢𝑟𝑔𝑒𝑛𝑐𝑦}
+→ 𝑓%
+∗ = 𝑢𝑟𝑔𝑒𝑛𝑐𝑦
+𝑢𝑟𝑔𝑒𝑛𝑐𝑦 = “high”
+𝑖𝑠𝑠𝑢𝑒_𝑡𝑦𝑝𝑒 = “database”
+𝑏𝑢𝑠𝑖𝑛𝑒𝑠𝑠_𝑖𝑚𝑝𝑎𝑐𝑡 = “true”
+𝑒𝑟𝑟𝑜𝑟_𝑝𝑟𝑒𝑠𝑒𝑛𝑡 = “true”
+ϵ!"#$%&
+Fig. 1. Automated feature extraction pipeline with four stages. The pipeline transforms raw
+email threads into a structured dataset.
+and yi,j ∈ {0,1} indicates whether a ticket should be created at this point in the
+conversation. We use forward-filling within each thread, where yi,k =0 for all emails
+ei,k with k<j∗
+if ticket creation occurs at email ei,j∗ .
+To illustrate the pipeline, we use a running example throughout this section. Consider
+an email thread where a customer contacts support about a software issue:
+Email 1 (Customer): “Hi, I’m having trouble accessing the inventory module in
+your system. It shows an error message saying ’Database connection failed’. This
+started happening yesterday after the system update. Our business relies on this feature
+for daily operations. Please help urgently.”
+Email 2 (Support): “Thank you for contacting us. Can you tell me which browser
+you’re using and whether this happens every time you try to access inventory?”
+Email 3 (Customer): “I’m using Chrome version 120. Yes, it happens consistently.
+I also tried Firefox with the same result.”
+In this thread, ticket creation was triggered after Email 3 (yi,3=1) due to the persistent technical nature and business impact, while the earlier emails had yi,1=yi,2=0.
+We will trace how this example flows through each stage of the pipeline, showing how
+features are extracted cumulatively at each email point.
+3.1 Stage 1: Feature Identification
+The first stage takes a sample of email threads Esample ⊆ E and uses an LLM to
+identify features characterizing support interactions relevant to ticket creation decisions,
+producing an initial feature schema Finit.
+We define a feature schema as a set Finit ={f1,f2,...,fm}, where each feature fk
+is a tuple:
+fk =(namek,typek,desck,valuesk)
+with namek as the feature identifier, typek ∈ {categorical,numerical,boolean} as the
+data type, desck as semantic description, and valuesk as an optional set of possible values
+for categorical features (e.g., valuesk ={“high”,“medium”,“low”} for urgency levels), or
+∅ for numerical and boolean features. The LLM receives a prompt that includes both
+the email thread and the corresponding ticket information (name and description) for
+threads that resulted in ticket creation, requesting: “Analyze the following email threads
+along with their associated ticket details and identify features that would be relevant for
+From Unstructured Emails to Explainable Predictions 5
+deciding whether to create a support ticket of this type. For each feature, provide: name,
+type, description, and for categorical features, also provide a set of possible values.”
+For our running example, the LLM might identify features including:
+f1=(issue_type,cat.,“Type of technical problem”,{“DB”,“Auth”,“Performance”})
+f2=(urgency_level,cat.,“Level of issue’s urgency”,{“high”,“medium”,“low”})
+f3=(business_impact,bool.,“Affects business operations”,∅)
+f4=(error_present,bool.,“Contains error message”,∅)
+These identified features form the initial schema Finit. Since the LLM analyzes
+multiple diverse threads, Finit may contain hundreds of features, many of which are
+semantically similar or redundant. The next stage addresses this redundancy through
+consolidation.
+3.2 Stage 2: Semantic Clustering and Consolidation
+The second stage consolidates the potentially large and redundant initial feature schema
+Finit into a smaller, more coherent consolidated feature schema F
+∗
+. We employ a
+sentence embedding model to map each feature to a dense vector representation based
+on its name and description:
+ψ:fk→ek∈R
+d
+where ek is the embedding of the concatenation of namek and desck. We then apply HDBSCAN (Hierarchical Density-Based Spatial Clustering of Applications with
+Noise) [14] to identify clusters:
+C=HDBSCAN({e1,...,em},ϵ,min_samples)
+producing a set of feature clusters C={C1,C2,...,Ck} where features within each cluster
+Cj are semantically similar.
+For each cluster Cj, a domain expert reviews the features {fk :fk∈Cj} and either
+selects the most representative feature f
+∗
+j ∈Cj, or creates a new consolidated feature
+f
+∗
+j
+that better captures the cluster’s semantic content. For categorical features, domain
+experts also review and refine the set of possible values, ensuring they are comprehensive
+yet constrained to prevent value explosion during extraction.
+Following clustering, domain experts perform post-processing based on feature correlation analysis and missingness patterns. Features with ambiguous definitions that
+could lead to biased annotations are removed, and highly correlated features are merged
+into unified representations. The consolidated schema is:
+F
+∗={f
+∗
+1
+,f∗
+2
+,...,f∗
+p }
+where p≪m, significantly reducing the feature space dimensionality.
+Returning to our running example, suppose the LLM identified three similar features
+across different threads in Esample:
+fa=(customer_urgency,cat.,“Level of urgency expressed”,{“high”,“medium”,“low”})
+fb=(priority_indicator,cat.,“Importance of request”,{“high”,“medium”,“low”})
+fc=(urgency_level,cat.,“How urgent the issue is”,{“high”,“medium”,“low”})
+After embedding and clustering, these features form cluster C1 due to their semantic
+similarity. The domain expert consolidates them into:
+f
+∗
+1 =(urgency,cat.,“Customer-expressed urgency level”,{“high”,“medium”,“low”})
+This consolidation process is repeated for all clusters, producing the consolidated
+schema F
+∗
+that serves as the template for systematic feature extraction in the next stage.
+6 Kocak and Park
+3.3 Stage 3: Feature Extraction
+With the consolidated feature schema F
+∗
+established, the third stage extracts actual values from all individual emails in the dataset. For each email ei,j in thread Ei and each feature f
+∗
+k ∈F∗
+, we use the LLM as an extraction function to obtain the email-specific value.
+Formally, we define ϕk :ei,j×f
+∗
+k →Vk∪{⊥} as the extraction function that maps an
+individual email and feature to a value from the feature’s domain Vk or to ⊥ (missing)
+if the information is not present in that email:
+vi,j,k =ϕk(ei,j,f∗
+k
+)=LLM(prompt(ei,j,f∗
+k
+))
+where prompt(ei,j,f∗
+k
+) constructs a query asking the LLM to extract the value of
+feature f
+∗
+k
+from email ei,j.
+The complete set of feature mappings for all emails is:
+M={(ei,j,f∗
+k
+,vi,j,k):i=1,...,N,j=1,...,ni
+,k=1,...,p}
+Applying this extraction to our running example with the consolidated schema F
+∗
+yields email-specific values. For instance, at email ei,3 (the third email in the thread):
+vi,3,1=ϕ1(ei,3,f∗
+1
+)=“high” (urgency)
+vi,3,2=ϕ2(ei,3,f∗
+2
+)=“database_connection” (issue_type)
+vi,3,3=ϕ3(ei,3,f∗
+3
+)=true (business_impact)
+vi,3,4=ϕ4(ei,3,f∗
+4
+)=true (error_present)
+These email-level extracted values are stored in M and serve as the raw input for
+dataset construction in the final stage.
+3.4 Stage 4: Dataset Construction
+The final stage transforms the email-level feature mappings M into a structured dataset
+D ready for machine learning. For each email ei,j in thread Ei
+, we construct a raw
+feature vector by applying forward-filling to the email-specific extracted values. The
+forward-filling mechanism differs by feature type:
+For categorical and numerical features, we use the most recently extracted non-missing
+value from emails {ei,1,ei,2,...,ei,j}:
+v
+cumulative
+i,j,k =
+
+
+
+vi,j,k if vi,j,k≠ ⊥
+v
+cumulative
+i,j−1,k if vi,j,k =⊥ and j >1
+⊥ otherwise
+For boolean features, once a value becomes true, it persists in all subsequent emails
+within the thread. This ensures that if a boolean feature is observed as true at any
+point in the conversation, later emails are influenced by this knowledge even if the
+feature is not explicitly mentioned or extracted as false.
+The cumulative feature vector is then:
+x
+raw
+i,j =(v
+cumulative
+i,j,1
+,vcumulative
+i,j,2
+,...,vcumulative
+i,j,p )
+where p=|F∗
+| is the number of consolidated features.
+We then apply standard preprocessing transformations T: categorical features undergo
+one-hot or ordinal encoding, numerical features are standardized to zero mean and
+unit variance, boolean features are converted to binary values, and missing values are
+handled appropriately for the target machine learning algorithm. The preprocessing
+function produces:
+xi,j =T(x
+raw
+i,j )∈R
+q
+From Unstructured Emails to Explainable Predictions 7
+where q≥p due to encoding expansion (e.g., one-hot encoding of categorical features).
+The final structured dataset is:
+D={(xi,j,yi,j)}
+where each instance pairs a preprocessed feature vector xi,j (cumulative knowledge
+up to email ei,j) with label yi,j ∈{0,1} indicating ticket creation timing.
+4 Explainable Prediction with Active Feature Learning
+Building on the structured dataset D from the extraction pipeline, we develop an
+explainable prediction system that determines at each email point whether a ticket
+should be created based on the cumulative conversation history, while also identifying
+which missing features, when acquired, would most improve prediction confidence.
+4.1 Binary Classification Model
+Given a feature vector xi,j ∈R
+q
+from the structured dataset D, we learn a classification
+function h:R
+q→{0,1} that predicts whether a ticket should be created at this point
+in the conversation based on the cumulative information available up to email ei,j.
+We employ gradient boosting decision trees (GBDT) [8], which build an ensemble
+sequentially:
+h(x)=sign X
+T
+t=1
+αtht(x)
+!
+where ht is the t-th decision tree, αt is its weight, and T is the number of trees. The
+model is trained on the structured dataset D={(xi,j,yi,j)} using standard gradient
+boosting optimization.
+4.2 SHAP-Based Local Interpretability
+To explain each prediction, we compute SHAP (SHapley Additive exPlanations) [12]
+values that decompose the model output into contributions from individual features.
+For each prediction h(x), SHAP assigns a contribution ϕj(x) to feature j based on
+cooperative game theory, satisfying:
+h(x)=ϕ0+
+Xq
+j=1
+ϕj(x)
+where ϕ0 is the expected model output (baseline) and ϕj(x) represents the impact
+of feature j on the prediction. Features with larger |ϕj(x)| have greater influence on
+the model’s decision. For tree-based models, TreeSHAP [11] computes these values
+efficiently in polynomial time.
+For our running example, TreeSHAP might produce the following contributions:
+ϕ1(xi)=+0.35 (urgency = high), ϕ2(xi)=+0.28 (issue_type = database), ϕ3(xi)=
++0.15 (business_impact = true), ϕ4(xi)=+0.22 (error_present = missing).
+Even for missing features, SHAP computes importance values based on how the tree
+ensemble handles missing data (e.g., through default split directions). These SHAP
+values flow into the active learning module, which uses them to assess prediction
+confidence and identify informative features to query.
+8 Kocak and Park
+Algorithm 1 Active Feature Learning for Prediction Refinement
+1: Input: Instance x, model h, thresholds θmiss, θstab
+2: Output: Prediction decision and optional feature query
+3:
+4: Compute SHAP values {ϕj(x)}
+q
+j=1 using TreeSHAP
+5: Identify missing features M(x)={j :xj =⊥}
+6: Compute MissingImpact(x)=P
+j∈M(x)
+|ϕj(x)|
+7:
+8: if MissingImpact(x)>θmiss then
+9: Select j
+∗=argmaxj∈M(x)
+|ϕj(x)|
+10: return (WITHHOLD, j
+∗
+)
+11: end if
+12:
+13: Simulate imputation: For each j∈M(x), create x
+(j,v) with xj =v
+14: for v sampled from training distribution
+15: Compute predictions {h(x
+(j,v)
+)} and calculate variance σ
+2
+16:
+17: if σ
+2>θstab then
+18: Select j
+∗=argmaxj∈M(x)
+|ϕj(x)|
+19: return (WITHHOLD, j
+∗
+)
+20: end if
+21:
+22: return (PREDICT, h(x))
+4.3 Active Feature Learning Strategy
+In practice, extracted features often contain missing values (either because the LLM
+extraction was uncertain or because the information is genuinely absent from the email
+thread). Requesting additional information from customers incurs time and effort costs.
+Our active feature learning strategy identifies which features, when queried, would most
+improve prediction confidence, enabling the system to make informed decisions about
+when to request more information versus making an immediate prediction.
+Algorithm 1 presents the complete prediction refinement procedure. The algorithm
+takes as input an instance x, the trained model h, and confidence thresholds, then decides
+whether to make an immediate prediction or request additional information. The algorithm operates in three phases, each assessing a different aspect of prediction confidence.
+Phase 1: Missing Feature Impact Assessment (Lines 4–11). The algorithm
+first computes SHAP values for all features and identifies which features are missing:
+M(x)={j :xj =⊥}. It then calculates the cumulative importance of missing features:
+MissingImpact(x)= X
+j∈M(x)
+|ϕj(x)|
+This metric quantifies how much influential information is absent from the prediction. If MissingImpact(x) > θmiss, the most critical features are missing, making the prediction unreliable. The algorithm withholds the prediction and returns
+j
+∗=argmaxj∈M(x)
+|ϕj(x)|, indicating which feature should be requested from the customer. This criterion ensures that predictions made without access to highly influential
+features are flagged for additional data collection.
+From Unstructured Emails to Explainable Predictions 9
+For our running example, only error_present is missing, so MissingImpact(xi) =
+|ϕ4| = 0.22. If we set θmiss = 0.3, the impact is below threshold, and the algorithm
+proceeds to the next phase.
+Phase 2: Prediction Stability Check (Lines 13–18). If missing feature importance is acceptable, the algorithm performs a stability analysis. It simulates filling in
+missing values with plausible values sampled from the training distribution P(xj|D),
+generating multiple imputed versions {x
+(j,v)} of the instance. For each imputation, it
+computes the model prediction h(x
+(j,v)
+) and calculates the variance:
+σ
+2=Var
+{h(x
+(j,v)
+)}
+
+If σ
+2>θstab, predictions vary significantly across plausible imputations, indicating
+that the specific value of a missing feature could substantially change the prediction. This
+instability signals unreliability, prompting the algorithm to withhold and request the
+most important missing feature. This criterion catches cases where the model’s decision
+is sensitive to missing information even if that information has moderate importance.
+For our running example, we might simulate error_present ∈{true, false} and observe
+that both imputations yield h(xi)=1, resulting in low variance. The prediction is stable
+despite the missing feature.
+Phase 3: Confident Prediction (Line 20). If both confidence criteria are satisfied,
+i.e., missing feature impact is low and prediction is stable, the algorithm returns the
+model’s prediction h(x). This indicates high confidence that the available information
+is sufficient for a reliable decision.
+For our running example, both criteria pass, and the algorithm returns (PREDICT,
+h(xi)=1), recommending ticket creation based on the high urgency, database-related
+issue type, and business impact, even without explicit confirmation of an error message.
+Design Rationale This two-stage confidence assessment balances automation with
+quality control. The missing impact criterion identifies cases where the model lacks
+access to its most trusted features, while the stability criterion identifies cases where the
+model’s decision boundary passes through the uncertainty region of missing features. By
+prioritizing feature queries based on SHAP importance, the system minimizes customer
+interaction burden while maximizing prediction improvement per query.
+The thresholds θmiss and θstab control the automation-quality tradeoff: lower thresholds increase caution (more queries, fewer incorrect predictions), while higher thresholds
+increase automation (fewer queries, faster decisions). These can be tuned based on the
+operational context. For instance, high-stakes decisions warrant lower thresholds to
+ensure accuracy, while high-volume scenarios may prefer higher thresholds to maintain
+throughput.
+5 Application and Experimental Evaluation
+We validate our proposed method through application to Nosco1
+, a commercial CRM
+platform that manages customer support interactions for small- to medium-sized businesses. This section presents the application setup, formulates research questions aligned
+with our contributions, and reports experimental results that answer these questions.
+1
+https://www.leanbit.it/en/nosco
+10 Kocak and Park
+5.1 Application Setup: Nosco Customer Support System
+Nosco processes email communications between businesses and customers. Support
+agents manually decide whether incoming emails should be converted into formal
+support tickets, requiring understanding of technical issues, urgency, business impact,
+and historical context. The business process is not explicitly documented and relies
+on agent experience.
+We collected 800 email threads from Nosco’s database (only threads that resulted in
+ticket creation). The dataset was structured with one instance per email, representing
+cumulative knowledge up to that point. Using forward-filling within each thread, emails
+prior to ticket creation receive label yi,j =0, while the email triggering ticket creation
+receives yi,j = 1, resulting in 1,500 total instances with natural class imbalance. We
+used stratified 5-fold cross-validation.
+For feature extraction, we employed Llama 3.1 8B Instruct (primary) and Qwen
+2.5 7B Instruct (validation) via Hugging Face’s free inference API. Feature embedding used mxbai-embed-large-v1 (1024 dimensions). For classification, we benchmarked six models: CATBoost, XGBoost, LightGBM, Random Forest, Explainable
+Boosting Machine (EBM), and Naive Bayes (baseline), using default hyperparameters
+for each model.
+5.2 Research Questions
+To validate our contributions, we formulate three research questions that correspond
+to the key components of our approach:
+RQ1: Feature Extraction Automation. Can the LLM-based pipeline effectively
+automate the extraction of structured features from raw email data, and does semantic
+clustering effectively reduce feature space?
+RQ2: Predictive Performance. What level of predictive performance can treebased classification models achieve for predicting the optimal timing of ticket creation
+within email conversations, and which model provides the best balance of accuracy
+and efficiency?
+RQ3: Active Feature Learning Impact. Does the SHAP-based active feature
+learning strategy improve prediction quality, and which features are most informative
+for uncertain predictions?
+5.3 RQ1: Automated Feature Extraction Effectiveness
+We evaluated the feature extraction pipeline by applying it to 100 randomly sampled
+email threads and measuring the reduction in features through semantic clustering.
+The LLM generated 785 initial features across diverse categories: damage and repair
+indicators, equipment specifications (including product models), return and shipping
+logistics, follow-up requirements, documentation requests, and contextual metadata
+(e.g., urgency, warranty_status). Only company and product were pre-existing
+CRM metadata; all other features were extracted from email content.
+We embedded each feature using mxbai-embed-large-v1 and applied HDBSCAN
+with ϵ=0.5 and min_samples=2, which identified 24 semantically coherent clusters
+from 257 features. The remaining 528 features (67.26% of all features) were classified
+as noise by HDBSCAN. Domain experts reviewed both clusters and noise, identifying
+From Unstructured Emails to Explainable Predictions 11
+11 additional informative features from noise that had insufficient density for automatic
+clustering.
+Following clustering, domain experts performed post-processing based on feature
+correlation analysis and missingness patterns. Features with ambiguous definitions
+were removed (e.g., issue_described_clearly, follow_up_required). Highly correlated features were merged (e.g., repair_action_by_service_provider, repair_
+action_taken with correlation up to 0.93 were merged into customer_service_action).
+Domain experts reviewed the 24 clusters and 11 features from noise, consolidating
+them by selecting the most representative feature or creating a new consolidated feature.
+The consolidation process reduced the feature set from 785 to 35 features (95.5%
+reduction in feature space). The 35 consolidated features comprised: 12 categorical
+features, 22 boolean features, and 1 numerical feature. We used Llama 3.1 8B Instruct to extract values for all 35 features across 1,500 email instances (cumulative
+knowledge at each email point), producing the final dataset. Missing values were present
+in all of the features, primarily in features requiring specific technical details not always
+mentioned in emails (e.g., damage_consequences, cause_of_damage, error_code).
+These results demonstrate that the LLM-based extraction pipeline successfully
+transforms unstructured email data into structured features. Domain expert review
+confirmed that semantically related features were appropriately grouped, validating
+embedding-based consolidation for reducing redundancy while preserving domainrelevant information.
+5.4 RQ2: Model Performance Benchmarking
+We benchmarked six classification models for predicting ticket creation timing. Performance was assessed using precision P =
+T P
+T P+F P , recall R =
+T P
+T P+FN , F1 score
+F1 = 2 ·
+P·R
+P+R
+, and ROC-AUC. We report 95% confidence intervals (Student’s tdistribution, 5-fold CV).
+Tab. 1 presents results from 5-fold cross-validation. CATBoost achieved the best
+overall performance with ROC-AUC of 0.73 ± 0.04, F1 score of 0.67 ± 0.04, and
+balanced precision (0.67 ± 0.03) and recall (0.67 ± 0.04). Its native handling of categorical features through ordered target encoding contributed to superior performance.
+CATBoost obtained narrow confidence intervals across all metrics, demonstrating
+stability across data subsets. XGBoost (AUC: 0.65 ± 0.05) and LightGBM (AUC:
+0.66 ± 0.05) showed performance comparable to Naive Bayes baseline (AUC: 0.65 ±
+0.05), while EBM (AUC: 0.66 ± 0.04) showed competitive performance. Random Forest
+provided lower performance (AUC: 0.63 ± 0.05). These results confirm CATBoost’s
+superior performance for predicting ticket creation timing.
+These results establish that complex, experience-based business decisions can be
+modeled effectively using explainable machine learning. CATBoost’s performance
+(ROC-AUC of 0.73 ± 0.04 with balanced precision and recall) is sufficient for practical
+deployment as a decision support tool with human oversight. The model’s ability to
+capture implicit, undocumented decision-making patterns validates using LLM-extracted
+features to represent domain knowledge. Comparison across six models confirmed that
+CATBoost, with its native categorical feature handling, provides optimal balance of
+performance and interpretability.
+12 Kocak and Park
+Table 1. Performance comparison of classification models (5-fold CV, mean ± 95% CI)
+Model AUC F1 Precision Recall
+CATBoost 0.73 ± 0.04 0.67 ± 0.04 0.67 ± 0.03 0.67 ± 0.04
+XGBoost 0.65 ± 0.05 0.59 ± 0.03 0.59 ± 0.03 0.59 ± 0.03
+LightGBM 0.66 ± 0.05 0.61 ± 0.05 0.61 ± 0.05 0.61 ± 0.05
+Random Forest 0.63 ± 0.05 0.57 ± 0.04 0.57 ± 0.04 0.57 ± 0.04
+EBM 0.66 ± 0.04 0.62 ± 0.05 0.62 ± 0.04 0.62 ± 0.04
+Naive Bayes 0.65 ± 0.05 0.61 ± 0.04 0.61 ± 0.04 0.61 ± 0.04
+5.5 RQ3: Active Feature Learning Impact
+We evaluated whether the SHAP-based active feature learning strategy (Algorithm 1)
+improves prediction quality by selectively withholding predictions when confidence
+is low. We analyzed 150 test instances, applying the algorithm to each to determine
+whether to predict immediately or withhold and request additional features.
+Tab. 2 presents the results. The baseline configuration uses CATBoost making predictions on all 150 test instances without filtering, achieving performance consistent with the
+5-fold cross-validation results (AUC: 0.73, Precision: 0.67, Recall: 0.67). With confidence
+filtering via Algorithm 1, predictions were made on only 76 instances (50.7% coverage)
+that satisfied both criteria. Precision increased from 0.67 to 0.74 (10.4% relative), reducing false positives. ROC-AUC improved from 0.73 to 0.75. Recall decreased from 0.67 to
+0.61 (9.0% relative), reflecting reduced coverage from withholding uncertain predictions.
+Table 2. Impact of SHAP-based active feature learning on 150-instance test set
+Configuration AUC Precision Recall F1 Coverage
+Baseline (all predictions) 0.73 0.67 0.67 0.67 100%
+With Algorithm 1 filtering 0.75 0.74 0.61 0.67 50.7%
+To illustrate Algorithm 1, we present a case where CATBoost predicted ticket creation
+(probability = 0.521) with weak confidence. The algorithm computes missing feature
+impact (Phase 1). With θmiss calibrated from SHAP value distribution, this impact
+is significant, triggering Phase 2.
+The algorithm simulates plausible imputations. Tab. 3 shows selected results. Predicted
+probabilities range from 0.38 (Software_Issue) to 0.50 (Welding_Performance), exceeding θstab. Both criteria being met, the algorithm returns (WITHHOLD, j
+∗=errors),
+where errors has the highest |ϕj|=0.14 among missing features. This demonstrates that
+missing critical technical details prevented the model from making an accurate decision.
+These results validate that SHAP-based active feature learning improves prediction
+quality for high-confidence cases while appropriately withholding uncertain predictions.
+The system makes accurate predictions on 50.7% of high-confidence cases while
+withholding 49.3% and requesting specific missing features. Case studies demonstrate the
+algorithm successfully identifies instances where missing critical technical details prevent
+accurate decisions, validating that SHAP values effectively guide feature acquisition.
+From Unstructured Emails to Explainable Predictions 13
+Table 3. Selected simulation results showing how different values for missing features errors
+and user_action affect prediction (baseline probability: 0.521). Label flip occurs when
+probability drops below 0.5.
+errors User_Action Probability Label Flip
+Alarm_Indicated no 0.47 Yes
+Alarm_Indicated yes 0.48 Yes
+Software_Mentioned no 0.38 Yes
+Software_Mentioned yes 0.39 Yes
+Welding_Performance yes 0.50 No
+6 Conclusion and Future Work
+This paper presented a comprehensive pipeline for automating ticket escalation decisions
+in customer support through LLM-based feature extraction and explainable machine
+learning. Our key contributions include: (1) an automated four-stage pipeline that
+consolidates 785 LLM-extracted features into 35 meaningful representations (95.5%
+reduction), (2) benchmarking six classification models with CATBoost achieving the
+best performance (ROC-AUC: 0.73 ± 0.04, balanced precision and recall of 0.67) for
+predicting optimal ticket creation timing, (3) a novel SHAP-based active feature learning
+strategy that improves precision from 0.67 to 0.74 (10.4% relative improvement) on
+high-confidence predictions covering 50.7% of cases, and (4) validation on 1,500 email
+instances from 800 real-world email threads from Nosco, a commercial CRM platform
+serving small- to medium-sized businesses.
+Our work demonstrates that LLMs can effectively serve as feature extractors rather
+than end-to-end decision makers, enabling transparent automation of complex, undocumented business processes. By combining semantic clustering for feature consolidation
+with SHAP-based confidence assessment, the pipeline balances automation with quality
+control, providing a practical solution for organizations with limited resources.
+The pipeline offers several advantages for support automation. First, LLM-based
+feature extraction significantly reduces manual feature engineering. Second, active
+feature learning provides a principled mechanism for balancing automation with quality
+through SHAP-based confidence criteria, minimizing customer interaction burden while
+maximizing prediction reliability. Third, SHAP explanations enable support managers
+to understand prediction drivers and audit model reasoning, building trust and allowing
+validation of decision patterns against business logic.
+Several promising research directions emerge from this work. First, evaluation on larger
+datasets from multiple organizations would enable more robust performance assessment
+and better characterize the approach’s generalization capabilities across different support
+contexts and interaction patterns. Second, testing the pipeline in diverse domains beyond
+industrial equipment support, such as IT helpdesk, healthcare triage, or financial services,
+would validate transferability and identify required adaptations for different vocabularies
+and decision criteria. Third, expanding beyond email text to handle attachments (screenshots, error logs, technical documents) would broaden applicability to richer support
+interactions where visual or structured information complements textual descriptions.
+14 Kocak and Park
+References
+1. Arora, S., et al.: Language models enable simple systems for generating structured views of
+heterogeneous data lakes. Proceedings of the VLDB Endowment 17(2), 92–105 (Oct 2023)
+2. Bayer, M., Lutz, J., Reuter, C.: ActiveLLM: Large Language Model-based Active Learning
+for Textual Few-Shot Scenarios. arXiv e-prints arXiv:2405.10808 (May 2024)
+3. Chen, D., Alnassar, S.A., Avison, K.E., Huang, R.S., Raman, S.: Large language model
+applications for health information extraction in oncology: Scoping review. JMIR Cancer
+11, e65984 (Mar 2025)
+4. Edge, D., et al.: From local to global: A graph RAG approach to query-focused
+summarization. CoRR abs/2404.16130 (2024)
+5. Gupta, S.: A hybrid machine learning framework of gradient boosting decision tree and
+sequence model for predicting escalation in customer support. In: 2020 IEEE International
+Conference on Big Data. pp. 5511–5518. IEEE, Atlanta, GA, USA (December 2020)
+6. Huang, L., et al.: A survey on hallucination in large language models: Principles, taxonomy,
+challenges, and open questions. ACM Transactions on Management Information Systems
+43(2) (Jan 2025)
+7. Jeong, D.P., Lipton, Z.C., Ravikumar, P.K.: Llm-select: Feature selection with large
+language models. Transactions on Machine Learning Research 2025 (2025)
+8. Ke, G., Meng, Q., Finley, T., Wang, T., Chen, W., Ma, W., Ye, Q., Liu, T.: Lightgbm: A
+highly efficient gradient boosting decision tree. In: Guyon, I., von Luxburg, U., Bengio, S.,
+Wallach, H.M., Fergus, R., Vishwanathan, S.V.N., Garnett, R. (eds.) Advances in Neural
+Information Processing Systems 30: Annual Conference on Neural Information Processing
+Systems 2017, December 4-9, 2017, Long Beach, CA, USA. pp. 3146–3154 (2017)
+9. Li, Y., Oliva, J.: Active feature acquisition with generative surrogate models. In:
+Proceedings of the 38th International Conference on Machine Learning. Proceedings
+of Machine Learning Research, vol. 139, pp. 6450–6459 (18–24 Jul 2021)
+10. Li, Y., Tan, Z., Liu, Y.: Privacy-Preserving Prompt Tuning for Large Language Model
+Services. arXiv e-prints arXiv:2305.06212 (May 2023)
+11. Lundberg, S.M., Erion, G.G., Chen, H., DeGrave, A.J., Prutkin, J.M., Nair, B., Katz,
+R., Himmelfarb, J., Bansal, N., Lee, S.: From local explanations to global understanding
+with explainable AI for trees. Nat. Mach. Intell. 2(1), 56–67 (2020)
+12. Lundberg, S.M., Lee, S.: A unified approach to interpreting model predictions. In: Guyon,
+I., von Luxburg, U., Bengio, S., Wallach, H.M., Fergus, R., Vishwanathan, S.V.N., Garnett,
+R. (eds.) Advances in Neural Information Processing Systems 30: Annual Conference
+on Neural Information Processing Systems 2017, December 4-9, 2017, Long Beach, CA,
+USA. pp. 4765–4774 (2017)
+13. Ma, C., Tschiatschek, S., Palla, K., Miguel Hernández-Lobato, J., Nowozin, S., Zhang,
+C.: EDDI: efficient dynamic discovery of high-value information with partial VAE. In:
+Proceedings of the 36th International Conference on Machine Learning. vol. 97, pp.
+4234–4243. PMLR, Long Beach, California, USA (June 2019)
+14. McInnes, L., Healy, J., Astels, S.: hdbscan: Hierarchical density based clustering. J. Open
+Source Softw. 2(11), 205 (2017)
+15. Mo, B., et al.: Kggen: Extracting knowledge graphs from plain text with language models.
+CoRR abs/2502.09956 (2025)
+16. Montgomery, L., Damian, D., Bulmer, T., Quader, S.: Customer support ticket escalation
+prediction using feature engineering. Requir. Eng. 23(3), 333–355 (Sep 2018)
+17. Sun, T., Shao, Y., Qian, H., Huang, X., Qiu, X.: Black-box tuning for language-modelas-a-service. In: Proceedings of the 39th International Conference on Machine Learning.
+Proceedings of Machine Learning Research, vol. 162, pp. 20841–20855. PMLR (Jul 2022)
+18. Xu, Y., Sun, F., Zhang, X.: Literature survey of active learning in multimedia annotation
+and retrieval. In: Lu, K., Mei, T., Wu, X. (eds.) International Conference on Internet
+Multimedia Computing and Service, ICIMCS ’13, Huangshan, China - August 17 - 19,
+2013. pp. 237–242. ACM (2013)

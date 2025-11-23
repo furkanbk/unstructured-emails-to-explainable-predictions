@@ -1,0 +1,1443 @@
+[
+  {
+    "name": "issue_category",
+    "type": "categorical",
+    "description": "The type of issue (e.g. database, network, configuration)",
+    "values": [
+      "database"
+    ],
+    "source_thread_id": 2,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "customer_impact",
+    "type": "categorical",
+    "description": "The type of impact on the customer",
+    "values": [
+      "production"
+    ],
+    "source_thread_id": 2,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "time_sensitivity",
+    "type": "numerical",
+    "description": "The urgency of the issue",
+    "values": [],
+    "source_thread_id": 2,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "The type of issue being reported (e.g., technical, functional, etc.)",
+    "values": [
+      "database_connectivity",
+      "inventory_module_access",
+      "upgrade_issue"
+    ],
+    "source_thread_id": 3,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "urgency",
+    "type": "categorical",
+    "description": "The level of urgency required to resolve the issue",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 3,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "production_affect",
+    "type": "boolean",
+    "description": "Whether the issue is affecting production operations.",
+    "values": [],
+    "source_thread_id": 5,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "operating_system",
+    "type": "categorical",
+    "description": "The operating system on which the CRM system is running",
+    "values": [
+      "Windows 10"
+    ],
+    "source_thread_id": 6,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "escalation_status",
+    "type": "categorical",
+    "description": "Whether the issue has been escalated to a higher level of support",
+    "values": [
+      "yes"
+    ],
+    "source_thread_id": 6,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "Urgency of the issue (e.g. immediate, within hours, within days)",
+    "values": [
+      "immediate",
+      "within_hours",
+      "within_days"
+    ],
+    "source_thread_id": 9,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "The time sensitivity and urgency of resolving the issue",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 10,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "The type of issue, e.g., technical, configuration, or integration problem",
+    "values": [
+      "technical",
+      "configuration",
+      "integration"
+    ],
+    "source_thread_id": 10,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "urgent_attention_needed",
+    "type": "boolean",
+    "description": "Whether the issue requires urgent attention",
+    "source_thread_id": 12,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "technical_support_needed",
+    "type": "boolean",
+    "description": "Whether technical support is needed to resolve the issue",
+    "source_thread_id": 12,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "customer_industry",
+    "type": "categorical",
+    "description": "Industry type of the customer",
+    "values": [
+      "machinery_parts_distributor"
+    ],
+    "source_thread_id": 12,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "system_outage_status",
+    "type": "categorical",
+    "description": "Status of system outage (if any)",
+    "values": [
+      "no_regional_outages"
+    ],
+    "source_thread_id": 12,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "user_actions_taken",
+    "type": "categorical",
+    "description": "Actions taken by the user to attempt to resolve the issue",
+    "values": [
+      "server restart",
+      "cache clearing",
+      "unknown"
+    ],
+    "source_thread_id": 17,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "system_impact",
+    "type": "categorical",
+    "description": "Type of business impact caused by the issue",
+    "values": [
+      "inventory levels cannot be tracked"
+    ],
+    "source_thread_id": 20,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "log_analysis",
+    "type": "boolean",
+    "description": "Whether server logs have been analyzed",
+    "source_thread_id": 20,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "escalation_status",
+    "type": "categorical",
+    "description": "Status of issue escalation to technical team",
+    "values": [
+      "escalated"
+    ],
+    "source_thread_id": 20,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "critical_system_involved",
+    "type": "boolean",
+    "description": "Whether a critical system (e.g. inventory module) is involved",
+    "source_thread_id": 21,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "Type of issue (e.g., database connection, application crash)",
+    "values": [
+      "database_connection",
+      "application_crash",
+      "other"
+    ],
+    "source_thread_id": 22,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "software_version",
+    "type": "categorical",
+    "description": "Version of the software experiencing the issue",
+    "values": [
+      "3.2.1"
+    ],
+    "source_thread_id": 22,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "database_type",
+    "type": "categorical",
+    "description": "Type of database experiencing the issue",
+    "values": [
+      "SQL Server 2017"
+    ],
+    "source_thread_id": 22,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "business_impact",
+    "type": "numerical",
+    "description": "Level of business impact (e.g., revenue loss, production downtime)",
+    "values": [],
+    "source_thread_id": 22,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "error_message",
+    "type": "categorical",
+    "description": "The specific error message being displayed",
+    "values": [
+      "Database connection failed"
+    ],
+    "source_thread_id": 23,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "application_version",
+    "type": "categorical",
+    "description": "Version of the CRM platform being used",
+    "values": [
+      "2.5.3"
+    ],
+    "source_thread_id": 24,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "customer_impact",
+    "type": "categorical",
+    "description": "Impact of the issue on the customer's business",
+    "values": [
+      "Production line on hold",
+      "Urgent"
+    ],
+    "source_thread_id": 24,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "escalation_level",
+    "type": "categorical",
+    "description": "Level of escalation required to resolve the issue",
+    "values": [
+      "technical_team_involved",
+      "senior_technical_team_involved"
+    ],
+    "source_thread_id": 26,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "Technical complexity and nature of the issue",
+    "values": [
+      "database_connection_timeout",
+      "system_down"
+    ],
+    "source_thread_id": 28,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "business_impact",
+    "type": "categorical",
+    "description": "Urgency and business impact",
+    "values": [
+      "high"
+    ],
+    "source_thread_id": 28,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "related_systems",
+    "type": "categorical",
+    "description": "Systems or equipment related to the issue",
+    "values": [
+      "inventory_module",
+      "crm",
+      "industrial_equipment_monitoring_systems"
+    ],
+    "source_thread_id": 28,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "previous_updates_failure",
+    "type": "boolean",
+    "description": "Whether previous platform updates have failed",
+    "values": [
+      "True"
+    ],
+    "source_thread_id": 30,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "business_risk",
+    "type": "categorical",
+    "description": "The level of business risk due to the issue",
+    "values": [
+      "High"
+    ],
+    "source_thread_id": 30,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "dependencies",
+    "type": "categorical",
+    "description": "The number of dependent systems affected by the issue",
+    "values": [
+      "Multiple"
+    ],
+    "source_thread_id": 30,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "support_team_involvement",
+    "type": "boolean",
+    "description": "Whether the support team is already involved in the issue",
+    "values": [],
+    "source_thread_id": 34,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "issue_reproduction",
+    "type": "categorical",
+    "description": "Whether the issue can be reproduced",
+    "values": [
+      "unknown"
+    ],
+    "source_thread_id": 34,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "support_channel",
+    "type": "categorical",
+    "description": "Channel through which the issue was reported",
+    "values": [
+      "email"
+    ],
+    "source_thread_id": 34,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "recent_changes",
+    "type": "categorical",
+    "description": "Whether any recent changes or updates were made to the CRM system",
+    "values": [
+      "No recent changes"
+    ],
+    "source_thread_id": 35,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "machine_model",
+    "type": "categorical",
+    "description": "Type of CNC machine model involved",
+    "values": [
+      "Haas VF-2SSY"
+    ],
+    "source_thread_id": 38,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "crm_version",
+    "type": "categorical",
+    "description": "Version of CRM platform installed",
+    "values": [
+      "v3.2.1"
+    ],
+    "source_thread_id": 38,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "api_version",
+    "type": "categorical",
+    "description": "Version of manufacturing module API",
+    "values": [
+      "v4.7.2"
+    ],
+    "source_thread_id": 38,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "error_code",
+    "type": "categorical",
+    "description": "Error code received from API integration",
+    "values": [
+      "API-503"
+    ],
+    "source_thread_id": 38,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "production_impact",
+    "type": "numerical",
+    "description": "Estimated loss of revenue per hour due to production halt",
+    "source_thread_id": 38,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "hotfix_availability",
+    "type": "boolean",
+    "description": "Availability of a pre-prepared hotfix",
+    "source_thread_id": 38,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "previous_patches_applied",
+    "type": "boolean",
+    "description": "Application of previous patches and maintenance",
+    "source_thread_id": 38,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "error_code",
+    "type": "categorical",
+    "description": "The specific error code reported by the customer (e.g. Error 503 Service Unavailable)",
+    "values": [
+      "503"
+    ],
+    "source_thread_id": 39,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "custom_config",
+    "type": "boolean",
+    "description": "Whether custom configurations or integrations are involved",
+    "values": [],
+    "source_thread_id": 39,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "platform_version",
+    "type": "categorical",
+    "description": "The version of the platform or software being used",
+    "values": [
+      "2.4.2",
+      "2.4.1"
+    ],
+    "source_thread_id": 39,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "impact_on_operations",
+    "type": "categorical",
+    "description": "The impact on business operations (e.g. production halted, shipments delayed, etc.)",
+    "values": [
+      "production_halted",
+      "shipments_delayed"
+    ],
+    "source_thread_id": 39,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "Level of urgency and priority assigned to the issue",
+    "values": [
+      "high_priority",
+      "medium_priority",
+      "low_priority"
+    ],
+    "source_thread_id": 41,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "payment_gateway_type",
+    "type": "categorical",
+    "description": "Type of payment gateway involved in the issue",
+    "values": [
+      "Stripe"
+    ],
+    "source_thread_id": 42,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "tls_version",
+    "type": "categorical",
+    "description": "TLS version related to the issue",
+    "values": [
+      "1.3"
+    ],
+    "source_thread_id": 42,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "business_impact",
+    "type": "numerical",
+    "description": "Estimated business impact in dollars per hour",
+    "values": [
+      "$5,000/hour"
+    ],
+    "source_thread_id": 42,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "Type of issue (e.g., database connectivity, server restart, cache clearing)",
+    "values": [
+      "database_connectivity",
+      "server_restart",
+      "cache_clearing"
+    ],
+    "source_thread_id": 43,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "impact_level",
+    "type": "categorical",
+    "description": "Business impact level of the issue (e.g., production halted, operations affected)",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 43,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "Urgency level of the issue (e.g., immediate resolution required)",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 43,
+    "validated": true,
+    "cluster_id": -1,
+    "source_features": 1
+  },
+  {
+    "name": "database_health_check",
+    "type": "boolean",
+    "description": "Whether a remote session is required to resolve the issue",
+    "values": [],
+    "cluster_id": 0,
+    "source_features": 5,
+    "original_names": [
+      "diagnostic_session_required",
+      "remote_session_required",
+      "database_health_check",
+      "remote_access_required",
+      "remote_access_required"
+    ]
+  },
+  {
+    "name": "rollback_status",
+    "type": "boolean",
+    "description": "Whether a rollback is required to resolve the issue",
+    "values": [],
+    "cluster_id": 1,
+    "source_features": 2,
+    "original_names": [
+      "rollback_required",
+      "rollback_status"
+    ]
+  },
+  {
+    "name": "ticket_id",
+    "type": "numerical",
+    "description": "Whether the ticket is marked as high priority",
+    "values": [],
+    "cluster_id": 2,
+    "source_features": 2,
+    "original_names": [
+      "ticket_id",
+      "prioritized_ticket"
+    ]
+  },
+  {
+    "name": "cache_clear_status",
+    "type": "boolean",
+    "description": "Whether the customer has tried clearing the cache",
+    "values": [],
+    "cluster_id": 3,
+    "source_features": 2,
+    "original_names": [
+      "cache_clear_status",
+      "cache_clear_status"
+    ]
+  },
+  {
+    "name": "reboot_status",
+    "type": "boolean",
+    "description": "Whether the customer has tried rebooting their system",
+    "values": [],
+    "cluster_id": 4,
+    "source_features": 2,
+    "original_names": [
+      "reboot_status",
+      "reboot_status"
+    ]
+  },
+  {
+    "name": "historical_pattern",
+    "type": "boolean",
+    "description": "Whether the issue has occurred before and if so, its recurrence pattern",
+    "values": [],
+    "cluster_id": 5,
+    "source_features": 3,
+    "original_names": [
+      "historical_pattern",
+      "historical_context",
+      "historical_context"
+    ]
+  },
+  {
+    "name": "resolution_options",
+    "type": "boolean",
+    "description": "Whether a multi-step resolution is required (e.g. hotfix patch, remote diagnostics, etc.)",
+    "values": [],
+    "cluster_id": 6,
+    "source_features": 4,
+    "original_names": [
+      "multi_step_resolution",
+      "multi_step_resolution",
+      "resolution_options",
+      "resolution_required"
+    ]
+  },
+  {
+    "name": "device_consistency",
+    "type": "categorical",
+    "description": "Whether the issue affects multiple devices or browsers",
+    "values": [
+      "consistent across both Chrome and Firefox"
+    ],
+    "cluster_id": 7,
+    "source_features": 3,
+    "original_names": [
+      "device_consistency",
+      "browser_consistency",
+      "multi_device_issue"
+    ]
+  },
+  {
+    "name": "browser_type",
+    "type": "categorical",
+    "description": "Type of web browser used by the customer",
+    "values": [
+      "Chrome",
+      "Chrome 122",
+      "Edge"
+    ],
+    "cluster_id": 8,
+    "source_features": 2,
+    "original_names": [
+      "browser_type",
+      "browser_version"
+    ]
+  },
+  {
+    "name": "repeated_issue",
+    "type": "numerical",
+    "description": "Timeframe within which the issue is expected to be resolved",
+    "values": [],
+    "cluster_id": 9,
+    "source_features": 4,
+    "original_names": [
+      "repeated_issue",
+      "resolution_timeframe",
+      "issue_start_time",
+      "resolution_time_estimate"
+    ]
+  },
+  {
+    "name": "os_type",
+    "type": "categorical",
+    "description": "The type of operating system being used by the customer",
+    "values": [
+      "Windows Server 2019",
+      "linux",
+      "macos",
+      "windows_10",
+      "windows_11"
+    ],
+    "cluster_id": 10,
+    "source_features": 3,
+    "original_names": [
+      "os_type",
+      "server_os",
+      "server_os"
+    ]
+  },
+  {
+    "name": "upgrade_related",
+    "type": "boolean",
+    "description": "Whether the issue is related to a recent upgrade or not",
+    "values": [],
+    "cluster_id": 11,
+    "source_features": 2,
+    "original_names": [
+      "upgrade_related",
+      "upgrade_related"
+    ]
+  },
+  {
+    "name": "user_impact",
+    "type": "categorical",
+    "description": "The number of users affected by the issue.",
+    "values": [
+      "multiple",
+      "multiple users",
+      "single user"
+    ],
+    "cluster_id": 12,
+    "source_features": 2,
+    "original_names": [
+      "user_impact",
+      "affected_users"
+    ]
+  },
+  {
+    "name": "escalation_needed",
+    "type": "boolean",
+    "description": "Whether the issue requires escalation to a higher-level support team or technical expert",
+    "values": [],
+    "cluster_id": 13,
+    "source_features": 3,
+    "original_names": [
+      "escalation_needed",
+      "escalation_required",
+      "escalation_required"
+    ]
+  },
+  {
+    "name": "system_change",
+    "type": "categorical",
+    "description": "Recent changes made to the system",
+    "values": [
+      "no recent changes",
+      "software_update"
+    ],
+    "cluster_id": 14,
+    "source_features": 2,
+    "original_names": [
+      "system_change",
+      "recent_system_changes"
+    ]
+  },
+  {
+    "name": "recent_update",
+    "type": "boolean",
+    "description": "Whether there have been any recent changes or updates that may be related to the issue",
+    "values": [],
+    "cluster_id": 15,
+    "source_features": 5,
+    "original_names": [
+      "recent_changes",
+      "recent_changes",
+      "recent_changes",
+      "recent_changes",
+      "recent_update"
+    ]
+  },
+  {
+    "name": "technical_complexity",
+    "type": "categorical",
+    "description": "The technical complexity of the issue (e.g. simple, complex, multi-step resolution)",
+    "values": [
+      "High",
+      "complex",
+      "high",
+      "low",
+      "medium",
+      "multi_step"
+    ],
+    "cluster_id": 16,
+    "source_features": 4,
+    "original_names": [
+      "technical_complexity",
+      "technical_complexity",
+      "technical_complexity",
+      "technical_complexity"
+    ]
+  },
+  {
+    "name": "escalation_required",
+    "type": "boolean",
+    "description": "Whether the issue requires escalation to a higher level of support",
+    "values": [],
+    "cluster_id": 17,
+    "source_features": 2,
+    "original_names": [
+      "escalation_required",
+      "escalation_required"
+    ]
+  },
+  {
+    "name": "escalation_required",
+    "type": "boolean",
+    "description": "Whether the issue requires escalation to a higher-level support team",
+    "values": [],
+    "cluster_id": 18,
+    "source_features": 2,
+    "original_names": [
+      "escalation_required",
+      "escalation_required"
+    ]
+  },
+  {
+    "name": "crm_version",
+    "type": "categorical",
+    "description": "The version of the CRM system being used.",
+    "values": [
+      "2.5.3",
+      "3.2.1",
+      "4.1.9",
+      "4.2.0",
+      "4.2.1",
+      "4.8.2",
+      "other"
+    ],
+    "cluster_id": 19,
+    "source_features": 5,
+    "original_names": [
+      "crm_version",
+      "system_version",
+      "crm_version",
+      "system_version",
+      "crm_version"
+    ]
+  },
+  {
+    "name": "software_version",
+    "type": "categorical",
+    "description": "Version of the CRM software involved in the issue",
+    "values": [
+      "2.5.3",
+      "3.2.1",
+      "4.2.1",
+      "v3.14.2"
+    ],
+    "cluster_id": 20,
+    "source_features": 5,
+    "original_names": [
+      "software_version",
+      "software_version",
+      "software_version",
+      "software_version",
+      "crm_software_version"
+    ]
+  },
+  {
+    "name": "error_type",
+    "type": "categorical",
+    "description": "Type of error encountered (e.g. database connection failure, timeout)",
+    "values": [
+      "configuration_error",
+      "database connection failure",
+      "database_connection_failed",
+      "timeout",
+      "unknown",
+      "unknown_error"
+    ],
+    "cluster_id": 21,
+    "source_features": 2,
+    "original_names": [
+      "error_type",
+      "error_message_type"
+    ]
+  },
+  {
+    "name": "system_affected",
+    "type": "categorical",
+    "description": "The system or platform affected by the issue",
+    "values": [
+      "API",
+      "B2B platform",
+      "CNC equipment",
+      "CRM",
+      "CRM platform",
+      "Database",
+      "Stripe gateway",
+      "crm_system",
+      "inventory_module"
+    ],
+    "cluster_id": 22,
+    "source_features": 3,
+    "original_names": [
+      "system_affected",
+      "affected_systems",
+      "system_affected"
+    ]
+  },
+  {
+    "name": "affected_module",
+    "type": "categorical",
+    "description": "Modules or functionalities impacted by the issue",
+    "values": [
+      "inventory management",
+      "inventory management module",
+      "reporting",
+      "unknown"
+    ],
+    "cluster_id": 23,
+    "source_features": 2,
+    "original_names": [
+      "affected_modules",
+      "affected_module"
+    ]
+  },
+  {
+    "name": "issue_severity",
+    "type": "categorical",
+    "description": "The level of severity of the issue, indicating the impact on the business or users.",
+    "values": [
+      "critical",
+      "high",
+      "low",
+      "medium"
+    ],
+    "cluster_id": 24,
+    "source_features": 2,
+    "original_names": [
+      "issue_severity",
+      "issue_severity"
+    ]
+  },
+  {
+    "name": "error_type",
+    "type": "categorical",
+    "description": "Type of error encountered",
+    "values": [
+      "503: Service Unavailable",
+      "API timeout after webhook validation fails",
+      "Database connection timeout",
+      "Database migration conflict",
+      "database_connection_timeout_exception"
+    ],
+    "cluster_id": 25,
+    "source_features": 3,
+    "original_names": [
+      "error_type",
+      "error_type",
+      "error_type"
+    ]
+  },
+  {
+    "name": "error_code",
+    "type": "categorical",
+    "description": "Error code received by the customer",
+    "values": [
+      "403: Invalid API Signature",
+      "Error 503"
+    ],
+    "cluster_id": 26,
+    "source_features": 2,
+    "original_names": [
+      "error_code",
+      "error_code"
+    ]
+  },
+  {
+    "name": "error_code",
+    "type": "categorical",
+    "description": "Error code associated with the issue",
+    "values": [
+      "1040",
+      "503",
+      "database_connection_failed"
+    ],
+    "cluster_id": 27,
+    "source_features": 2,
+    "original_names": [
+      "error_code",
+      "error_code"
+    ]
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "The type of issue being reported (e.g. database connectivity, API endpoint, etc.)",
+    "values": [
+      "API_endpoint",
+      "database_connectivity",
+      "software_update"
+    ],
+    "cluster_id": 28,
+    "source_features": 2,
+    "original_names": [
+      "issue_type",
+      "issue_type"
+    ]
+  },
+  {
+    "name": "error_type",
+    "type": "categorical",
+    "description": "The type of error encountered by the customer",
+    "values": [
+      "database connectivity",
+      "database_connection_failed",
+      "other",
+      "unknown"
+    ],
+    "cluster_id": 29,
+    "source_features": 2,
+    "original_names": [
+      "error_type",
+      "error_type"
+    ]
+  },
+  {
+    "name": "error_message",
+    "type": "categorical",
+    "description": "The specific error message encountered by the customer",
+    "values": [
+      "Database connection failed",
+      "Error 1045",
+      "Error 503"
+    ],
+    "cluster_id": 30,
+    "source_features": 5,
+    "original_names": [
+      "error_message",
+      "error_message",
+      "error_message",
+      "error_message_type",
+      "error_message"
+    ]
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "Type of issue (e.g., technical, connectivity, access)",
+    "values": [
+      "access_issue",
+      "database_connectivity",
+      "inventory_module_access",
+      "server_side"
+    ],
+    "cluster_id": 31,
+    "source_features": 2,
+    "original_names": [
+      "issue_type",
+      "issue_type"
+    ]
+  },
+  {
+    "name": "business_criticality",
+    "type": "categorical",
+    "description": "The importance of the system or process affected by the issue",
+    "values": [
+      "high",
+      "low",
+      "medium"
+    ],
+    "cluster_id": 32,
+    "source_features": 2,
+    "original_names": [
+      "business_criticality",
+      "business_criticality"
+    ]
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "The type of issue being reported",
+    "values": [
+      "database_connection",
+      "database_connectivity",
+      "software_update_conflict"
+    ],
+    "cluster_id": 33,
+    "source_features": 4,
+    "original_names": [
+      "issue_type",
+      "issue_type",
+      "issue_type",
+      "issue_type"
+    ]
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "The type of technical issue encountered",
+    "values": [
+      "API error",
+      "API version conflict",
+      "CRM integration issue",
+      "Database lock",
+      "Firmware mismatch",
+      "Inventory sync failure",
+      "TLS handshake failure"
+    ],
+    "cluster_id": 34,
+    "source_features": 2,
+    "original_names": [
+      "issue_type",
+      "issue_type"
+    ]
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "Urgency level of the issue based on business impact",
+    "values": [
+      "critical",
+      "production line blocked"
+    ],
+    "cluster_id": 35,
+    "source_features": 2,
+    "original_names": [
+      "system_urgency",
+      "urgency_level"
+    ]
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "The level of urgency reported by the customer (e.g. high, medium, low)",
+    "values": [
+      "High",
+      "Urgent",
+      "critical",
+      "high"
+    ],
+    "cluster_id": 36,
+    "source_features": 3,
+    "original_names": [
+      "urgency_level",
+      "urgency_level",
+      "urgency_level"
+    ]
+  },
+  {
+    "name": "urgency",
+    "type": "categorical",
+    "description": "Urgency level of the issue (e.g., critical, high, medium)",
+    "values": [
+      "critical",
+      "high",
+      "low",
+      "medium"
+    ],
+    "cluster_id": 37,
+    "source_features": 3,
+    "original_names": [
+      "urgency_level",
+      "urgency_level",
+      "urgency"
+    ]
+  },
+  {
+    "name": "business_impact",
+    "type": "numerical",
+    "description": "Magnitude of business impact due to the issue (e.g. revenue loss, production halt, etc.)",
+    "values": [],
+    "cluster_id": 38,
+    "source_features": 2,
+    "original_names": [
+      "business_impact",
+      "business_impact"
+    ]
+  },
+  {
+    "name": "issue_impact",
+    "type": "categorical",
+    "description": "The business impact of the issue on the customer's operations",
+    "values": [
+      "Halted production line",
+      "Significant delays",
+      "cancellation of a large order",
+      "order fulfillment disruption",
+      "revenue loss"
+    ],
+    "cluster_id": 39,
+    "source_features": 2,
+    "original_names": [
+      "issue_impact",
+      "issue_impact"
+    ]
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "Urgency level of the issue",
+    "values": [
+      "critical",
+      "high"
+    ],
+    "cluster_id": 40,
+    "source_features": 2,
+    "original_names": [
+      "urgency_level",
+      "urgency_level"
+    ]
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "The level of urgency required to resolve the issue",
+    "values": [
+      "Urgent",
+      "high",
+      "immediate",
+      "low",
+      "medium"
+    ],
+    "cluster_id": 41,
+    "source_features": 4,
+    "original_names": [
+      "urgency_level",
+      "urgency_level",
+      "urgency_level",
+      "urgency_level"
+    ]
+  },
+  {
+    "name": "business_impact",
+    "type": "categorical",
+    "description": "Impact of the issue on business operations",
+    "values": [
+      "blocking critical orders",
+      "critical",
+      "high",
+      "impacting customer experience",
+      "low",
+      "medium",
+      "no significant impact"
+    ],
+    "cluster_id": 42,
+    "source_features": 3,
+    "original_names": [
+      "business_impact",
+      "business_impact",
+      "business_impact"
+    ]
+  },
+  {
+    "name": "business_impact",
+    "type": "categorical",
+    "description": "The level of business impact caused by the issue",
+    "values": [
+      "Production delays",
+      "high"
+    ],
+    "cluster_id": 43,
+    "source_features": 4,
+    "original_names": [
+      "business_impact",
+      "business_impact",
+      "business_impact",
+      "business_impact"
+    ]
+  },
+  {
+    "name": "impact_level",
+    "type": "categorical",
+    "description": "The level of business impact due to the issue",
+    "values": [
+      "Critical",
+      "order_processing",
+      "production_line"
+    ],
+    "cluster_id": 44,
+    "source_features": 2,
+    "original_names": [
+      "business_impact_level",
+      "impact_level"
+    ]
+  },
+  {
+    "name": "business_impact",
+    "type": "categorical",
+    "description": "The potential impact of the issue on the customer's business operations",
+    "values": [
+      "affecting_multiple_users",
+      "blocking_daily_operations",
+      "customer_experience",
+      "high",
+      "inventory_management",
+      "low",
+      "medium",
+      "minimal_impact",
+      "production_line"
+    ],
+    "cluster_id": 45,
+    "source_features": 3,
+    "original_names": [
+      "business_impact",
+      "business_impact",
+      "business_impact"
+    ]
+  },
+  {
+    "name": "business_impact",
+    "type": "categorical",
+    "description": "The impact of the issue on the customer's business",
+    "values": [
+      "production_line",
+      "production_line_halted",
+      "urgent"
+    ],
+    "cluster_id": 46,
+    "source_features": 2,
+    "original_names": [
+      "business_impact",
+      "business_impact"
+    ]
+  }
+]

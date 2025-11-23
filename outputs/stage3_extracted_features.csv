@@ -1,0 +1,874 @@
+thread_id,email_number,rollback_status,cache_clear_status,diagnostics_required,device_consistency,browser_version,browser_type,issue_reproduction,support_required,os_type,system_change,upgrade_related,ticket_priority,escalation_status,software_version,escalation_needed,crm_version,software_version,technical_complexity,resolution_time,error_type,issue_history,error_type,issue_severity,system_affected
+1,1,False,True,True,consistent across both Chrome and Firefox,unknown,unknown,False,True,windows_10,configuration_change,False,high,False,4.2.1,False,4.2.1,4.2.1,High,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,single system
+1,2,False,,True,unknown,unknown,unknown,False,True,unknown,unknown,,unknown,False,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,critical,inventory_module
+2,1,False,True,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,False,True,windows_10,configuration_change,True,high,True,4.2.3,True,4.2.3,4.2.3,High,,503: Service Unavailable,recurring,503: Service Unavailable,critical,single system
+2,2,False,,True,unknown,unknown,unknown,False,True,unknown,unknown,True,high,True,unknown,True,unknown,unknown,unknown,2.0,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,multiple systems
+3,1,,,,,,,,,,,,,,,,,,,,,,,,
+3,2,,,True,unknown,,,,False,,unknown,,,,,,,,,,,,,,unknown
+3,3,,,False,unknown,,,,False,unknown,configuration_change,True,,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+3,4,True,,True,consistent across both Chrome and Firefox,,Chrome,,False,unknown,configuration_change,True,,False,unknown,True,,unknown,Medium,,configuration_error,one-time,configuration_error,high,inventory_module
+3,5,True,,,,,,,False,,unknown,False,,,,,,,unknown,,,unknown,,medium,unknown
+3,6,True,,False,unknown,unknown,unknown,,False,unknown,unknown,False,unknown,,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+4,1,True,True,True,consistent across both Chrome and Firefox,Chrome 130.0.6723.91,Chrome,,,unknown,configuration_change,,high,,v2.1.5,True,unknown,v2.1.5,High,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,multiple systems
+4,2,False,,True,,,,,False,,no recent changes,True,,,2.1.6,True,4.8.2,2.1.6,,,unknown_error,,unknown_error,critical,multiple systems
+4,3,False,,True,consistent across both Chrome and Firefox,,Chrome,False,True,windows_10,software_update,True,high,False,unknown,True,,unknown,High,,timeout,one-time,timeout,critical,multiple systems
+5,1,,True,,consistent across both Chrome and Firefox,,,,False,,software_update,True,,,CRM Pro v3.2.4,False,2.5.3,CRM Pro v3.2.4,Medium,,database_connection_failed,recurring,database_connection_failed,high,single system
+5,2,,,True,unknown,unknown,unknown,,True,unknown,unknown,,unknown,False,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,critical,unknown
+6,1,False,,True,consistent across both Chrome and Firefox,,,False,False,windows_10,no recent changes,False,,False,3.2.1,False,3.2.1,3.2.1,Medium,,database_connection_failed,recurring,database_connection_failed,critical,multiple systems
+6,2,,,False,unknown,unknown,unknown,False,False,unknown,unknown,False,,False,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+6,3,,,False,consistent across both Chrome and Firefox,,,False,False,,No recent changes,False,,False,,False,,,,,database_connection_timeout_exception,,database_connection_timeout_exception,,single system
+6,4,False,,True,consistent across both Chrome and Firefox,unknown,unknown,,True,windows_10,unknown,,unknown,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,unknown
+6,5,,,False,unknown,unknown,unknown,,,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+9,1,False,True,True,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,unknown,False,unknown,False,unknown,False,unknown,unknown,unknown,,database_connection_failed,unknown,database_connection_failed,critical,multiple systems
+9,2,,,True,unknown,,,,False,,unknown,,,,unknown,,,unknown,unknown,,,,,,
+10,1,True,True,False,consistent across both Chrome and Firefox,Chrome 129.0.6668.89,Chrome,False,False,unknown,no recent changes,False,high,False,v4.8.2,True,4.8.2,v4.8.2,unknown,2.0,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,multiple systems
+10,2,True,,True,,,,True,False,,yes,True,,False,v3.1.7,True,,v3.1.7,High,30.0,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,multiple systems
+12,1,,True,,consistent across both Chrome and Firefox,unknown,Chrome,,,unknown,unknown,,high,,CRM Pro v3.2.4,True,4.8.2,CRM Pro v3.2.4,High,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,single system
+12,2,False,,True,unknown,,,,False,unknown,configuration_change,False,high,,unknown,True,unknown,unknown,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,inventory_module
+13,1,,,,consistent across both Chrome and Firefox,,,,,,No recent changes,,,,2.5.3,,2.5.3,2.5.3,,,database_connection_failed,recurring,database_connection_failed,high,crm_system
+13,2,,,True,unknown,unknown,unknown,,False,unknown,unknown,,,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+13,3,False,True,True,unknown,unknown,unknown,False,False,unknown,software_update,True,unknown,False,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,critical,inventory_module
+13,4,,,True,unknown,unknown,unknown,False,True,unknown,configuration_change,False,,True,unknown,True,unknown,unknown,Medium,,configuration_error,unknown,configuration_error,high,crm_system
+13,5,,,True,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,unknown,,,,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,critical,single system
+14,1,,,True,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,unknown,,,,unknown,True,unknown,unknown,unknown,,database_connection_failed,unknown,database_connection_failed,critical,multiple systems
+14,2,,,False,unknown,,,False,False,,,,,False,,False,,,,,,,,,
+14,3,False,,False,unknown,unknown,unknown,,False,unknown,software_update,True,unknown,False,3.2.1,False,unknown,3.2.1,unknown,,database_connection_failed,unknown,database_connection_failed,unknown,crm_system
+14,4,True,,False,consistent across both Chrome and Firefox,,,False,True,,configuration_change,True,,False,CRM Pro v3.2.4,True,,CRM Pro v3.2.4,High,,configuration_error,one-time,configuration_error,high,crm_system
+14,5,,,,unknown,unknown,unknown,False,,unknown,unknown,,,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,critical,single system
+15,1,True,,True,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,software_update,True,high,,v2.4.7,True,unknown,v2.4.7,Medium,,API endpoint timeout,recurring,API endpoint timeout,critical,multiple systems
+15,2,,,True,consistent across both Chrome and Firefox,,unknown,False,False,unknown,unknown,True,unknown,,CRM Pro v3.2.4,True,unknown,CRM Pro v3.2.4,Medium,,API socket issue,one-time,API socket issue,high,CNC equipment
+15,3,True,,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,,True,windows_10,software_update,True,,,v3.14.2,True,,v3.14.2,High,,database_connection_timeout_exception,,database_connection_timeout_exception,critical,single system
+17,1,True,True,False,consistent across both Chrome and Firefox,,,,False,unknown,software_update,True,,,CRM Pro v3.2.4,False,,CRM Pro v3.2.4,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+17,2,,,True,unknown,unknown,unknown,,False,unknown,configuration_change,True,,,v3.14.2,,unknown,v3.14.2,Medium,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,high,crm_system
+18,1,,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,,False,unknown,configuration_change,True,,,CRM v3.2.1,True,3.2.1,CRM v3.2.1,Medium,,Error 503: Service Unavailable,recurring,Error 503: Service Unavailable,critical,multiple systems
+18,2,True,,True,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,configuration_change,True,high,,3.2.1,True,3.2.1,3.2.1,High,,configuration_error,one-time,configuration_error,critical,multiple systems
+18,3,True,,True,unknown,,,False,True,unknown,unknown,False,,False,unknown,True,,unknown,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,multiple systems
+20,1,,True,True,,,,,False,unknown,unknown,False,,,,False,,,,,database_connection_failed,,database_connection_failed,high,inventory_module
+20,2,,,True,unknown,unknown,unknown,,,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+20,3,False,,False,consistent across both Chrome and Firefox,,,False,False,,No recent changes,False,,False,,False,,,,,database_connection_failed,one-time,database_connection_failed,high,inventory_module
+20,4,False,,True,consistent across both Chrome and Firefox,,,,False,unknown,configuration_change,False,,False,unknown,True,unknown,unknown,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,multiple systems
+20,5,False,,True,consistent across both Chrome and Firefox,,,False,False,,configuration_change,False,,False,unknown,False,,unknown,,,database_connection_timeout_exception,,database_connection_timeout_exception,,multiple systems
+21,1,False,,False,unknown,Chrome 122,Chrome,False,False,unknown,unknown,True,unknown,False,v3.14.2,False,v3.14.2,v3.14.2,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,high,unknown
+21,2,False,,True,consistent across both Chrome and Firefox,,,True,False,,No recent changes,False,,,,False,,,,,,,,,
+22,1,,,,,,,,True,,,,,,3.2.1,,,3.2.1,,,database_connection_failed,,database_connection_failed,critical,crm_system
+22,2,,,False,unknown,,,,False,,unknown,,,,unknown,,,unknown,,,unknown,unknown,unknown,,unknown
+22,3,False,,False,consistent across both Chrome and Firefox,,,False,False,windows_2019,No recent changes,False,,False,,False,,,Low,,,one-time,,high,single system
+22,4,,,True,unknown,,unknown,,True,unknown,unknown,,high,,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,single system
+23,1,,,True,unknown,,,,True,,unknown,True,,,2.5.3,True,unknown,2.5.3,Medium,,database_connection_failed,unknown,database_connection_failed,critical,crm_system
+23,2,,,True,unknown,unknown,unknown,,False,unknown,unknown,,,False,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+23,3,,True,True,consistent across both Chrome and Firefox,,Chrome,,False,windows_10,configuration_change,True,,False,CRM Pro v3.2.4,False,other,CRM Pro v3.2.4,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,multiple systems
+23,4,,,True,unknown,unknown,unknown,False,True,unknown,unknown,,unknown,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+24,1,,,True,consistent across both Chrome and Firefox,,,,False,,configuration_change,True,,,CRM Pro v3.2.4,True,3.2.1,CRM Pro v3.2.4,High,,database_connection_failed,one-time,database_connection_failed,critical,single system
+24,2,,,False,unknown,unknown,unknown,,False,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+24,3,,True,False,consistent across both Chrome and Firefox,98.0.4758.102,Google Chrome,False,False,windows_10,unknown,False,unknown,False,unknown,False,unknown,unknown,unknown,,database_connection_failed,unknown,database_connection_failed,medium,single system
+24,4,,,True,unknown,,unknown,,True,unknown,,,unknown,,,True,unknown,,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,medium,unknown
+24,5,,,True,consistent across both Chrome and Firefox,,,,False,,configuration_change,True,,,,True,,,High,,,,,critical,multiple systems
+26,1,,,True,unknown,,,,False,unknown,unknown,,high,,unknown,True,unknown,unknown,unknown,,database_connection_failed,unknown,database_connection_failed,high,multiple systems
+26,2,,,True,,,,,False,,unknown,,,False,,True,,,,,,,,,
+26,3,,True,False,unknown,unknown,unknown,False,False,unknown,no_recent_changes,False,unknown,False,4.2.1,False,4.2.1,4.2.1,unknown,,database_connection_failed,unknown,database_connection_failed,high,single_system
+26,4,,,True,unknown,unknown,unknown,,False,unknown,unknown,,unknown,True,unknown,True,unknown,unknown,unknown,,database_connection_failed,unknown,database_connection_failed,medium,inventory_module
+26,5,,,False,consistent across both Chrome and Firefox,unknown,Chrome,True,False,unknown,unknown,True,high,,unknown,True,unknown,unknown,Medium,,timeout,recurring,timeout,high,inventory_module
+26,6,False,,False,,,,False,False,,no recent changes,False,,False,,False,,,,,,one-time,,medium,single system
+28,1,True,True,False,consistent across both Chrome and Firefox,Chrome 118.0.0,Chrome,False,True,unknown,software_update,True,high,False,unknown,True,unknown,unknown,Medium,,Database connection timeout,recurring,Database connection timeout,high,inventory_module
+28,2,True,,True,consistent across both Chrome and Firefox,,,,True,,no recent changes,True,high,,,True,,,Medium,,Database connection timeout,one-time,Database connection timeout,high,single system
+30,1,True,True,True,consistent across both Chrome and Firefox,,,False,True,,software_update,True,,False,v3.2.1,True,,v3.2.1,High,,database_connection_failed,recurring,database_connection_failed,critical,multiple systems
+30,2,,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,True,high,True,1.7.2,True,,1.7.2,High,,502: Bad Gateway,one-time,502: Bad Gateway,critical,single system
+30,3,False,,True,consistent across both Chrome and Firefox,,,False,False,,configuration_change,True,,,unknown,True,,unknown,High,,configuration_error,one-time,configuration_error,critical,multiple systems
+30,4,,,False,consistent across both Chrome and Firefox,,,,True,,configuration_change,True,,,v5.1.3,True,,v5.1.3,High,,configuration_error,recurring,configuration_error,critical,multiple systems
+30,5,True,,False,consistent across both Chrome and Firefox,,Chrome,,True,Windows Server 2019,configuration_change,True,,False,v3.14.2,False,,v3.14.2,High,,,recurring,,critical,single system
+31,1,,,True,consistent across both Chrome and Firefox,unknown,Chrome,False,False,unknown,unknown,False,high,False,unknown,False,unknown,unknown,unknown,,database_connection_failed,recurring,database_connection_failed,critical,single system
+31,2,,,True,unknown,,,,False,,unknown,,,,,,,,,,,,,,
+31,3,,True,False,consistent across both Chrome and Firefox,"Chrome 119, Firefox 117","Chrome, Firefox",,False,unknown,no recent changes,,unknown,,v4.5.2,,4.5.2,v4.5.2,unknown,,unknown_error,unknown,unknown_error,medium,multiple systems
+31,4,,,True,,,,,False,,,,,,,,,,,,,,,,
+31,5,,,True,unknown,unknown,unknown,,False,unknown,unknown,,,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+34,1,,True,False,consistent across both Chrome and Firefox,Chrome 122,Chrome,False,False,windows_10,no recent changes,False,high,False,CRM Pro v3.2.4,False,3.2.5,CRM Pro v3.2.4,High,,database_connection_failed,recurring,database_connection_failed,critical,multiple systems
+34,2,,,False,unknown,unknown,unknown,False,False,unknown,configuration_change,False,unknown,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,multiple systems
+34,3,,,False,unknown,,unknown,,False,unknown,no_recent_changes,True,,,unknown,False,,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+34,4,False,,True,consistent across both Chrome and Firefox,,unknown,False,True,unknown,configuration_change,True,,,unknown,True,unknown,unknown,Medium,,unknown_error,recurring,unknown_error,medium,multiple systems
+35,1,,,False,consistent across both Chrome and Firefox,,unknown,False,False,unknown,unknown,False,unknown,False,unknown,False,unknown,unknown,unknown,,database_connection_failed,unknown,database_connection_failed,high,multiple systems
+35,2,,,True,,,,,False,,unknown,,,,,,,,,,,,,,
+35,3,,,,consistent across both Chrome and Firefox,unknown,unknown,,,unknown,no recent changes,,unknown,,unknown,,4.2.1,unknown,unknown,,database_connection_failed,recurring,database_connection_failed,high,single system
+35,4,,,,,,,,False,,,,,True,,True,,,,,,,,,
+35,5,,False,,unknown,unknown,unknown,,False,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,high,single system
+35,6,,,False,unknown,unknown,unknown,,False,unknown,unknown,False,,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+38,1,True,True,True,consistent across both Chrome and Firefox,unknown,unknown,False,False,windows_2019,configuration_change,True,high,False,v3.2.1,True,unknown,v3.2.1,High,,database_connection_failed,recurring,database_connection_failed,critical,crm_system
+38,2,,False,True,unknown,,,False,True,windows_2019,configuration_change,True,,True,,True,,,Medium,90.0,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,single system
+39,1,,True,,consistent across both Chrome and Firefox,Chrome 120,Chrome,,False,unknown,software_update,True,high,False,Nosco CRM's inventory module,True,unknown,Nosco CRM's inventory module,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,single system
+39,2,False,,True,,,,True,True,,,True,high,False,,False,,,,,,,,critical,inventory_module
+39,3,,,True,consistent across both Chrome and Firefox,,,False,False,,No recent changes,False,,,3.2.1,True,,3.2.1,High,,503: Service Unavailable,one-time,503: Service Unavailable,critical,single system
+39,4,False,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,True,,,2.5.3,True,,2.5.3,Medium,,configuration_error,one-time,configuration_error,critical,multiple systems
+39,5,,,True,unknown,unknown,unknown,,,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,critical,inventory_module
+41,1,False,True,False,consistent across both Chrome and Firefox,,unknown,False,True,unknown,unknown,False,high,False,,False,unknown,,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,high,multiple systems
+41,2,False,,True,,,,False,True,,,False,,False,,True,,,,,,,,high,multiple systems
+42,1,,True,,consistent across both Chrome and Firefox,Chrome 128.0.0,Google Chrome,,True,unknown,unknown,False,critical,,v3.14.2,True,unknown,v3.14.2,High,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,multiple systems
+42,2,,,True,,,,True,True,,configuration_change,True,high,,,True,,,,,,,,critical,single system
+43,1,,True,False,,,,,True,,unknown,,,,CRM Pro v3.2.4,True,,CRM Pro v3.2.4,,,database_connection_timeout_exception,,database_connection_timeout_exception,critical,single system
+43,2,,,False,unknown,unknown,unknown,,True,unknown,unknown,,unknown,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,multiple systems
+44,1,,,True,consistent across both Chrome and Firefox,,,,False,windows_10,unknown,,high,,,True,,,High,,database_connection_failed,unknown,database_connection_failed,critical,multiple systems
+44,2,,,True,unknown,unknown,unknown,,True,unknown,configuration_change,,unknown,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,critical,crm_system
+44,3,,,False,,,,,,,software_update,True,,,3.2.1,,,3.2.1,,,database_connection_failed,,database_connection_failed,medium,single system
+44,4,True,,True,,,,,True,,software_update,True,,,,,,,,,,,,,
+44,5,False,,True,unknown,unknown,unknown,,,unknown,unknown,False,unknown,,3.2.1,,unknown,3.2.1,unknown,,unknown,unknown,unknown,unknown,inventory_module
+45,1,,,True,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,unknown,,,,unknown,True,unknown,unknown,unknown,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+45,2,False,,True,consistent across both Chrome and Firefox,,,False,False,,configuration_change,False,,False,,False,,,Medium,,configuration_error,one-time,configuration_error,high,single system
+45,3,,,True,consistent across both Chrome and Firefox,,unknown,,False,unknown,configuration_change,True,,,SAP RFC 7.50 Patch 3,True,unknown,SAP RFC 7.50 Patch 3,High,,configuration_error,recurring,configuration_error,critical,multiple systems
+47,1,False,,True,consistent across both Chrome and Firefox,,,,False,,,,,,,True,,,,,database_connection_failed,one-time,database_connection_failed,critical,inventory_module
+47,2,,,True,,,,,,,unknown,,,,unknown,,,unknown,,,,,,,
+47,3,,,False,consistent across both Chrome and Firefox,,,False,False,,No recent changes,False,,False,3.2.1,False,3.2.1,3.2.1,,,database_connection_failed,one-time,database_connection_failed,high,single system
+47,4,,,False,unknown,unknown,unknown,False,False,unknown,unknown,False,unknown,True,unknown,True,unknown,unknown,unknown,,database_connection_failed,unknown,database_connection_failed,critical,single system
+47,5,False,,True,,,,False,False,,,False,,False,,False,,,,,database_connection_failed,,database_connection_failed,high,inventory_module
+47,6,,,False,unknown,unknown,unknown,,True,unknown,unknown,,unknown,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+48,1,,True,True,consistent across both Chrome and Firefox,,Chrome,False,,windows_10,configuration_change,True,high,,CRM Pro v3.2.4,True,4.7.3,CRM Pro v3.2.4,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+48,2,,,True,consistent across both Chrome and Firefox,,unknown,,False,unknown,configuration_change,False,high,False,unknown,False,unknown,unknown,High,,unknown_error,unknown,unknown_error,critical,single system
+48,3,False,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,False,False,windows_10,hardware_upgrade,True,high,False,v3.14.2,True,unknown,v3.14.2,High,2.0,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,single system
+48,4,False,,True,consistent across both Chrome and Firefox,,,False,True,,configuration_change,True,high,True,unknown,True,,unknown,High,90.0,configuration_error,one-time,configuration_error,critical,multiple systems
+49,1,False,True,True,consistent across both Chrome and Firefox,,,False,True,,no recent changes,False,,False,CRM Pro v3.2.4,False,unknown,CRM Pro v3.2.4,Medium,,database_connection_failed,recurring,database_connection_failed,high,crm_system
+49,2,False,,True,unknown,,,,True,,unknown,,,,,True,,,,,,,,,
+51,1,False,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,,True,unknown,software_update,True,,,NoscoCRM v4.3.2,True,unknown,NoscoCRM v4.3.2,High,,Database connection failed - Error 503 Service Unavailable,one-time,Database connection failed - Error 503 Service Unavailable,critical,multiple systems
+51,2,,,True,consistent across both Chrome and Firefox,unknown,unknown,,True,unknown,configuration_change,True,unknown,True,unknown,True,unknown,unknown,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,critical,multiple systems
+51,3,,,False,consistent across both Chrome and Firefox,,,,False,windows_10,no recent changes,False,,,,True,,,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+51,4,True,,True,consistent across both Chrome and Firefox,,Chrome,True,True,,configuration_change,True,,False,v3.14.2,True,,v3.14.2,High,4.0,configuration_error,recurring,configuration_error,critical,multiple systems
+51,5,True,,True,unknown,unknown,unknown,False,True,unknown,unknown,,unknown,False,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,critical,inventory_module
+51,6,False,,True,unknown,,,,True,,configuration_change,True,,True,unknown,True,,unknown,High,,unknown_error,unknown,unknown_error,critical,multiple systems
+52,1,False,,True,consistent across both Chrome and Firefox,,,False,False,unknown,unknown,False,high,False,unknown,False,unknown,unknown,High,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,inventory_module
+52,2,False,,True,consistent across both Chrome and Firefox,,unknown,,False,unknown,configuration_change,True,,False,v3.14.2,False,unknown,v3.14.2,Medium,,unknown_error,recurring,unknown_error,critical,inventory_module
+52,3,True,,True,consistent across both Chrome and Firefox,unknown,unknown,,True,unknown,software_update,True,high,,3.20.1,True,unknown,3.20.1,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+52,4,True,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,,True,,software_update,True,high,,PostgreSQL 15,True,,PostgreSQL 15,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,inventory_module
+52,5,False,False,True,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,configuration_change,True,high,False,3.20.2,True,unknown,3.20.2,High,,configuration_error,recurring,configuration_error,critical,multiple systems
+52,6,True,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,,,windows_10,yes,True,,,v3.20.1,True,,v3.20.1,High,,configuration_error,one-time,configuration_error,critical,inventory_module
+53,1,,True,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,,False,windows_10,configuration_change,False,,,3.2.1,True,,3.2.1,High,,database_connection_failed,,database_connection_failed,critical,crm_system
+53,2,,,True,unknown,unknown,unknown,,True,unknown,unknown,,unknown,True,unknown,True,unknown,unknown,unknown,,database_connection_failed,unknown,database_connection_failed,critical,multiple systems
+54,1,,True,False,consistent across both Chrome and Firefox,Chrome 120,Chrome,,True,windows_10,software_update,True,,,Nosco CRM v2.4.1,True,,Nosco CRM v2.4.1,,,database_connection_timeout_exception,,database_connection_timeout_exception,critical,single system
+54,2,False,,True,unknown,,,False,True,,unknown,,high,,,True,,,,,503: Service Unavailable,unknown,503: Service Unavailable,high,unknown
+54,3,,,True,consistent across both Chrome and Firefox,unknown,Firefox,,,unknown,no recent changes,,,,unknown,True,unknown,unknown,High,,503: Service Unavailable,one-time,503: Service Unavailable,critical,multiple systems
+54,4,,,True,,,,False,True,,unknown,False,,True,unknown,True,,unknown,unknown,,database_connection_failed,unknown,database_connection_failed,critical,inventory_module
+55,1,,True,False,consistent across both Chrome and Firefox,Chrome 129,Chrome,,False,Windows Server 2019,software_update,True,high,False,v3.7.2,True,,v3.7.2,High,,timeout_error,recurring,timeout_error,critical,multiple systems
+55,2,,False,True,consistent across both Chrome and Firefox,unknown,unknown,False,True,Windows Server 2019,configuration_change,True,high,False,v3.7.2,True,unknown,v3.7.2,High,,timeout,recurring,timeout,critical,single system
+56,1,False,True,False,consistent across both Chrome and Firefox,Chrome 122,Google Chrome,False,False,unknown,unknown,False,unknown,False,unknown,False,unknown,unknown,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,multiple systems
+56,2,,,True,unknown,unknown,unknown,False,True,unknown,unknown,,high,True,unknown,True,unknown,unknown,High,30.0,unknown,unknown,unknown,critical,single system
+56,3,True,,True,consistent across both Chrome and Firefox,,unknown,,False,unknown,unknown,True,unknown,False,unknown,True,unknown,unknown,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+58,1,,,True,consistent across both Chrome and Firefox,,,,True,,software_update,True,,,v2.4.1,True,,v2.4.1,High,,database_connection_failed,one-time,database_connection_failed,critical,inventory_module
+58,2,,,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,,False,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,high,single system
+58,3,,,False,consistent across both Chrome and Microsoft Edge,Chrome v120.0.0,"Chrome, Microsoft Edge",True,False,,No recent changes,False,,False,,False,,,,,,recurring,,,multiple systems
+58,4,False,False,True,unknown,unknown,unknown,False,True,unknown,software_update,True,unknown,False,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,multiple systems
+58,5,,,True,unknown,unknown,unknown,False,False,unknown,unknown,,unknown,,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,inventory_module
+59,1,False,True,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,False,False,windows_10,software_update,True,high,False,v2.4.3,True,unknown,v2.4.3,High,,database_connection_failed,recurring,database_connection_failed,critical,multiple systems
+59,2,False,,True,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,unknown,True,high,True,v2.4.3,True,unknown,v2.4.3,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,inventory_module
+59,3,False,,False,consistent across both Chrome and Firefox,,,False,False,,hardware_upgrade,True,,False,,False,,,,,503: Service Unavailable,one-time,503: Service Unavailable,critical,single system
+59,4,False,,True,consistent across both Chrome and Firefox,,,False,False,,configuration_change,True,,,,False,,,Medium,,503: Service Unavailable,one-time,503: Service Unavailable,high,single system
+60,1,,,True,unknown,unknown,unknown,,,unknown,unknown,,,,CRM Platform version 2.5.3,True,2.5.3,CRM Platform version 2.5.3,unknown,,database_connection_failed,unknown,database_connection_failed,critical,crm_system
+60,2,,,False,unknown,unknown,unknown,,False,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+60,3,False,True,False,consistent across both Chrome and Firefox,98.0.4758.102,Google Chrome,,False,,configuration_change,False,,,,False,,,,,,,,,multiple systems
+60,4,,,True,unknown,unknown,unknown,,True,unknown,unknown,,,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+60,5,,False,False,consistent across both Chrome and Firefox,,Chrome,False,False,,no recent changes,,high,,,False,,,,,,recurring,,high,multiple systems
+63,1,False,True,True,unknown,unknown,unknown,,True,unknown,unknown,,,,unknown,True,unknown,unknown,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,crm_system
+63,2,,,True,,,,,True,,configuration_change,,,,,True,,,,,,,,critical,crm_system
+64,1,,True,False,consistent across both Chrome and Firefox,,unknown,,False,windows_10,configuration_change,True,high,,3.2.1,True,3.2.1,3.2.1,Medium,,database_connection_failed,one-time,database_connection_failed,high,crm_system
+64,2,,,True,unknown,,,,True,unknown,unknown,,unknown,True,,True,,,unknown,,database_connection_failed,unknown,database_connection_failed,high,single system
+65,1,,True,,,,,,True,,,,,,,,,,,,,,,,
+65,2,,,True,,,,,False,,unknown,,,,unknown,,,unknown,,,,,,,unknown
+65,3,,,True,consistent across both Chrome and Firefox,,,False,False,,configuration_change,True,,,3.2.1,True,,3.2.1,,,database_connection_failed,,database_connection_failed,high,crm_system
+66,1,True,True,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,False,False,windows_10,yes,True,high,False,v2.1.5,True,unknown,v2.1.5,High,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,single system
+66,2,,,True,,,,,True,,configuration_change,True,high,,,True,,,,90.0,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,multiple systems
+67,1,,,,unknown,,,,False,unknown,unknown,,,,3.2.1,False,3.2.1,3.2.1,unknown,,database_connection_failed,unknown,database_connection_failed,high,crm_system
+67,2,,False,True,unknown,unknown,unknown,False,False,unknown,unknown,False,unknown,False,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,critical,unknown
+67,3,,,,,,,,,,,,,,,,,,,,,,,,
+67,4,False,,True,consistent across both Chrome and Firefox,,,False,True,,No recent changes,,,False,unknown,True,,unknown,,,database connection failure,,database connection failure,,single system
+71,1,,False,True,consistent across both Chrome and Firefox,,,False,True,,no recent changes,False,,False,v3.14.2,True,,v3.14.2,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,multiple systems
+71,2,,,True,consistent across both Chrome and Firefox,,,,True,unknown,configuration_change,True,high,False,4.3.2,False,4.3.2,4.3.2,Medium,,unknown_error,recurring,unknown_error,critical,crm_system
+71,3,False,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,False,True,windows_10,software_update,True,,,PostgreSQL 13.9,True,,PostgreSQL 13.9,Medium,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,multiple systems
+72,1,False,True,False,consistent across both Chrome and Firefox,Chrome 119,Chrome,False,True,unknown,unknown,False,unknown,False,unknown,False,4.2.1,unknown,Medium,,database_connection_failed,recurring,database_connection_failed,high,crm_system
+72,2,,,False,unknown,unknown,unknown,False,True,unknown,unknown,False,unknown,False,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,unknown
+73,1,,True,False,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,False,unknown,configuration_change,True,,,Nosco CRM v2.3.4,True,,Nosco CRM v2.3.4,High,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,inventory_module
+73,2,,,False,unknown,,unknown,,True,unknown,unknown,,,True,,True,unknown,,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,inventory_module
+73,3,,,,consistent across both Chrome and Firefox,unknown,unknown,,,unknown,unknown,False,high,,unknown,True,unknown,unknown,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,critical,inventory_module
+73,4,True,,True,consistent across both Chrome and Firefox,,,True,False,unknown,configuration_change,True,high,,v3.2.4,True,unknown,v3.2.4,High,,database_migration_conflict,one-time,database_migration_conflict,critical,inventory_module
+73,5,True,,,unknown,unknown,unknown,,True,unknown,unknown,,high,,unknown,True,unknown,unknown,unknown,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+75,1,False,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,,True,unknown,configuration_change,True,,,v3.2.1,True,Nosco CRM v3.2.1,v3.2.1,High,,Timeout exception: Failed to connect to /api/inventory/sync,one-time,Timeout exception: Failed to connect to /api/inventory/sync,critical,inventory_module
+75,2,,,True,unknown,,,,False,unknown,configuration_change,,,,,,unknown,,unknown,,unknown,unknown,unknown,critical,unknown
+75,3,,,True,consistent across both Chrome and Firefox,,,,False,,no recent changes,,,,CRM Pro v3.2.4,True,other,CRM Pro v3.2.4,High,,database_connection_timeout_exception,,database_connection_timeout_exception,critical,single system
+75,4,True,,False,unknown,,,,True,,unknown,True,,,,False,,,unknown,,,unknown,,high,single system
+75,5,True,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,,False,unknown,yes,True,high,,3.2.1,True,3.2.1,3.2.1,High,,configuration_error,recurring,configuration_error,critical,inventory_module
+75,6,False,,False,consistent across both Chrome and Firefox,,,,False,,configuration_change,True,high,True,v3.14.2,True,unknown,v3.14.2,High,2.0,unknown_error,recurring,unknown_error,critical,single system
+76,1,False,True,False,unknown,Chrome 98.0.4758.102,Google Chrome,False,True,unknown,no recent changes,False,,False,CRM Pro v3.2.4,False,,CRM Pro v3.2.4,,,Database connection failed,unknown,Database connection failed,high,crm_system
+76,2,,,True,unknown,unknown,unknown,,False,unknown,unknown,,,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+76,3,,,True,unknown,,unknown,,,unknown,configuration_change,True,,,CRM Pro v3.2.4,,,CRM Pro v3.2.4,,,database_connection_timeout_exception,,database_connection_timeout_exception,high,crm_system
+77,1,,True,False,consistent across both Chrome and Firefox,Chrome 120,Chrome,,False,unknown,yes,True,,,2.4.7,True,unknown,2.4.7,High,,database_connection_failed,unknown,database_connection_failed,critical,single system
+77,2,,,True,unknown,unknown,unknown,,True,unknown,unknown,,high,True,unknown,True,unknown,unknown,unknown,2.0,503: Service Unavailable,unknown,503: Service Unavailable,critical,multiple systems
+77,3,,,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,,,unknown,unknown,,,,,,,,,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+78,1,True,True,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,,True,windows_10,configuration_change,True,,,CRM Pro v3.2.4,True,4.2.7,CRM Pro v3.2.4,High,,503: Service Unavailable,one-time,503: Service Unavailable,critical,crm_system
+78,2,,,True,consistent across both Chrome and Firefox,,,,True,,yes,True,,,unknown,True,unknown,unknown,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+78,3,,,True,consistent across both Chrome and Firefox,unknown,unknown,,,unknown,configuration_change,,,,unknown,True,unknown,unknown,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,multiple systems
+78,4,True,,True,unknown,,,False,True,,configuration_change,True,high,False,v4.2.7,False,,v4.2.7,Medium,,timeout,one-time,timeout,high,multiple systems
+79,1,False,True,False,unknown,Chrome 120,Chrome,False,True,unknown,unknown,False,high,False,unknown,True,unknown,unknown,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,inventory_module
+79,2,,,True,unknown,unknown,unknown,,False,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,critical,single system
+79,3,False,,True,consistent across both Chrome and Firefox,98.0.4758.102,Google Chrome,True,False,windows_10,software_update,True,high,False,2.4.1,False,,2.4.1,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,inventory_module
+79,4,True,,False,consistent across both Chrome and Firefox,,,False,False,,configuration_change,True,,False,2.4.1,True,2.5.3,2.4.1,High,,database_connection_failed,one-time,database_connection_failed,critical,inventory_module
+79,5,True,,True,unknown,unknown,unknown,,False,unknown,configuration_change,True,high,,unknown,True,unknown,unknown,High,,database_connection_failed,recurring,database_connection_failed,critical,inventory_module
+79,6,True,,True,unknown,,,False,True,,,,high,False,,,,,unknown,,,,,high,single system
+80,1,False,,True,unknown,,,,True,,unknown,False,,,,,,,unknown,,database_connection_failed,unknown,database_connection_failed,high,crm_system
+80,2,,,True,unknown,unknown,unknown,,False,unknown,unknown,,,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+80,3,,True,,consistent across both Chrome and Firefox,,,,,,configuration_change,True,,,2.5.3,,2.5.3,2.5.3,Medium,,database_connection_failed,one-time,database_connection_failed,high,multiple systems
+80,4,,,False,unknown,,,,True,,,,,,,True,,,,,,,,,
+80,5,,,True,consistent across both Chrome and Firefox,,Chrome,,False,,,False,,,,True,,,,,,,,critical,single system
+80,6,,,True,unknown,unknown,unknown,,True,unknown,unknown,,high,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+81,1,False,True,True,,,,,True,,hardware_upgrade,True,,,2.2.0,True,,2.2.0,,,database_connection_failed,,database_connection_failed,critical,inventory_module
+81,2,,,True,unknown,,unknown,,False,unknown,hardware_upgrade,True,unknown,False,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,critical,multiple systems
+81,3,True,,True,consistent across both Chrome and Firefox,,,False,False,windows_10,configuration_change,True,high,False,CRM Pro v3.2.4,True,unknown,CRM Pro v3.2.4,High,,timeout,recurring,timeout,critical,multiple systems
+81,4,True,,True,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,configuration_change,True,high,True,unknown,True,unknown,unknown,High,1.0,configuration_error,one-time,configuration_error,critical,single system
+82,1,False,,False,consistent across both Chrome and Firefox,,,False,False,,configuration_change,True,,False,,False,,,,,database_connection_failed,one-time,database_connection_failed,high,single system
+82,2,,,False,unknown,,,,False,,,,,,,,,,,,,,,,
+82,3,False,True,False,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,,False,windows_10,no recent changes,False,,False,v3.14.2,False,3.2.1,v3.14.2,Low,,database_connection_failed,one-time,database_connection_failed,medium,single system
+82,4,,,True,,,,False,True,,,False,,True,,True,,,,,,,,,
+83,1,False,True,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,False,False,unknown,yes,True,,False,Nosco CRM v2.4.1,True,2.4.1,Nosco CRM v2.4.1,High,,Database connection failed - Timeout exception,one-time,Database connection failed - Timeout exception,critical,inventory_module
+83,2,,,True,consistent across both Chrome and Firefox,,Chrome,,True,,configuration_change,True,,True,,True,,,,,configuration_error,recurring,configuration_error,high,multiple systems
+83,3,,,True,consistent across both Chrome and Firefox,,,,False,unknown,unknown,False,high,False,unknown,True,unknown,unknown,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,multiple systems
+83,4,,,True,unknown,,,,,unknown,unknown,,,,v3.14.2,True,unknown,v3.14.2,High,4.0,timeout,unknown,timeout,high,single system
+83,5,True,,True,consistent across both Chrome and Firefox,,,False,True,,configuration_change,True,high,True,unknown,True,unknown,unknown,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,single system
+84,1,,,True,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,unknown,,high,,unknown,True,unknown,unknown,High,,database_connection_failed,recurring,database_connection_failed,critical,inventory_module
+84,2,,,True,unknown,,,,False,,unknown,,,,unknown,,,unknown,,,,,,,
+84,3,,,False,,,,,False,,No recent changes,False,,,2.3.1,False,,2.3.1,,,,,,,
+84,4,,True,True,unknown,unknown,unknown,False,True,unknown,unknown,False,,False,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,medium,single system
+84,5,,True,False,unknown,unknown,unknown,False,True,unknown,unknown,False,unknown,False,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,critical,single system
+84,6,,,,,,,,True,,,,high,,,,,,,,,,,,
+85,1,,True,False,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,unknown,,high,,unknown,,unknown,unknown,Medium,,database_connection_failed,one-time,database_connection_failed,high,single system
+85,2,False,,True,unknown,unknown,unknown,False,True,unknown,unknown,,unknown,False,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,critical,unknown
+85,3,,,,,,,,,,,,,,,,,,,,,,,,
+86,1,,True,True,,,,,False,,,,,,3.2.1,False,,3.2.1,,,database_connection_failed,,database_connection_failed,high,crm_system
+86,2,,,True,unknown,unknown,unknown,,False,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+86,3,,,False,consistent across both Chrome and Firefox,,unknown,,,unknown,No recent changes,False,,,unknown,,unknown,unknown,unknown,,unknown_error,one-time,unknown_error,high,single system
+87,1,False,True,False,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,unknown,False,unknown,False,2.5.3,False,2.5.3,2.5.3,unknown,,database_connection_failed,one-time,database_connection_failed,high,single system
+87,2,,,True,,,,,False,,unknown,,,,,,,,,,database_connection_failed,unknown,database_connection_failed,,
+87,3,,,False,unknown,,,False,False,unknown,configuration_change,False,,,8.0.23,True,,8.0.23,unknown,,unknown_error,unknown,unknown_error,critical,single system
+89,1,False,True,False,consistent across both Chrome and Firefox,,,False,True,,,False,,False,,False,,,,,database_connection_failed,one-time,database_connection_failed,critical,single system
+89,2,,,True,unknown,unknown,unknown,,False,unknown,configuration_change,,high,True,unknown,True,unknown,unknown,Medium,,database_connection_failed,one-time,database_connection_failed,high,single system
+90,1,,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,,,,configuration_change,True,,,Nosco CRM v4.5.1,True,,Nosco CRM v4.5.1,,,API timeout after webhook validation fails,,API timeout after webhook validation fails,critical,multiple systems
+90,2,,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,True,False,windows_10,software_update,True,high,,unknown,False,unknown,unknown,High,24.0,timeout,recurring,timeout,critical,multiple systems
+90,3,False,,True,consistent across both Chrome and Firefox,unknown,unknown,,,unknown,configuration_change,True,high,,unknown,True,unknown,unknown,Medium,,API timeout after webhook validation fails,recurring,API timeout after webhook validation fails,critical,multiple systems
+91,1,,,,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,unknown,False,unknown,,unknown,False,unknown,unknown,unknown,,configuration_error,unknown,configuration_error,critical,single system
+91,2,,,False,unknown,unknown,unknown,,False,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,medium,unknown
+91,3,,,False,consistent across both Chrome and Firefox,"Chrome 111, Firefox 109","Chrome, Firefox",True,False,unknown,No recent changes,,,,v3.14.2,False,unknown,v3.14.2,unknown,,unknown,unknown,unknown,critical,single system
+91,4,,,True,consistent across both Chrome and Firefox,,,,False,,unknown,,,False,unknown,True,,unknown,unknown,,,unknown,,high,single system
+91,5,,,False,,,,False,False,,,,,,,,,,,,,,,,
+92,1,,,False,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,unknown,False,,,unknown,False,unknown,unknown,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,single system
+92,2,False,,False,unknown,unknown,unknown,False,False,unknown,unknown,False,unknown,False,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+92,3,,True,False,unknown,unknown,unknown,False,False,unknown,no recent changes,False,unknown,False,CRM Pro v4.2.3,False,4.2.3,CRM Pro v4.2.3,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,medium,crm_system
+92,4,,,True,unknown,,unknown,False,False,unknown,unknown,False,,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,single system
+92,5,False,,False,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,unknown,False,unknown,False,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,high,multiple systems
+93,1,False,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,True,unknown,software_update,True,high,False,v3.14.2,True,unknown,v3.14.2,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,multiple systems
+93,2,,,True,unknown,unknown,unknown,,True,unknown,configuration_change,True,unknown,True,4.2.1,True,unknown,4.2.1,Medium,,database_connection_failed,unknown,database_connection_failed,high,inventory_module
+94,1,True,,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,True,True,unknown,unknown,,high,True,CRM Pro v3.2.4,True,3.2.1,CRM Pro v3.2.4,High,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+94,2,False,,False,consistent across both Chrome and Firefox,,,False,True,,configuration_change,True,high,False,,True,,,High,1.0,database_connection_failed,one-time,database_connection_failed,critical,single system
+95,1,,True,False,consistent across both Chrome and Firefox,Chrome 122,Chrome,,False,windows_10,unknown,,,,v3.14.2,True,4.2.1,v3.14.2,High,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,single system
+95,2,,,True,unknown,unknown,Chrome,,True,unknown,unknown,,high,,unknown,,unknown,unknown,unknown,,database_connection_failed,unknown,database_connection_failed,high,single system
+95,3,,,False,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,False,windows_11,No recent changes,False,,,unknown,True,,unknown,Medium,,unknown_error,recurring,unknown_error,high,multiple systems
+95,4,False,,True,consistent across both Chrome and Firefox,,,True,False,,configuration_change,True,high,False,,False,,,Medium,2.0,database_connection_failed,recurring,database_connection_failed,high,inventory_module
+95,5,,,True,consistent across both Chrome and Firefox,,,,False,,software_update,True,,,unknown,True,,unknown,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+96,1,,True,False,consistent across both Chrome and Firefox,Chrome 122,Chrome,False,True,windows_10,configuration_change,True,high,False,v3.14.2,False,unknown,v3.14.2,High,,timeout,recurring,timeout,critical,multiple systems
+96,2,,,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,,False,,software_update,True,,True,,True,,,High,,API timeout after webhook validation fails,,API timeout after webhook validation fails,critical,single system
+97,1,,True,False,unknown,unknown,unknown,False,False,unknown,unknown,False,high,False,v3.8.2,True,unknown,v3.8.2,High,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,crm_system
+97,2,False,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,,,windows_10,software_update,True,high,,v3.14.2,True,unknown,v3.14.2,Medium,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,single system
+97,3,,,True,consistent across both Chrome and Firefox,,,False,False,,configuration_change,True,,,,True,,,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,inventory_module
+97,4,True,,True,consistent across both Chrome and Firefox,unknown,unknown,,True,unknown,hardware_upgrade,True,high,,unknown,True,unknown,unknown,High,,database_connection_failed,one-time,database_connection_failed,critical,Database
+97,5,,,True,consistent across both Chrome and Firefox,,,,True,,unknown,False,,,,True,,,,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,multiple systems
+100,1,,True,False,consistent across both Chrome and Firefox,Chrome 120,Chrome,,False,windows_10,software_update,True,,,v3.14.2,True,3.2.1,v3.14.2,High,,Database connection failed,recurring,Database connection failed,high,inventory_module
+100,2,,,True,unknown,,,False,False,unknown,configuration_change,False,unknown,,3.2.1,,unknown,3.2.1,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,high,single system
+100,3,,,True,consistent across both Chrome and Firefox,,Chrome,,False,Windows,software_update,True,,,v3.2.1,True,,v3.2.1,High,,timeout,recurring,timeout,critical,multiple systems
+100,4,True,,True,,,,,False,,configuration_change,True,,,unknown,True,,unknown,,,database_connection_timeout_exception,,database_connection_timeout_exception,high,multiple systems
+100,5,True,,,unknown,unknown,unknown,,True,unknown,unknown,,,,unknown,True,unknown,unknown,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,high,multiple systems
+100,6,True,,False,unknown,,,,True,unknown,configuration_change,True,high,True,v3.14.2,True,unknown,v3.14.2,Medium,,503: Service Unavailable,recurring,503: Service Unavailable,critical,inventory_module
+101,1,False,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,True,Windows,software_update,True,high,False,v4.2.3,True,unknown,v4.2.3,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,inventory_module
+101,2,,,True,consistent across both Chrome and Firefox,,Chrome,,True,,configuration_change,True,high,,v3.14.2,True,,v3.14.2,Medium,120.0,configuration_error,one-time,configuration_error,high,crm_system
+104,1,False,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,True,unknown,software_update,True,high,False,Nosco CRM v5.2.1,False,unknown,Nosco CRM v5.2.1,Medium,,database_connection_failed,one-time,database_connection_failed,high,single system
+104,2,,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,,high,True,,True,,,Medium,,,,,high,multiple systems
+104,3,,,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,,,unknown,software_update,True,unknown,,unknown,True,unknown,unknown,Medium,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,multiple systems
+104,4,False,,True,consistent across both Chrome and Firefox,unknown,unknown,,True,unknown,configuration_change,True,high,,unknown,False,unknown,unknown,Medium,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+105,1,True,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,False,unknown,software_update,True,high,False,CRM Pro v3.2.1,True,unknown,CRM Pro v3.2.1,High,,timeout,recurring,timeout,critical,multiple systems
+105,2,,False,True,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,unknown,False,high,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,critical,multiple systems
+105,3,False,,True,,,,,True,,configuration_change,True,,,,True,,,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,multiple systems
+106,1,,True,False,consistent across both Chrome and Firefox,,Chrome,False,True,,no recent changes,False,,,,True,2.5.3,,High,,503: Service Unavailable,one-time,503: Service Unavailable,critical,multiple systems
+106,2,,,True,unknown,unknown,unknown,,True,unknown,unknown,,unknown,True,unknown,True,unknown,unknown,unknown,4.0,unknown,unknown,unknown,high,multiple systems
+106,3,False,,False,consistent across both Chrome and Firefox,,,False,,,No recent changes,False,,,,False,,,,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,inventory_module
+108,1,,True,False,consistent across both Chrome and Firefox,Chrome 120,Google Chrome,,True,unknown,yes,True,high,,v4.2.1,True,unknown,v4.2.1,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+108,2,,,False,consistent across both Chrome and Firefox,,,,True,,configuration_change,,,,,True,,,Medium,,503: Service Unavailable,one-time,503: Service Unavailable,high,single system
+108,3,,False,True,consistent across both Chrome and Firefox,,unknown,False,False,unknown,hardware_upgrade,True,,,,True,unknown,,Medium,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+108,4,False,False,True,unknown,unknown,unknown,False,True,unknown,configuration_change,True,unknown,False,unknown,True,unknown,unknown,unknown,,timeout,unknown,timeout,critical,multiple systems
+108,5,True,,True,consistent across both Chrome and Firefox,98.0.4758.102,Google Chrome,,False,,unknown,True,high,,unknown,True,,unknown,,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+108,6,,,True,consistent across both Chrome and Firefox,"98.0.4758.102, Chrome 122",Chrome,,True,,configuration_change,,high,True,,True,,,High,48.0,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,"inventory_module, single system"
+109,1,,True,False,consistent across both Chrome and Firefox,Chrome 120,Chrome,,False,unknown,unknown,,,,v4.2.3,False,4.2.3,v4.2.3,High,,503: Service Unavailable,one-time,503: Service Unavailable,critical,inventory_module
+109,2,,,True,,,,,False,,unknown,,high,,,,,,,,503: Service Unavailable,unknown,503: Service Unavailable,high,single system
+109,3,False,,True,consistent across both Chrome and Firefox,,Chrome,False,False,unknown,software_update,True,,False,unknown,False,,unknown,High,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,multiple systems
+110,1,False,True,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,False,False,unknown,software_update,True,high,False,unknown,True,unknown,unknown,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+110,2,,,True,consistent across both Chrome and Firefox,,Chrome,,True,,configuration_change,,,,v2.4.7,True,,v2.4.7,Medium,,503: Service Unavailable,,503: Service Unavailable,high,single system
+110,3,False,False,True,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,yes,True,high,False,2.4.7,True,unknown,2.4.7,High,,timeout,recurring,timeout,critical,multiple systems
+110,4,True,,True,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,configuration_change,True,high,False,unknown,True,unknown,unknown,High,2.0,database_connection_failed,recurring,database_connection_failed,critical,multiple systems
+112,1,,True,False,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,False,unknown,configuration_change,True,high,False,Nosco CRM v2.4.2,True,2.4.2,Nosco CRM v2.4.2,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,inventory_module
+112,2,,,True,,,,,True,,unknown,,,True,,True,,,,,unknown_error,,unknown_error,critical,inventory_module
+112,3,,,False,consistent across both Chrome and Firefox,unknown,Chrome,,False,unknown,configuration_change,True,,,unknown,True,unknown,unknown,High,,timeout,recurring,timeout,critical,multiple systems
+112,4,,,False,consistent across both Chrome and Firefox,,Chrome,True,False,,configuration_change,True,,,v2.4.3,False,,v2.4.3,Medium,30.0,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,single system
+113,1,,True,True,consistent across both Chrome and Firefox,Chrome 120,Google Chrome,,True,unknown,software_update,True,,,CRM Pro v3.2.4,True,4.2.1,CRM Pro v3.2.4,High,,Database connection failed: Error 503,recurring,Database connection failed: Error 503,critical,crm_system
+113,2,False,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,False,,True,unknown,True,,unknown,High,,unknown_error,,unknown_error,critical,multiple systems
+113,3,False,,True,consistent across both Chrome and Firefox,,,,False,unknown,hardware_upgrade,True,,False,,True,,,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+113,4,,,True,consistent across both Chrome and Firefox,unknown,unknown,True,True,unknown,unknown,True,high,,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,multiple systems
+114,1,False,,True,consistent across both Chrome and Firefox,,,False,False,windows_10,software_update,True,,False,3.4.2-SE,True,,3.4.2-SE,High,,API timeout after webhook validation fails,recurring,API timeout after webhook validation fails,critical,single system
+114,2,False,,True,unknown,unknown,unknown,False,True,unknown,unknown,,high,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,critical,single system
+114,3,,,False,consistent across both Chrome and Firefox,,,,False,unknown,configuration_change,True,,,3.2.4,,,3.2.4,Medium,,configuration_error,recurring,configuration_error,high,multiple systems
+114,4,False,,False,consistent across both Chrome and Firefox,unknown,unknown,,,unknown,no recent changes,True,,,CRM Pro v3.2.4,False,unknown,CRM Pro v3.2.4,Low,4.0,unknown_error,one-time,unknown_error,medium,crm_system
+116,1,,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,,,,software_update,True,,,v4.2.1,True,,v4.2.1,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+116,2,,,False,consistent across both Chrome and Firefox,,,False,True,,no recent changes,False,high,False,,False,,,,4.0,503: Service Unavailable,,503: Service Unavailable,high,single system
+117,1,,True,True,unknown,Chrome 120,Google Chrome,False,True,windows_10,software_update,True,,,,True,,,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,single system
+117,2,,,True,unknown,unknown,unknown,,True,unknown,unknown,,,False,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,multiple systems
+117,3,False,,True,consistent across both Chrome and Firefox,,Chrome,False,False,unknown,software_update,True,high,False,v4.2.1,False,unknown,v4.2.1,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+117,4,,,True,,,,False,True,,configuration_change,True,,,,True,,,High,,,,,critical,inventory_module
+118,1,False,True,False,consistent across both Chrome and Firefox,Chrome 122,Chrome,,False,windows_10,configuration_change,True,,,CRM Pro v3.2.4,True,v3.14.2,CRM Pro v3.2.4,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,inventory_module
+118,2,,,True,consistent across both Chrome and Firefox,,,,False,,no recent changes,True,,,,,,,Medium,,unknown_error,one-time,unknown_error,high,single system
+118,3,False,False,True,consistent across both Chrome and Firefox,98.0.4758.102,Edge,False,False,windows_10,yes,True,high,False,unknown,False,unknown,unknown,High,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+118,4,False,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,,False,unknown,unknown,,high,,v5.2.1,,,v5.2.1,Medium,,timeout,one-time,timeout,high,single system
+118,5,False,,True,unknown,,,,True,unknown,unknown,False,,,,True,unknown,,unknown,,unknown,unknown,unknown,critical,multiple systems
+118,6,,,True,consistent across both Chrome and Firefox,,Chrome,False,True,Windows Server 2019,configuration_change,True,high,False,v5.2.1a,False,,v5.2.1a,High,,configuration_error,one-time,configuration_error,high,inventory_module
+119,1,,True,False,consistent across both Chrome and Firefox,Chrome 120,Chrome,,True,unknown,unknown,,high,,v4.2.1,True,4.2.1,v4.2.1,Medium,,Database connection failed: Error 503,recurring,Database connection failed: Error 503,critical,inventory_module
+119,2,,,True,consistent across both Chrome and Firefox,,,False,False,,configuration_change,,,False,,False,,,,,,,,,multiple systems
+119,3,,,True,consistent across both Chrome and Firefox,,,False,False,windows_10,yes,True,,False,,True,,,,,database_connection_timeout_exception,,database_connection_timeout_exception,critical,single system
+119,4,False,,True,consistent across both Chrome and Firefox,unknown,unknown,,True,unknown,configuration_change,True,high,,v4.2.1,False,4.2.1,v4.2.1,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,inventory_module
+119,5,False,,True,consistent across both Chrome and Firefox,,Firefox,False,False,,configuration_change,True,,False,,True,,,High,,503: Service Unavailable,recurring,503: Service Unavailable,critical,single system
+119,6,,,True,unknown,unknown,unknown,,True,unknown,unknown,True,,,unknown,True,unknown,unknown,unknown,48.0,unknown,unknown,unknown,critical,multiple systems
+120,1,False,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,True,unknown,software_update,True,high,False,v4.2.1,True,unknown,v4.2.1,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,single system
+120,2,,,False,unknown,unknown,unknown,,False,unknown,unknown,True,unknown,,unknown,False,unknown,unknown,unknown,,timeout,unknown,timeout,high,inventory_module
+120,3,False,True,False,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,False,False,unknown,software_update,True,high,False,3.2.1,True,unknown,3.2.1,High,,timeout,recurring,timeout,critical,multiple systems
+120,4,,,True,,,,True,True,,,,,False,,False,,,,,,,,,
+120,5,False,,True,,,,False,False,,,True,,False,,True,,,,,,,,critical,multiple systems
+121,1,,True,False,consistent across both Chrome and Firefox,,,False,False,,configuration_change,True,,False,Nosco CRM v2.4.2,True,,Nosco CRM v2.4.2,High,,Timeout Exception (Code 504),one-time,Timeout Exception (Code 504),critical,inventory_module
+121,2,False,,True,consistent across both Chrome and Firefox,,unknown,False,False,unknown,configuration_change,False,,,Nosco v2.4.2,False,unknown,Nosco v2.4.2,Medium,,unknown_error,unknown,unknown_error,high,multiple systems
+121,3,,,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,,True,windows_11,no recent changes,,,,3.2.1,True,,3.2.1,High,,timeout,,timeout,critical,multiple systems
+121,4,,,True,unknown,,unknown,False,True,unknown,configuration_change,True,high,False,3.1.x,False,unknown,3.1.x,Medium,,unknown_error,unknown,unknown_error,high,inventory_module_API
+121,5,,,,consistent across both Chrome and Firefox,,,,,,configuration_change,True,,,,True,,,High,,,,,critical,multiple systems
+121,6,,,False,unknown,unknown,unknown,,True,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+122,1,False,True,True,consistent across both Chrome and Firefox,Chrome 121,Chrome,False,False,unknown,configuration_change,True,high,False,v4.1.8,True,unknown,v4.1.8,Medium,,configuration_error,one-time,configuration_error,critical,multiple systems
+122,2,,,,,,,,,,,,,,,,,,,,,,,,
+122,3,False,,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,False,True,unknown,software_update,True,high,False,unknown,False,unknown,unknown,High,,system_error,one-time,system_error,critical,multiple systems
+122,4,True,,True,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,configuration_change,True,high,True,3.7.2,True,unknown,3.7.2,Medium,90.0,configuration_error,recurring,configuration_error,critical,single system
+123,1,,True,False,consistent across both Chrome and Firefox,Chrome 122,Chrome,,,,hardware_upgrade,True,,,v3.14.2,True,,v3.14.2,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+123,2,,,True,unknown,unknown,unknown,,False,unknown,unknown,,,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,high,single system
+123,3,,,True,consistent across both Chrome and Firefox,,,False,False,,hardware_upgrade,True,,False,,False,,,High,,configuration_error,recurring,configuration_error,high,multiple systems
+123,4,True,,True,consistent across both Chrome and Firefox,,,,False,,configuration_change,True,,,3.2.1,True,,3.2.1,High,,configuration_error,one-time,configuration_error,critical,single system
+124,1,True,False,True,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,unknown,False,high,False,unknown,True,unknown,unknown,High,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,multiple systems
+124,2,False,,True,consistent across both Chrome and Firefox,unknown,unknown,True,True,unknown,configuration_change,True,high,True,unknown,True,unknown,unknown,Medium,,configuration_error,recurring,configuration_error,high,multiple systems
+125,1,False,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,True,unknown,software_update,True,high,False,v4.2.7,True,4.2.7,v4.2.7,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,inventory_module
+125,2,,,False,consistent across both Chrome and Firefox,,unknown,False,False,unknown,configuration_change,True,,,unknown,True,unknown,unknown,Medium,,configuration_error,recurring,configuration_error,high,multiple systems
+125,3,,,True,consistent across both Chrome and Firefox,,,,,windows_10,no recent changes,,,,3.2.1,True,,3.2.1,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,single system
+125,4,True,,True,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,configuration_change,True,high,False,3.2.1,False,unknown,3.2.1,Medium,,timeout,one-time,timeout,high,single system
+125,5,True,,True,unknown,,unknown,False,False,unknown,unknown,False,unknown,False,unknown,False,unknown,unknown,unknown,,unknown,recurring,unknown,high,crm_system
+126,1,,True,False,unknown,Chrome 129,Chrome,,True,windows_11,unknown,,unknown,,v3.14.2,True,unknown,v3.14.2,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,critical,multiple systems
+126,2,False,,False,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,True,True,unknown,yes,True,high,False,v5.7.1,True,unknown,v5.7.1,High,90.0,configuration_error,unknown,configuration_error,critical,single system
+127,1,,True,False,consistent across both Chrome and Firefox,,Chrome,,True,,software_update,True,,,,True,,,High,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,single system
+127,2,,,True,unknown,unknown,unknown,,False,unknown,unknown,,high,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,high,unknown
+127,3,,,False,consistent across both Chrome and Firefox,Chrome 122,Chrome,,False,windows_10,No recent changes,False,,,unknown,False,,unknown,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,single system
+127,4,True,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,True,,False,v2.4.1,True,,v2.4.1,High,,database_connection_failed,one-time,database_connection_failed,critical,crm_system
+127,5,True,,False,unknown,,,False,True,unknown,unknown,True,,,unknown,True,,unknown,high,,database_connection_timeout,unknown,database_connection_timeout,critical,single system
+127,6,False,,,,,,True,False,,unknown,True,high,,v3.2.4,,3.2.1,v3.2.4,Medium,,,recurring,,high,inventory_module
+128,1,,True,True,consistent across both Chrome and Firefox,,Chrome,,,,configuration_change,True,,,Nosco CRM v2.4.1,True,,Nosco CRM v2.4.1,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,inventory_module
+128,2,,,True,,,,,False,Windows Server 2022,software_update,True,,False,,False,,,,,,,,,single system
+128,3,False,,True,consistent across both Chrome and Firefox,,,,True,Linux,configuration_change,False,high,,,True,unknown,,High,,503: Service Unavailable,recurring,503: Service Unavailable,critical,single system
+128,4,True,,True,consistent across both Chrome and Firefox,,,,False,,configuration_change,,high,,,True,,,High,,,,,critical,multiple systems
+129,1,False,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,True,unknown,software_update,True,high,False,v2.4.7,True,2.5.3,v2.4.7,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+129,2,,,True,consistent across both Chrome and Firefox,,,True,False,,configuration_change,True,,True,v3.14.2,True,other,v3.14.2,Medium,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,single system
+129,3,,,True,consistent across both Chrome and Firefox,,,False,False,,configuration_change,True,,,,True,,,,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+131,1,True,True,True,consistent across both Chrome and Firefox,Chrome 125.0.6422.142,Chrome,False,True,unknown,configuration_change,True,unknown,True,CRM v3.7.1,True,unknown,CRM v3.7.1,High,,API Gateway Timeout (Error 504),unknown,API Gateway Timeout (Error 504),critical,multiple systems
+131,2,,,True,consistent across both Chrome and Firefox,unknown,unknown,,True,unknown,configuration_change,True,high,True,unknown,True,unknown,unknown,High,30.0,unknown_error,unknown,unknown_error,critical,single system
+132,1,True,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,,True,unknown,configuration_change,True,,,Nosco CRM v4.2.3,True,4.2.3,Nosco CRM v4.2.3,High,,Database connection failed: Error 503,recurring,Database connection failed: Error 503,critical,multiple systems
+132,2,False,,True,consistent across both Chrome and Firefox,,,,True,,,True,high,True,,True,,,Medium,2.0,database_connection_failed,,database_connection_failed,critical,single system
+133,1,,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,True,Windows POS,unknown,False,high,True,stripe-v3.2.1,True,2.7.1,stripe-v3.2.1,High,,API timeout after webhook validation fails,unknown,API timeout after webhook validation fails,critical,multiple systems
+133,2,False,,True,consistent across both Chrome and Firefox,"98.0.4758.102, Chrome 122",Chrome,,True,unknown,configuration_change,True,high,True,v3.14.2,True,unknown,v3.14.2,High,,configuration_error,one-time,configuration_error,critical,multiple systems
+133,3,False,,True,consistent across both Chrome and Firefox,unknown,unknown,,True,unknown,configuration_change,True,high,,unknown,True,unknown,unknown,High,,database_connection_failed,recurring,database_connection_failed,critical,multiple systems
+134,1,,True,True,consistent across both Chrome and Firefox,Chrome 112,Chrome,,,macOS,configuration_change,,,,unknown,True,unknown,unknown,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+134,2,,,True,consistent across both Chrome and Firefox,,,,False,,configuration_change,True,,,,True,,,,,database_connection_failed,recurring,database_connection_failed,critical,multiple systems
+134,3,,,True,consistent across both Chrome and Firefox,,,False,False,unknown,hardware_upgrade,True,,,unknown,False,,unknown,Low,,503: Service Unavailable,one-time,503: Service Unavailable,high,multiple systems
+134,4,True,,True,consistent across both Chrome and Firefox,,API,,False,,configuration_change,True,,False,,,,,High,,timeout,,timeout,high,multiple systems
+134,5,True,,True,unknown,,unknown,False,True,unknown,unknown,False,unknown,False,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,high,unknown
+137,1,,,True,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,configuration_change,True,high,False,v2.1.48,True,unknown,v2.1.48,Medium,,configuration_error,recurring,configuration_error,high,multiple systems
+137,2,,,True,consistent across both Chrome and Firefox,,,,,,configuration_change,,,,,True,,,High,,,,,critical,multiple systems
+138,1,False,True,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,,False,windows_10,software_update,True,high,False,Nosco CRM v2.4.1,True,,Nosco CRM v2.4.1,High,,Database connection failed: Timeout exception (Error 503),one-time,Database connection failed: Timeout exception (Error 503),critical,single system
+138,2,False,False,True,,,,False,True,,unknown,True,,False,,False,,,,,,unknown,,,multiple systems
+138,3,,,True,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,unknown,,,,unknown,,unknown,unknown,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,critical,single system
+138,4,False,,True,consistent across both Chrome and Firefox,unknown,unknown,,True,unknown,unknown,,high,True,unknown,True,unknown,unknown,Medium,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,multiple systems
+139,1,,True,,consistent across both Chrome and Firefox,Chrome 120,Chrome,,,,configuration_change,True,,,v2.4.1,True,,v2.4.1,High,,503: Service Unavailable,recurring,503: Service Unavailable,critical,inventory_module
+139,2,,,True,consistent across both Chrome and Firefox,,,,True,,software_update,True,,True,v3.14.2,True,other,v3.14.2,High,4.0,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,inventory_module
+140,1,False,True,False,consistent across both Chrome and Firefox,Chrome 122,Chrome,False,True,unknown,unknown,False,unknown,False,unknown,True,unknown,unknown,unknown,,configuration_error,unknown,configuration_error,critical,multiple systems
+140,2,,,True,,,,,False,Windows Server 2022,,,,,,,,,,,,,,,single system
+140,3,False,,True,consistent across both Chrome and Firefox,,,False,False,unknown,yes,True,,,unknown,False,unknown,unknown,High,,timeout,recurring,timeout,critical,multiple systems
+140,4,True,,True,unknown,,,,True,unknown,configuration_change,True,high,True,4.2.1,True,4.2.1,4.2.1,High,,database_connection_failed,recurring,database_connection_failed,critical,multiple systems
+140,5,True,,True,consistent across both Chrome and Firefox,unknown,unknown,,,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,high,single system
+141,1,False,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,True,windows_11,software_update,True,high,False,CRM Pro v3.2.4,True,4.2.1,CRM Pro v3.2.4,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,inventory_module
+141,2,,,True,unknown,unknown,unknown,,True,unknown,configuration_change,True,high,,unknown,True,unknown,unknown,unknown,,system_error,unknown,system_error,critical,single system
+141,3,,,True,consistent across both Chrome and Firefox,,,False,True,Linux,configuration_change,False,,,,True,,,,,503: Service Unavailable,,503: Service Unavailable,critical,single system
+142,1,,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,,True,windows_10,no recent changes,,high,,,True,,,Medium,,database_connection_failed,one-time,database_connection_failed,high,single system
+142,2,,,True,,,,,True,,unknown,True,,,,True,,,,,database_connection_timeout_exception,,database_connection_timeout_exception,high,multiple systems
+142,3,,False,True,consistent across both Chrome and Firefox,,unknown,,False,unknown,no recent changes,False,,,,True,,,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,critical,multiple systems
+144,1,False,,True,consistent across both Chrome and Firefox,Chrome 119.0.0,Chrome,,True,unknown,unknown,,,,v4.2.1,True,4.2.1,v4.2.1,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,high,crm_system
+144,2,False,,True,unknown,unknown,unknown,,True,unknown,configuration_change,False,high,True,4.2.1,True,4.2.1,4.2.1,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,medium,crm_system
+145,1,,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,,,unknown,software_update,True,,,CRM v2.4.2,True,2.4.2,CRM v2.4.2,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,inventory_module
+145,2,,,True,unknown,,,False,False,,,False,,,,False,,,,,,,,,
+145,3,,,True,consistent across both Chrome and Firefox,,"Chrome, Edge",False,False,windows_11,software_update,True,critical,,v2.4.2,True,,v2.4.2,High,,503: Service Unavailable,one-time,503: Service Unavailable,critical,single system
+145,4,True,,False,consistent across both Chrome and Firefox,,,False,False,,configuration_change,True,high,False,3.2.2,False,,3.2.2,High,4.0,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+145,5,False,,False,unknown,unknown,unknown,False,True,unknown,unknown,True,high,False,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,critical,single system
+146,1,,True,False,consistent across both Chrome and Firefox,Chrome 122,Chrome,False,True,windows_10,software_update,True,high,,v4.2.1,False,unknown,v4.2.1,Medium,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,single system
+146,2,,,True,consistent across both Chrome and Firefox,,unknown,,True,unknown,unknown,,,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,high,single system
+146,3,,,,consistent across both Chrome and Firefox,,,,,Windows Server 2022,unknown,,,,,True,,,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,critical,multiple systems
+146,4,False,False,True,unknown,unknown,unknown,False,True,unknown,configuration_change,True,unknown,True,unknown,True,unknown,unknown,Medium,4.0,timeout,unknown,timeout,high,multiple systems
+146,5,,,,unknown,unknown,unknown,False,False,unknown,unknown,,unknown,,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,single system
+146,6,True,,,,,,,False,,configuration_change,True,,,,,,,,,database_migration_conflict,one-time,database_migration_conflict,high,multiple systems
+147,1,,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,,True,Windows Server 2019,yes,True,,,CRM Pro v3.2.4,True,4.2.1,CRM Pro v3.2.4,,,database_connection_timeout_exception,,database_connection_timeout_exception,critical,single system
+147,2,False,,True,,,,,True,,software_update,True,,True,,True,unknown,,High,24.0,timeout,recurring,timeout,critical,multiple systems
+147,3,,,True,unknown,unknown,unknown,,True,unknown,unknown,True,unknown,,unknown,True,unknown,unknown,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,critical,multiple systems
+148,1,,True,True,consistent across both Chrome and Firefox,unknown,unknown,,True,unknown,software_update,True,unknown,,v3.8.2,True,unknown,v3.8.2,High,,timeout,recurring,timeout,critical,multiple systems
+148,2,,,True,consistent across both Chrome and Firefox,Chrome 122,Google Chrome,,False,windows_10,No recent changes,,,,CRM Pro v3.2.4,,,CRM Pro v3.2.4,,,,,,,single system
+148,3,False,,True,consistent across both Chrome and Firefox,Chrome 121.0.0/Edge 120.0.2,"Chrome, Edge",,,"Windows Server 2019, windows_10, windows_11",software_update,True,high,,CRM Pro v3.2.4,True,,CRM Pro v3.2.4,High,48.0,"503: Service Unavailable, API timeout after webhook validation fails, Database connection timeout, Database migration conflict, Other, database_connection_timeout_exception, system_error",recurring,"503: Service Unavailable, API timeout after webhook validation fails, Database connection timeout, Database migration conflict, Other, database_connection_timeout_exception, system_error",critical,multiple systems
+150,1,False,True,False,consistent across both Chrome and Firefox,Chrome 120,Chrome,,True,unknown,software_update,True,high,False,v2.4.1,True,2.4.1,v2.4.1,Medium,,Database connection failed - Error Code: DB-503,one-time,Database connection failed - Error Code: DB-503,critical,inventory_module
+150,2,,,True,unknown,,,,True,,unknown,,high,,,True,,,,,503: Service Unavailable,,503: Service Unavailable,critical,multiple systems
+150,3,,,True,consistent across both Chrome and Firefox,,Chrome,,False,unknown,No recent changes,False,high,False,unknown,True,unknown,unknown,High,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+150,4,False,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,False,high,True,v3.14.2,True,other,v3.14.2,High,,database_connection_failed,recurring,database_connection_failed,critical,inventory_module
+151,1,,True,False,,Chrome 120,Chrome,,,,software_update,True,,,,True,3.2.4,,High,,database_connection_failed,recurring,database_connection_failed,critical,single system
+151,2,,,True,consistent across both Chrome and Firefox,,,,False,,software_update,True,high,True,3.2.4,True,3.2.4,3.2.4,High,2.0,database_connection_timeout,one-time,database_connection_timeout,critical,single system
+152,1,,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,True,unknown,software_update,True,,,Nosco CRM v3.2.1,True,v3.14.2,Nosco CRM v3.2.1,High,,503: Service Unavailable,one-time,503: Service Unavailable,critical,multiple systems
+152,2,,,True,consistent across both Chrome and Firefox,unknown,unknown,,True,unknown,unknown,True,high,,unknown,True,unknown,unknown,Medium,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,high,multiple systems
+153,1,True,True,True,consistent across both Chrome and Firefox,"98.0.4758.102, Chrome 122",Chrome,,True,windows_10,software_update,True,,,NexusCRM v5.2.1,True,,NexusCRM v5.2.1,High,,Error 500: Gateway Handshake Failed,recurring,Error 500: Gateway Handshake Failed,critical,multiple systems
+153,2,True,,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,,True,,configuration_change,True,,,v5.2.1,,,v5.2.1,,,configuration_error,recurring,configuration_error,critical,multiple systems
+153,3,False,,True,consistent across both Chrome and Firefox,Chrome 128,Chrome,,,unknown,configuration_change,True,high,,,True,,,High,,configuration_error,one-time,configuration_error,critical,multiple systems
+153,4,True,,,unknown,,unknown,,True,unknown,unknown,True,,,v5.2.1,True,,v5.2.1,High,,configuration_error,unknown,configuration_error,critical,single system
+153,5,True,,,,,,,True,,configuration_change,True,high,,v3.14.2,True,,v3.14.2,High,2.0,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,single system
+153,6,True,,False,unknown,unknown,unknown,False,True,unknown,unknown,True,unknown,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,critical,multiple systems
+154,1,False,True,True,consistent across both Chrome and Firefox,"98.0.4758.102, Chrome 122","Chrome, Edge",,False,windows_10,software_update,True,high,False,v3.14.2,True,,v3.14.2,High,,timeout,recurring,timeout,high,multiple systems
+154,2,,,False,unknown,,unknown,,False,unknown,unknown,,high,,unknown,,unknown,unknown,unknown,24.0,API timeout after webhook validation fails,unknown,API timeout after webhook validation fails,high,multiple systems
+154,3,,,True,consistent across both Chrome and Firefox,unknown,unknown,,,unknown,unknown,,unknown,,SAP ERP 2023,True,unknown,SAP ERP 2023,unknown,,timeout,recurring,timeout,critical,multiple systems
+155,1,False,True,False,consistent across both Chrome and Firefox,Chrome 122,Chrome,False,False,unknown,yes,True,high,False,CRM Pro v3.2.4,False,2.5.3,CRM Pro v3.2.4,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,single system
+155,2,,,True,unknown,unknown,unknown,,False,unknown,configuration_change,True,unknown,,v2.3.1,True,unknown,v2.3.1,unknown,,unknown,unknown,unknown,high,multiple systems
+155,3,,,True,consistent across both Chrome and Firefox,,,,False,unknown,No recent changes,False,,,,True,,,,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+155,4,False,,True,consistent across both Chrome and Firefox,,,True,False,,configuration_change,True,,False,,False,,,,,503: Service Unavailable,one-time,503: Service Unavailable,critical,multiple systems
+155,5,,,True,consistent across both Chrome and Firefox,unknown,unknown,,,unknown,unknown,,high,,unknown,,unknown,unknown,unknown,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+156,1,False,False,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,True,unknown,unknown,True,high,False,v3.2.1,False,unknown,v3.2.1,High,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,multiple systems
+156,2,,,False,unknown,,,,False,,unknown,,,,,,,,,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,high,single system
+156,3,False,True,True,consistent across both Chrome and Firefox,,Chrome,,False,Windows Server 2019,unknown,False,,False,unknown,False,unknown,unknown,Medium,,unknown_error,recurring,unknown_error,high,inventory_module
+156,4,False,,True,unknown,,,False,True,unknown,unknown,,,False,,True,,,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,high,multiple systems
+156,5,,False,True,unknown,,,False,False,unknown,unknown,False,,False,unknown,True,unknown,unknown,unknown,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+156,6,False,,True,consistent across both Chrome and Firefox,unknown,unknown,True,True,unknown,unknown,,high,False,unknown,False,unknown,unknown,Medium,,unknown,unknown,unknown,high,single system
+158,1,,True,True,consistent across both Chrome and Edge,Chrome 120,Chrome,,False,Windows Server 2019,yes,True,high,,Nosco CRM v5.2.1,True,v5.2.1,Nosco CRM v5.2.1,High,,Database connection failed - Error 503,recurring,Database connection failed - Error 503,critical,inventory_module
+158,2,False,,True,consistent across both Chrome and Firefox,,,False,True,,No recent changes,False,high,False,unknown,False,,unknown,Medium,2.0,database_connection_timeout_exception,one-time,database_connection_timeout_exception,high,single system
+159,1,,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,,True,unknown,unknown,,,,4.2.3,True,unknown,4.2.3,High,,Database connection failed: Error 503,unknown,Database connection failed: Error 503,critical,inventory_module
+159,2,False,False,True,consistent across both Chrome and Firefox,unknown,Chrome,False,True,unknown,software_update,True,high,True,v4.2.3,True,unknown,v4.2.3,High,,database_connection_failed,one-time,database_connection_failed,critical,single system
+159,3,True,,False,consistent across both Chrome and Firefox,Chrome 122,Chrome,,False,windows_10,configuration_change,True,high,,unknown,True,unknown,unknown,Medium,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,multiple systems
+159,4,False,,True,unknown,,,False,True,unknown,configuration_change,True,high,False,,False,,,Medium,,,one-time,,high,single system
+159,5,,,True,consistent across both Chrome and Firefox,,,,False,windows_10,software_update,True,high,,,True,,,High,,503: Service Unavailable,one-time,503: Service Unavailable,critical,single system
+159,6,True,,False,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,configuration_change,True,high,False,unknown,False,unknown,unknown,Low,,configuration_error,unknown,configuration_error,high,single system
+160,1,,True,False,consistent across both Chrome and Firefox,Chrome 120,Chrome,,True,unknown,software_update,True,high,,2.4.5,True,unknown,2.4.5,High,,database_connection_failed,recurring,database_connection_failed,critical,single system
+160,2,,,True,unknown,unknown,unknown,,True,unknown,unknown,,high,,unknown,,unknown,unknown,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,critical,multiple systems
+160,3,True,,False,consistent across both Chrome and Firefox,unknown,unknown,True,False,unknown,no recent changes,False,unknown,False,2.4.5,False,unknown,2.4.5,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,critical,single system
+160,4,,,True,unknown,unknown,unknown,,False,unknown,unknown,False,,,unknown,,unknown,unknown,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,single system
+160,5,True,False,True,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,unknown,False,unknown,False,unknown,True,unknown,unknown,High,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+160,6,False,,True,,,,False,True,,configuration_change,True,,False,unknown,False,,unknown,High,,configuration_error,one-time,configuration_error,high,multiple systems
+161,1,False,True,False,unknown,Chrome 120,Chrome,False,True,unknown,unknown,False,high,False,Nosco CRM v2.4.1,True,unknown,Nosco CRM v2.4.1,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,single system
+161,2,,,True,consistent across both Chrome and Firefox,,,,,,configuration_change,,,,,,,,,,,,,,multiple systems
+161,3,,,True,consistent across both Chrome and Firefox,,,,,,no recent changes,False,,,,True,,,,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+161,4,False,,True,unknown,unknown,unknown,,False,unknown,configuration_change,True,,False,unknown,False,unknown,unknown,Medium,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,high,multiple systems
+161,5,True,,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,,True,unknown,configuration_change,True,high,,unknown,True,unknown,unknown,High,,unknown_error,recurring,unknown_error,critical,multiple systems
+161,6,,,False,consistent across both Chrome and Firefox,,unknown,,True,unknown,software_update,True,high,False,2.4.1,True,unknown,2.4.1,Medium,4.0,Database connection timeout,recurring,Database connection timeout,critical,single system
+162,1,,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,True,unknown,unknown,,,,5.1.2,True,unknown,5.1.2,unknown,,Database connection failed: Timeout exception (Error 503),unknown,Database connection failed: Timeout exception (Error 503),critical,multiple systems
+162,2,,,True,unknown,unknown,unknown,False,True,unknown,unknown,False,high,True,unknown,True,unknown,unknown,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,single system
+162,3,,,False,consistent across both Chrome and Firefox,,unknown,False,False,unknown,no recent changes,False,,,,True,,,unknown,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+162,4,True,,True,unknown,,,,True,,unknown,True,high,,5.1.3,True,unknown,5.1.3,unknown,,database_connection_failed,unknown,database_connection_failed,high,crm_system
+162,5,True,,,unknown,unknown,unknown,,,unknown,unknown,,,,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,unknown
+163,1,,True,False,consistent across both Chrome and Firefox,Chrome 120,Chrome,,False,unknown,software_update,True,high,False,Nosco CRM v2.3.4,True,2.3.4,Nosco CRM v2.3.4,Medium,,database_connection_failed,recurring,database_connection_failed,critical,inventory_module
+163,2,,,True,consistent across both Chrome and Firefox,,,False,False,,No recent changes,False,,False,,False,,,,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,high,single system
+163,3,,,False,consistent across both Chrome and Firefox,,,,,unknown,configuration_change,False,,,unknown,False,,unknown,Medium,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+163,4,True,,True,consistent across both Chrome and Firefox,,,True,True,,configuration_change,True,,,v3.14.2,True,,v3.14.2,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,inventory_module
+163,5,True,,True,consistent across both Chrome and Firefox,unknown,unknown,,,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+163,6,True,,True,unknown,,,False,True,,configuration_change,True,,,v2.3.4,True,,v2.3.4,High,,database_connection_failed,recurring,database_connection_failed,critical,single system
+164,1,,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,,,windows_10,software_update,True,,,Nosco version 2.4.1,True,,Nosco version 2.4.1,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,inventory_module
+164,2,,False,True,unknown,,unknown,False,True,unknown,yes,False,high,False,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,high,inventory_module
+164,3,,,True,consistent across both Chrome and Firefox,98.0.4758.102,Edge,,,macOS,hardware_upgrade,True,high,,v3.14.2,True,unknown,v3.14.2,High,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+164,4,True,,True,unknown,unknown,unknown,False,False,unknown,configuration_change,True,high,False,3.2.4,True,unknown,3.2.4,Medium,,database_connection_timeout,unknown,database_connection_timeout,critical,inventory_module
+164,5,False,,True,unknown,unknown,unknown,False,False,unknown,configuration_change,True,,False,unknown,False,unknown,unknown,High,,unknown,unknown,unknown,critical,multiple systems
+164,6,,,True,unknown,unknown,unknown,,True,unknown,configuration_change,True,unknown,,unknown,True,unknown,unknown,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,critical,multiple systems
+165,1,False,True,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,,,Windows,software_update,True,high,,v4.2.1,True,4.2.1,v4.2.1,High,,Database connection failed - Error 503,recurring,Database connection failed - Error 503,critical,multiple systems
+165,2,,,True,,,,,True,,,False,,,,,,,,,,,,,
+165,3,,,True,consistent across both Chrome and Firefox,,,,False,,unknown,,unknown,,CRM Pro v3.2.4,True,4.2.1,CRM Pro v3.2.4,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,critical,multiple systems
+166,1,False,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,True,unknown,configuration_change,False,,False,v5.1.2,True,unknown,v5.1.2,High,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,single system
+166,2,,,True,unknown,unknown,unknown,,True,unknown,unknown,,high,,unknown,,unknown,unknown,unknown,4.0,database_connection_timeout,unknown,database_connection_timeout,critical,multiple systems
+166,3,,,False,consistent across both Chrome and Firefox,,,False,True,Windows Server 2019,software_update,True,,,,True,,,High,,configuration_error,recurring,configuration_error,critical,single system
+166,4,False,,True,consistent across both Chrome and Firefox,,,True,False,,configuration_change,True,,False,CRM Pro v3.2.4,False,,CRM Pro v3.2.4,High,,configuration_error,recurring,configuration_error,high,multiple systems
+168,1,False,True,False,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,configuration_change,True,high,False,unknown,False,unknown,unknown,Medium,,database_connection_failed,one-time,database_connection_failed,high,multiple systems
+168,2,False,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,,,,unknown,,,unknown,,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,high,single system
+169,1,False,True,True,consistent across both Chrome and Firefox,Chrome 128.0.6613.114,Chrome,,False,Windows Server 2022,configuration_change,False,,False,CRM v4.8.2,True,4.8.2,CRM v4.8.2,High,4.0,Database connection timeout,one-time,Database connection timeout,critical,inventory_module
+169,2,False,,True,unknown,unknown,unknown,False,True,unknown,configuration_change,True,high,True,unknown,True,unknown,unknown,High,,database_connection_failed,unknown,database_connection_failed,,multiple systems
+169,3,False,,True,unknown,,,False,True,,unknown,False,unknown,False,,True,,,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,inventory_module
+170,1,,True,True,consistent across both Chrome and Firefox,,Chrome,,False,windows_10,software_update,True,,,CRM Pro v3.2.4,True,,CRM Pro v3.2.4,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+170,2,,False,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,,True,unknown,yes,True,high,True,unknown,True,unknown,unknown,High,4.0,503: Service Unavailable,recurring,503: Service Unavailable,critical,single system
+171,1,,,,,,,,,,,,,,,,,,,,,,,,
+171,2,,,True,consistent across both Chrome and Firefox,,unknown,,False,unknown,unknown,,,,unknown,,,unknown,unknown,,unknown,unknown,unknown,medium,single system
+171,3,,True,True,consistent across both Chrome and Firefox,Chrome 121,Chrome,,False,Linux,unknown,,unknown,,unknown,True,unknown,unknown,unknown,1.0,database_connection_timeout_exception,unknown,database_connection_timeout_exception,high,multiple systems
+171,4,True,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,False,True,unknown,software_update,True,high,True,v3.4.1,True,unknown,v3.4.1,High,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,single system
+172,1,,True,True,consistent across both Chrome and Firefox,Chrome 118,Chrome,,,unknown,unknown,False,,,CRM Platform v2.3.4,True,unknown,CRM Platform v2.3.4,unknown,,database_connection_failed,recurring,database_connection_failed,high,multiple systems
+172,2,,,True,unknown,,,,False,,unknown,,,,,,,,,,,,,,
+172,3,,,False,unknown,unknown,Chrome,,,unknown,hardware_upgrade,True,,,unknown,False,,unknown,Medium,,database_connection_failed,unknown,database_connection_failed,medium,single system
+173,1,False,True,True,unknown,unknown,unknown,False,True,unknown,software_update,True,high,False,Nosco 2.4.1,True,unknown,Nosco 2.4.1,Medium,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,multiple systems
+173,2,,,True,,,,,True,,,,high,True,,True,,,,,,,,,
+174,1,,True,True,consistent across both Chrome and Firefox,Chrome 119.0.0,Chrome,,,windows_10,hardware_upgrade,True,,,CRM v4.2.3,True,4.2.3,CRM v4.2.3,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,multiple systems
+174,2,,,True,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,unknown,False,unknown,,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,single system
+174,3,True,,True,consistent across both Chrome and Firefox,,Chrome,False,False,windows_10,software_update,True,high,False,unknown,False,unknown,unknown,High,,timeout,recurring,timeout,high,multiple systems
+175,1,,True,False,,,,,False,Windows Server 2016,no recent changes,False,,,,True,,,,,database_connection_failed,one-time,database_connection_failed,high,single system
+175,2,,,True,unknown,,unknown,,False,unknown,unknown,,unknown,False,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+175,3,,,True,consistent across both Chrome and Firefox,Chrome 98.0.4758.102,Chrome,,,unknown,No recent changes,,,,v3.14.2,,,v3.14.2,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,medium,single system
+175,4,,,True,unknown,unknown,unknown,,False,unknown,unknown,,unknown,False,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+176,1,,True,True,unknown,,,,True,unknown,,,,,,True,,,,,503: Service Unavailable,unknown,503: Service Unavailable,critical,multiple systems
+176,2,,,True,,,,,False,,unknown,,,,,True,,,,,,,,,
+178,1,True,True,False,consistent across both Chrome and Firefox,Chrome 125,Chrome,True,True,unknown,software_update,True,high,False,v3.2.1,True,unknown,v3.2.1,Medium,,timeout,recurring,timeout,high,multiple systems
+178,2,,,True,consistent across both Chrome and Firefox,unknown,unknown,,True,unknown,configuration_change,True,high,True,3.2.1,True,unknown,3.2.1,High,,timeout,one-time,timeout,critical,multiple systems
+178,3,True,,True,consistent across both Chrome and Firefox,,,False,False,windows_10,configuration_change,True,high,False,unknown,True,,unknown,High,,configuration_error,one-time,configuration_error,critical,single system
+179,1,False,True,True,consistent across both Chrome and Firefox,Chrome 121.0.0.1,Chrome,,True,windows_10,software_update,True,,,,True,,,,,database_connection_failed,,database_connection_failed,high,multiple systems
+179,2,,,True,consistent across both Chrome and Firefox,,,,False,,configuration_change,False,,,,,,,,,,,,high,multiple systems
+180,1,,True,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,,False,unknown,configuration_change,True,high,,CRM Pro v3.2.4,True,unknown,CRM Pro v3.2.4,Medium,,timeout,one-time,timeout,high,inventory_module
+180,2,,,,unknown,unknown,unknown,,True,unknown,unknown,,unknown,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,multiple systems
+180,3,False,,True,consistent across both Chrome and Firefox,"98.0.4758.102, Chrome 122","Chrome, Edge, Firefox, Google Chrome, Microsoft Edge",,False,,hardware_upgrade,True,,False,,True,,,,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+180,4,False,,True,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,configuration_change,True,high,False,unknown,False,unknown,unknown,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,multiple systems
+180,5,,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,,True,unknown,software_update,True,high,,CNC firmware v2.1.4,True,unknown,CNC firmware v2.1.4,Medium,,timeout,recurring,timeout,high,multiple systems
+180,6,,,True,unknown,,,,True,,,True,,,,True,,,,,,,,high,multiple systems
+181,1,,True,True,,,,,True,,,,,,,,,,,,503: Service Unavailable,,503: Service Unavailable,critical,single system
+181,2,,,True,,,,,False,,unknown,,,,,,,,,,503: Service Unavailable,,503: Service Unavailable,,single system
+183,1,True,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,True,False,unknown,software_update,True,,False,v3.2.1,True,,v3.2.1,High,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,multiple systems
+183,2,,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,,high,,,True,,,Medium,,configuration_error,,configuration_error,high,crm_system
+183,3,,,True,consistent across both Chrome and Firefox,,,,False,,No recent changes,,,,,True,,,,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+183,4,True,,True,consistent across both Chrome and Firefox,,,,,,,True,,,,True,,,High,,database_connection_failed,,database_connection_failed,critical,multiple systems
+183,5,True,,False,consistent across both Chrome and Firefox,unknown,unknown,,,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,timeout,unknown,timeout,high,inventory_module
+185,1,False,,True,consistent across both Chrome and Firefox,,,False,False,,no recent changes,,,False,,False,,,Medium,,database_connection_failed,one-time,database_connection_failed,high,multiple systems
+185,2,,,True,unknown,unknown,unknown,,False,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+185,3,,True,,,,,,,,configuration_change,True,,,v3.14.2,,3.2.1,v3.14.2,Medium,,,,,high,single system
+185,4,False,,True,unknown,unknown,unknown,,True,unknown,unknown,,unknown,,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+185,5,,,False,unknown,,,,False,unknown,unknown,,unknown,,,False,,,unknown,,unknown,unknown,unknown,high,multiple systems
+185,6,,,True,unknown,unknown,unknown,,True,unknown,unknown,,unknown,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,critical,unknown
+186,1,,,True,consistent across both Chrome and Firefox,Chrome 120.0.0,Chrome,,False,Windows 10,software_update,True,,,unknown,True,,unknown,High,,503: Service Unavailable,one-time,503: Service Unavailable,critical,single system
+186,2,,,True,unknown,unknown,unknown,,False,unknown,configuration_change,True,unknown,,unknown,,unknown,unknown,Medium,,unknown,unknown,unknown,critical,crm_system
+186,3,,,,unknown,,,,False,,unknown,True,,,,,,,unknown,,timeout,unknown,timeout,high,multiple systems
+186,4,False,,True,consistent across both Chrome and Firefox,,unknown,,,unknown,unknown,True,unknown,,PostgreSQL 12.4,True,unknown,PostgreSQL 12.4,Medium,,database_connection_failed,recurring,database_connection_failed,high,multiple systems
+186,5,True,,False,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,unknown,True,high,False,unknown,False,unknown,unknown,High,,unknown_error,one-time,unknown_error,critical,multiple systems
+186,6,True,,True,consistent across both Chrome and Firefox,,,,True,unknown,configuration_change,True,,True,unknown,True,unknown,unknown,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+189,1,,True,False,consistent across both Chrome and Firefox,Chrome 120.0.0,Chrome,,False,unknown,unknown,,,,v4.2.5,True,4.2.5,v4.2.5,Medium,,Database connection timeout,one-time,Database connection timeout,high,multiple systems
+189,2,,,True,unknown,unknown,unknown,,True,unknown,unknown,,unknown,,unknown,True,unknown,unknown,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,single system
+189,3,,,True,consistent across both Chrome and Firefox,Edge 120,Edge,,False,unknown,software_update,True,,True,v4.2.5,True,unknown,v4.2.5,Medium,36.0,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,single system
+189,4,,,True,unknown,,,False,True,unknown,software_update,True,,False,v4.2.5,True,unknown,v4.2.5,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,medium,multiple systems
+189,5,False,,True,consistent across both Chrome and Firefox,unknown,unknown,False,,unknown,configuration_change,True,high,,CRM Pro v3.2.4,True,4.2.5,CRM Pro v3.2.4,high,8.0,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+189,6,,,True,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,configuration_change,True,high,,v4.2.5,True,unknown,v4.2.5,High,,database_connection_failed,recurring,database_connection_failed,critical,multiple systems
+190,1,,,False,consistent across both Chrome and Firefox,,,,False,,No recent changes,,,,2.3.1,True,2.3.1,2.3.1,High,,database_connection_failed,one-time,database_connection_failed,critical,crm_system
+190,2,,False,True,unknown,unknown,unknown,,False,unknown,unknown,,unknown,False,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+190,3,,True,False,consistent across both Chrome and Firefox,,Chrome,,,windows_10,No recent changes,False,,,,False,,,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,medium,inventory_module
+190,4,,,True,unknown,,,,False,,,,,,,,,,,,unknown_error,unknown,unknown_error,,
+190,5,,,,unknown,,,,False,,unknown,,,,,,,,unknown,,,unknown,,critical,unknown
+191,1,False,,True,consistent across both Chrome and Firefox,112,Chrome,False,True,unknown,configuration_change,True,high,False,4.5.2,True,4.5.2,4.5.2,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,single system
+191,2,,,True,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,configuration_change,True,high,False,v3.14.2,False,unknown,v3.14.2,High,,configuration_error,recurring,configuration_error,critical,multiple systems
+191,3,False,False,True,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,configuration_change,True,high,False,Oracle 21.4.0.2,True,unknown,Oracle 21.4.0.2,High,,database_connection_failed,recurring,database_connection_failed,critical,single system
+191,4,,,True,unknown,,unknown,,False,unknown,configuration_change,True,high,,CNC-PRO v3.1,True,unknown,CNC-PRO v3.1,High,,configuration_error,unknown,configuration_error,critical,inventory_module
+192,1,,True,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,,,windows_10,software_update,True,,,v3.14.2,True,,v3.14.2,,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,single system
+192,2,,False,True,unknown,unknown,unknown,False,True,unknown,configuration_change,True,high,False,PostgreSQL 12.7+,False,unknown,PostgreSQL 12.7+,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,multiple systems
+193,1,False,True,True,consistent across both Chrome and Firefox,,,False,True,,configuration_change,True,,False,v3.14.2,True,4.2.1,v3.14.2,High,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,crm_system
+193,2,True,,False,consistent across both Chrome and Firefox,,,,True,,configuration_change,True,high,True,v3.14.2,True,4.2.1,v3.14.2,Medium,,configuration_error,one-time,configuration_error,high,single system
+193,3,False,,True,unknown,unknown,unknown,,,unknown,unknown,,unknown,,v4.2.1,True,unknown,v4.2.1,unknown,,timeout,unknown,timeout,critical,multiple systems
+193,4,,,True,unknown,unknown,unknown,,True,unknown,unknown,False,high,,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,multiple systems
+193,5,,,False,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,unknown,True,unknown,,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,critical,single system
+194,1,False,True,False,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,True,windows_10,software_update,True,high,False,v2.4.2,True,unknown,v2.4.2,Medium,,database_connection_failed,one-time,database_connection_failed,critical,single system
+194,2,,,True,consistent across both Chrome and Firefox,unknown,unknown,,True,Windows Server 2022,unknown,,high,True,unknown,True,unknown,unknown,unknown,4.0,database_connection_failed,unknown,database_connection_failed,critical,multiple systems
+194,3,True,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,,,Windows Server 2019,configuration_change,True,,,unknown,True,unknown,unknown,Medium,,503: Service Unavailable,recurring,503: Service Unavailable,high,multiple systems
+194,4,True,,False,consistent across both Chrome and Firefox,,,,,,configuration_change,True,high,,v2.4.2,False,,v2.4.2,Medium,,configuration_error,one-time,configuration_error,high,single system
+194,5,True,,False,consistent across both Chrome and Firefox,,,,False,windows_10,no recent changes,True,high,False,,False,,,Low,,503: Service Unavailable,recurring,503: Service Unavailable,high,multiple systems
+195,1,,True,False,consistent across both Chrome and Firefox,Chrome 122,Google Chrome,,True,windows_10,configuration_change,True,high,False,CRM Pro v3.2.4,False,4.2.1,CRM Pro v3.2.4,High,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,crm_system
+195,2,,,True,unknown,unknown,unknown,,True,unknown,unknown,,,,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,multiple systems
+195,3,False,,True,consistent across both Chrome and Firefox,unknown,unknown,,False,windows_10,configuration_change,True,high,False,unknown,True,unknown,unknown,High,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+195,4,,,True,unknown,unknown,unknown,,True,windows_10,configuration_change,True,high,False,PostgreSQL 12.7+,True,unknown,PostgreSQL 12.7+,High,,timeout,unknown,timeout,critical,single system
+195,5,False,,True,unknown,,,False,False,Windows Server 2019,unknown,False,,False,PostgreSQL 13.5,True,,PostgreSQL 13.5,High,,unknown_error,unknown,unknown_error,critical,multiple systems
+195,6,True,,True,consistent across both Chrome and Firefox,,,False,False,windows_10,configuration_change,True,,False,,False,,,High,,configuration_error,recurring,configuration_error,high,single system
+196,1,True,True,False,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,False,unknown,software_update,True,high,False,v4.2.1,True,4.2.1,v4.2.1,Medium,,503: Service Unavailable,recurring,503: Service Unavailable,high,multiple systems
+196,2,,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,False,False,windows_10,unknown,,high,False,v3.14.2,True,unknown,v3.14.2,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,critical,single system
+196,3,,,True,consistent across both Chrome and Firefox,"98.0.4758.102, Chrome 122",Chrome,,,windows_10,configuration_change,True,,,v3.14.2,True,,v3.14.2,High,,unknown_error,recurring,unknown_error,critical,single system
+196,4,False,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,True,True,unknown,software_update,True,high,False,4.2.1,True,unknown,4.2.1,High,,configuration_error,one-time,configuration_error,critical,multiple systems
+196,5,True,False,True,consistent across both Chrome and Firefox,unknown,Chrome,True,True,unknown,unknown,True,high,False,unknown,True,unknown,unknown,unknown,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+197,1,True,,False,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,configuration_change,True,high,False,3.2.1,True,unknown,3.2.1,High,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,multiple systems
+197,2,,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,,True,unknown,configuration_change,True,high,True,v3.14.2,True,unknown,v3.14.2,High,,database_connection_failed,recurring,database_connection_failed,critical,single system
+197,3,False,,True,consistent across both Chrome and Firefox,,Chrome,False,False,windows_10,yes,True,high,False,unknown,False,unknown,unknown,High,,unknown_error,recurring,unknown_error,critical,multiple systems
+197,4,True,,False,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,configuration_change,True,unknown,,v3.2.1,False,unknown,v3.2.1,Low,20.0,configuration_error,recurring,configuration_error,critical,single system
+200,1,,,True,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,configuration_change,True,high,,v3.1.02,True,4.7.2,v3.1.02,High,,503: Service Unavailable,one-time,503: Service Unavailable,critical,single system
+200,2,True,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,True,high,True,4.7.2,True,,4.7.2,High,2.0,503: Service Unavailable,recurring,503: Service Unavailable,critical,single system
+203,1,,,True,consistent across both Chrome and Firefox,98.0.4758.80,Chrome,,True,windows_10,unknown,,,,2.4.5,,2.4.5,2.4.5,High,,database_connection_failed,recurring,database_connection_failed,critical,single system
+203,2,,,False,,,,False,True,,,,,False,,True,,,,,,,,critical,multiple systems
+204,1,,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,,False,unknown,software_update,True,high,False,v4.2.1,True,4.2.1,v4.2.1,Medium,,database_connection_failed,recurring,database_connection_failed,critical,multiple systems
+204,2,False,,True,consistent across both Chrome and Firefox,,,False,True,,configuration_change,False,high,True,CRM Pro v3.2.4,True,,CRM Pro v3.2.4,High,2.0,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,crm_system
+205,1,True,False,True,consistent across both Chrome and Firefox,unknown,unknown,False,True,Windows 11,configuration_change,True,high,False,3.2.1,True,unknown,3.2.1,High,,"configuration_error, database_connection_failed",one-time,"configuration_error, database_connection_failed",critical,multiple systems
+205,2,,,True,,,,,True,windows_10,configuration_change,True,high,True,unknown,True,,unknown,High,30.0,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,single system
+206,1,,,True,consistent across both Chrome and Firefox,,,False,False,,No recent changes,,,,v3.14.2,True,4.2.1,v3.14.2,,,database_connection_failed,one-time,database_connection_failed,high,multiple systems
+206,2,,False,True,unknown,unknown,unknown,,True,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+206,3,,True,,consistent across both Chrome and Firefox,"98.0.4758.102, Chrome 122","Chrome, Edge, Firefox, Google Chrome, Microsoft Edge",,,"Linux, Windows Server 2019, macOS, windows_10, windows_11","No recent changes, configuration_change, hardware_upgrade, software_update, yes",False,,,"3.2.1, 3.2.2, 3.3.0, CRM Pro v3.2.4, PostgreSQL 12.7+, unknown",True,"2.5.3, 3.2.1, 4.1.9, 4.2.0, 4.2.1, 4.8.2, other","3.2.1, 3.2.2, 3.3.0, CRM Pro v3.2.4, PostgreSQL 12.7+, unknown",High,,"configuration_error, database_connection_failed, timeout, unknown_error",recurring,"configuration_error, database_connection_failed, timeout, unknown_error",critical,single system
+206,4,,,True,unknown,unknown,unknown,False,True,unknown,unknown,False,unknown,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,single system
+206,5,,,,unknown,,,,True,,,,,,,,,,,,,,,,
+206,6,,,False,,,,,False,,,,,False,,False,,,,,,,,,
+207,1,False,,True,consistent across both Chrome and Firefox,,Chrome,,False,windows_10,no recent changes,True,,,CRM Pro v3.2.4,False,3.2.1,CRM Pro v3.2.4,Medium,,database_connection_failed,recurring,database_connection_failed,high,multiple systems
+207,2,,,True,unknown,,unknown,,False,unknown,unknown,,,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,critical,single system
+207,3,,True,,consistent across both Chrome and Firefox,,,,,,No recent changes,,,,4.2.1,,4.2.1,4.2.1,Medium,,database_connection_failed,one-time,database_connection_failed,high,single system
+207,4,,,False,unknown,,,,True,,,,,True,,True,,,,,,,,,
+207,5,,,False,consistent across both Chrome and Firefox,,,,,,unknown,,,,,,,,unknown,,,unknown,,critical,single system
+210,1,,,True,consistent across both Chrome and Firefox,,,,False,,configuration_change,True,,,,,,,High,,,,,critical,single system
+210,2,,,False,unknown,,,,False,unknown,unknown,,,,,False,,,unknown,,unknown,unknown,unknown,unknown,unknown
+210,3,False,True,False,consistent across both Chrome and Firefox,"98.0.4758.102, Chrome 122",Chrome,False,False,unknown,No recent changes,False,high,False,unknown,False,unknown,unknown,Medium,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,high,single system
+210,4,False,,True,unknown,unknown,unknown,False,True,unknown,unknown,False,unknown,False,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+211,1,,,True,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,unknown,False,high,,CRM Pro v3.2.4,True,2.5.3,CRM Pro v3.2.4,High,,database_connection_failed,recurring,database_connection_failed,critical,crm_system
+211,2,,,False,unknown,unknown,unknown,False,False,unknown,unknown,False,unknown,False,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,critical,inventory_module
+211,3,False,True,False,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,False,False,unknown,No recent changes,False,high,False,unknown,False,unknown,unknown,Medium,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,inventory_module
+211,4,,,True,unknown,unknown,unknown,,True,unknown,configuration_change,,unknown,True,unknown,True,unknown,unknown,Medium,,unknown,unknown,unknown,high,inventory_module
+211,5,,,True,unknown,,,,False,,configuration_change,False,,,,,,,,,unknown_error,unknown,unknown_error,unknown,inventory_module
+211,6,,,False,,,,False,False,,unknown,,,False,,False,,,unknown,,,unknown,,unknown,unknown
+212,1,,,,unknown,,unknown,,True,unknown,,,unknown,,unknown,,unknown,unknown,unknown,,database_connection_failed,unknown,database_connection_failed,high,inventory_module
+212,2,,,False,unknown,unknown,unknown,False,False,unknown,unknown,False,unknown,False,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+212,3,,True,,consistent across both Chrome and Firefox,"Chrome 98, Firefox 95","Chrome, Firefox",,,unknown,No recent changes,,,,,,,,unknown,,Database connection failed: Error 503,recurring,Database connection failed: Error 503,high,multiple systems
+212,4,,,True,unknown,unknown,unknown,False,True,unknown,unknown,False,unknown,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+212,5,,,,unknown,unknown,unknown,,False,unknown,unknown,,,,4.2.3,,unknown,4.2.3,unknown,,unknown,unknown,unknown,unknown,crm_system
+214,1,True,True,True,consistent across both Chrome and Firefox,Chrome 121.0.6167.185,Chrome,False,False,windows_10,unknown,False,unknown,False,CRM v5.2.1,True,unknown,CRM v5.2.1,unknown,,Database connection timeout (Error 504),unknown,Database connection timeout (Error 504),critical,single system
+214,2,,,True,unknown,unknown,unknown,,True,unknown,unknown,,high,False,PostgreSQL 12.7+,True,unknown,PostgreSQL 12.7+,unknown,,database_connection_timeout,unknown,database_connection_timeout,critical,single system
+214,3,,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,,,windows_10,software_update,True,high,,PostgreSQL 12.7+,True,,PostgreSQL 12.7+,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+214,4,,,True,,,,,False,,configuration_change,True,,,,False,,,,,,,,critical,multiple systems
+214,5,,,True,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,configuration_change,True,high,,3.2.1,,unknown,3.2.1,Medium,,unknown_error,recurring,unknown_error,high,single system
+217,1,,,True,unknown,unknown,unknown,False,True,unknown,configuration_change,True,unknown,,3.2.1,,unknown,3.2.1,unknown,,database_connection_failed,unknown,database_connection_failed,critical,crm_system
+217,2,,False,True,unknown,unknown,unknown,,False,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+217,3,,True,,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,medium,multiple systems
+217,4,,,True,unknown,,,,False,,unknown,,,False,,True,,,,,database_connection_failed,,database_connection_failed,critical,multiple systems
+217,5,False,,False,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,configuration_change,False,unknown,True,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,single system
+218,1,,True,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,,False,unknown,unknown,,,,unknown,True,unknown,unknown,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+218,2,,,True,unknown,,unknown,,True,unknown,unknown,,unknown,,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,unknown
+218,3,,,False,unknown,unknown,unknown,,False,unknown,no recent changes,False,unknown,,unknown,False,4.2.1,unknown,unknown,,unknown,unknown,unknown,critical,inventory_module
+219,1,,,False,consistent across both Chrome and Firefox,Chrome 122,Google Chrome,,,windows_10,No recent changes,,,,CRM Pro v3.2.4,,4.2.5,CRM Pro v3.2.4,Medium,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,high,single system
+219,2,,False,,unknown,,,,False,,,,,,,,,,,,,,,,
+219,3,False,True,False,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,unknown,False,unknown,False,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,multiple systems
+219,4,,,True,unknown,unknown,unknown,False,True,unknown,configuration_change,,unknown,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,multiple systems
+219,5,False,,False,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,No recent changes,False,unknown,False,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,high,multiple systems
+219,6,,,True,unknown,,unknown,,,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+220,1,False,,True,consistent across both Chrome and Firefox,,,,False,,configuration_change,True,,,3.2.5,False,,3.2.5,Medium,,database_connection_timeout_exception,,database_connection_timeout_exception,critical,single system
+220,2,,,True,unknown,unknown,unknown,,False,unknown,unknown,False,unknown,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+220,3,,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,,,windows_10,hardware_upgrade,True,,,SQL Server 2019,True,,SQL Server 2019,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,single system
+220,4,,,True,unknown,,,False,True,,configuration_change,True,unknown,False,unknown,True,unknown,unknown,Medium,,unknown,unknown,unknown,medium,single system
+220,5,,,False,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,unknown,False,unknown,False,unknown,False,unknown,unknown,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,multiple systems
+220,6,,,True,unknown,unknown,unknown,,,unknown,unknown,,unknown,,3.2.5,,3.2.1,3.2.5,unknown,,unknown,unknown,unknown,high,crm_system
+223,1,False,True,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,,,windows_10,unknown,True,high,False,v3.14.2,True,2.5.3,v3.14.2,High,,configuration_error,unknown,configuration_error,critical,multiple systems
+223,2,,,True,unknown,,,,True,,configuration_change,,,,,True,,,unknown,,database_connection_failed,unknown,database_connection_failed,high,single system
+223,3,False,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,False,False,Linux,configuration_change,False,,False,unknown,True,,unknown,High,,timeout,recurring,timeout,high,multiple systems
+223,4,,False,True,consistent across both Chrome and Firefox,unknown,unknown,True,True,unknown,configuration_change,False,high,False,unknown,False,unknown,unknown,Medium,,timeout,recurring,timeout,high,multiple systems
+223,5,False,,True,consistent across both Chrome and Firefox,unknown,unknown,,True,unknown,unknown,False,high,False,unknown,False,unknown,unknown,Medium,,503: Service Unavailable,one-time,503: Service Unavailable,high,single system
+223,6,False,,True,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,configuration_change,True,high,False,v2.4.1,True,unknown,v2.4.1,Medium,30.0,configuration_error,recurring,configuration_error,high,multiple systems
+224,1,,,False,unknown,,,,True,,,,,,4.2.1,,,4.2.1,,,database_connection_failed,,database_connection_failed,high,crm_system
+224,2,,,True,unknown,unknown,unknown,False,False,unknown,unknown,False,unknown,False,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+224,3,False,,False,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,False,False,unknown,No recent changes,False,,False,unknown,False,unknown,unknown,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,high,inventory_module
+224,4,False,True,False,consistent across both Chrome and Firefox,Chrome 122,Chrome,False,True,unknown,unknown,False,high,True,unknown,True,unknown,unknown,Medium,,unknown_error,recurring,unknown_error,medium,single system
+224,5,False,True,False,consistent across both Chrome and Firefox,unknown,Chrome,False,False,unknown,unknown,False,,False,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,high,single system
+224,6,,,False,unknown,,,,True,,unknown,,high,,,,,,unknown,,,unknown,,unknown,unknown
+225,1,False,True,False,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,True,unknown,unknown,False,,False,,True,,,,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,crm_system
+225,2,,,True,unknown,unknown,unknown,,True,unknown,unknown,,high,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+225,3,,,False,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,no recent changes,False,,,unknown,False,,unknown,unknown,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+225,4,,,True,,,,False,True,,unknown,False,high,,unknown,True,,unknown,unknown,2.0,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,single system
+225,5,,,,consistent across both Chrome and Firefox,,,,True,,configuration_change,,,,CRM Pro v3.2.4,True,,CRM Pro v3.2.4,High,,configuration_error,,configuration_error,critical,crm_system
+225,6,False,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,True,,,,True,,,High,30.0,,one-time,,high,single system
+226,1,False,True,False,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,configuration_change,True,unknown,False,4.2.8,False,unknown,4.2.8,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,single system
+226,2,,,True,unknown,unknown,unknown,,True,unknown,configuration_change,True,high,,unknown,True,unknown,unknown,Medium,,database_connection_failed,one-time,database_connection_failed,critical,multiple systems
+226,3,,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,True,,,,True,,,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+226,4,,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,True,,True,,True,,,High,,,,,,multiple systems
+227,1,,,True,consistent across both Chrome and Firefox,,,,True,windows_10,configuration_change,True,high,True,v3.14.2,True,4.2.1,v3.14.2,High,,503: Service Unavailable,recurring,503: Service Unavailable,critical,single system
+227,2,,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,True,high,,,True,,,High,,configuration_error,one-time,configuration_error,critical,single system
+227,3,True,,True,consistent across both Chrome and Firefox,,,False,False,unknown,configuration_change,True,high,False,unknown,True,,unknown,High,2.0,configuration_error,one-time,configuration_error,critical,multiple systems
+229,1,,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,,False,unknown,configuration_change,True,,False,v5.1.2,True,unknown,v5.1.2,Medium,,database_connection_failed,recurring,database_connection_failed,critical,multiple systems
+229,2,,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,True,high,True,unknown,True,,unknown,High,4.0,timeout,recurring,timeout,critical,multiple systems
+229,3,,,True,consistent across both Chrome and Firefox,,,,False,unknown,unknown,,,,,True,,,High,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,multiple systems
+230,1,,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,True,windows_11,software_update,True,,,Nosco CRM v4.2.1,True,4.2.1,Nosco CRM v4.2.1,,,Database connection timeout,one-time,Database connection timeout,critical,single system
+230,2,False,,True,unknown,,unknown,,True,unknown,unknown,True,,,,True,,,unknown,,unknown,unknown,unknown,critical,multiple systems
+230,3,,,True,consistent across both Chrome and Firefox,unknown,unknown,,,unknown,configuration_change,True,high,,unknown,True,unknown,unknown,High,,timeout,recurring,timeout,critical,multiple systems
+230,4,True,,True,,,,,False,,unknown,True,,,v4.2.1,True,,v4.2.1,High,48.0,database_connection_timeout_exception,,database_connection_timeout_exception,critical,multiple systems
+230,5,True,,True,consistent across both Chrome and Firefox,,Chrome,,True,windows_10,configuration_change,True,high,,,True,,,High,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+231,1,,True,False,consistent across both Chrome and Firefox,,Chrome,,False,windows_10,No recent changes,False,,,,False,,,,,503: Service Unavailable,one-time,503: Service Unavailable,critical,inventory_module
+231,2,,,True,consistent across both Chrome and Firefox,unknown,unknown,,True,unknown,unknown,,high,False,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,critical,multiple systems
+231,3,,,False,unknown,unknown,unknown,False,False,unknown,no recent changes,False,,,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,critical,crm_system
+231,4,False,,False,consistent across both Chrome and Firefox,,,,True,,No recent changes,,,False,,False,,,,,,,,,single system
+232,1,True,True,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,,,windows_10,software_update,True,high,,3.2.1,True,,3.2.1,High,,503: Service Unavailable,one-time,503: Service Unavailable,critical,multiple systems
+232,2,,,True,consistent across both Chrome and Firefox,,Chrome,,True,,configuration_change,False,high,True,3.2.1,True,,3.2.1,High,4.0,configuration_error,,configuration_error,critical,multiple systems
+233,1,,,False,consistent across both Chrome and Firefox,Chrome 119.0.0,Chrome,False,True,unknown,configuration_change,True,high,False,unknown,True,unknown,unknown,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+233,2,False,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,True,high,,,True,,,,90.0,,,,critical,multiple systems
+234,1,,,False,consistent across both Chrome and Firefox,unknown,unknown,,True,unknown,unknown,,unknown,,unknown,False,unknown,unknown,unknown,,database_connection_failed,unknown,database_connection_failed,critical,multiple systems
+234,2,,,True,unknown,unknown,unknown,,False,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+234,3,,,,,,,,,,configuration_change,True,,,3.2.1,,3.2.1,3.2.1,,,database_connection_failed,,database_connection_failed,,
+234,4,False,True,True,unknown,unknown,unknown,False,True,unknown,software_update,True,unknown,True,unknown,True,unknown,unknown,Medium,,unknown,unknown,unknown,high,single system
+234,5,False,True,False,unknown,unknown,unknown,False,False,unknown,unknown,False,unknown,False,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,high,single system
+234,6,False,,True,consistent across both Chrome and Firefox,,,False,True,,,False,high,True,,True,,,High,,,one-time,,critical,multiple systems
+235,1,,,False,consistent across both Chrome and Firefox,Chrome 119.0.0,Chrome,,,unknown,unknown,False,,,v2.7.4,False,unknown,v2.7.4,unknown,,Error 503: Service Unavailable,unknown,Error 503: Service Unavailable,critical,inventory_module
+235,2,,False,True,,,,,False,,unknown,True,,,,,,,,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+235,3,,True,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,,,unknown,configuration_change,True,high,,unknown,True,unknown,unknown,High,,timeout,one-time,timeout,critical,multiple systems
+235,4,,,True,,,,False,True,,,,,True,,True,,,,,,,,,
+235,5,,,True,consistent across both Chrome and Firefox,,Chrome,False,False,windows_10,yes,True,,,CRM Pro v3.2.4,True,,CRM Pro v3.2.4,High,,timeout,one-time,timeout,critical,single system
+236,1,,True,,consistent across both Chrome and Firefox,unknown,unknown,,,windows_10,unknown,,,,2.4.3,,2.4.3,2.4.3,unknown,,database_connection_failed,unknown,database_connection_failed,high,single system
+236,2,,,True,unknown,unknown,unknown,,True,unknown,unknown,,unknown,,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,critical,single system
+236,3,,,False,consistent across both Chrome and Firefox,,Chrome,False,False,,software_update,True,,,unknown,False,unknown,unknown,Medium,,database_connection_failed,unknown,database_connection_failed,high,multiple systems
+239,1,,True,True,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,unknown,,,,3.2.1,True,3.2.1,3.2.1,unknown,,database_connection_failed,unknown,database_connection_failed,critical,crm_system
+239,2,,,True,,,,,True,,unknown,,,,,,,,,,,,,,unknown
+240,1,,True,True,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,unknown,False,unknown,False,2.1.4,True,unknown,2.1.4,unknown,,database_connection_failed,recurring,database_connection_failed,critical,crm_system
+240,2,,,False,unknown,,,,True,,,,,False,,True,,,unknown,,,,,critical,single system
+240,3,,,False,unknown,,unknown,,False,unknown,no recent changes,False,,,,False,,,unknown,,unknown,unknown,unknown,unknown,single system
+241,1,,True,False,consistent across both Chrome and Firefox,,Chrome,False,False,,software_update,True,,,,False,,,High,,API timeout after webhook validation fails,one-time,API timeout after webhook validation fails,high,multiple systems
+241,2,,,True,consistent across both Chrome and Firefox,unknown,unknown,,True,unknown,unknown,,high,True,v22.3.4,True,unknown,v22.3.4,unknown,,unknown_error,unknown,unknown_error,critical,multiple systems
+241,3,,,True,consistent across both Chrome and Firefox,,,,True,,hardware_upgrade,True,,,,True,,,,,timeout,recurring,timeout,high,multiple systems
+241,4,,,True,unknown,unknown,unknown,,True,unknown,unknown,,high,,unknown,,unknown,unknown,unknown,48.0,unknown,unknown,unknown,unknown,unknown
+241,5,,,True,unknown,unknown,unknown,,,unknown,unknown,False,unknown,,3.2.1,True,unknown,3.2.1,unknown,,unknown,unknown,unknown,critical,single system
+242,1,True,,,consistent across both Chrome and Firefox,Chrome 120.0.1,Chrome,,,unknown,software_update,True,high,,v2.3.4,True,unknown,v2.3.4,Medium,,timeout,recurring,timeout,critical,multiple systems
+242,2,,,True,consistent across both Chrome and Firefox,unknown,Chrome,,False,unknown,unknown,,high,False,unknown,True,unknown,unknown,High,,timeout,recurring,timeout,critical,multiple systems
+242,3,True,,,unknown,unknown,unknown,,False,unknown,unknown,True,unknown,,CRM Pro v3.8.16,True,unknown,CRM Pro v3.8.16,unknown,,unknown,unknown,unknown,high,multiple systems
+244,1,,,True,consistent across both Chrome and Firefox,unknown,unknown,False,True,windows_10,software_update,True,high,,unknown,True,unknown,unknown,High,,unknown_error,one-time,unknown_error,critical,multiple systems
+244,2,,,True,unknown,,,False,True,unknown,configuration_change,True,high,False,unknown,True,unknown,unknown,High,,configuration_error,unknown,configuration_error,critical,multiple systems
+244,3,True,False,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,False,True,Windows Server 2022,configuration_change,True,high,False,unknown,True,unknown,unknown,High,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,multiple systems
+244,4,True,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,,True,unknown,configuration_change,True,high,True,v4.7.9,True,4.8.3,v4.7.9,High,,configuration_error,one-time,configuration_error,critical,multiple systems
+244,5,True,,False,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,False,False,unknown,configuration_change,True,high,False,3.2.2,True,3.2.1,3.2.2,High,,database_connection_failed,recurring,database_connection_failed,critical,multiple systems
+244,6,,,,,,,,,,,,,,,,,,,,,,,,
+245,1,,True,False,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,True,Windows,software_update,True,,False,Nosco CRM version 4.2.3,False,4.2.3,Nosco CRM version 4.2.3,High,,Database connection failed: Error 503 Service Unavailable,one-time,Database connection failed: Error 503 Service Unavailable,critical,single system
+245,2,,,True,unknown,unknown,unknown,,True,unknown,configuration_change,True,high,,unknown,,unknown,unknown,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,high,multiple systems
+245,3,,,True,consistent across both Chrome and Firefox,,Chrome,False,False,,configuration_change,True,,,,True,,,High,,timeout,one-time,timeout,critical,multiple systems
+245,4,True,,False,consistent across both Chrome and Firefox,,,False,True,,configuration_change,True,high,True,unknown,True,,unknown,High,,configuration_error,,configuration_error,critical,multiple systems
+245,5,False,,False,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,,True,windows_10,yes,True,high,False,unknown,False,unknown,unknown,High,,unknown_error,one-time,unknown_error,critical,multiple systems
+247,1,,True,False,consistent across both Chrome and Firefox,Chrome 121.0.0,Chrome,,True,unknown,configuration_change,False,,,3.8.4,True,3.8.4,3.8.4,High,,timeout,recurring,timeout,critical,single system
+247,2,,False,True,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,unknown,False,high,False,unknown,False,unknown,unknown,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,inventory_module
+247,3,,,True,consistent across both Chrome and Firefox,,,,False,,hardware_upgrade,True,,False,,True,,,High,,database_connection_timeout_exception,,database_connection_timeout_exception,critical,multiple systems
+247,4,True,,,unknown,unknown,unknown,,False,unknown,configuration_change,True,high,,3.8.4,True,unknown,3.8.4,High,,timeout,one-time,timeout,critical,single system
+248,1,True,True,False,consistent across both Chrome and Firefox,Chrome 120,Chrome,,True,windows_10,unknown,False,,,,True,,,,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,inventory_module
+248,2,,,True,consistent across both Chrome and Firefox,,unknown,,False,unknown,configuration_change,True,high,True,v3.14.2,True,unknown,v3.14.2,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+249,1,False,True,True,consistent across both Chrome and Firefox,Chrome 124,Chrome,False,True,unknown,software_update,True,high,False,CRM v3.5.0,True,unknown,CRM v3.5.0,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+249,2,False,,True,consistent across both Chrome and Firefox,,,False,True,unknown,unknown,True,,True,,True,,,High,,configuration_error,recurring,configuration_error,high,multiple systems
+249,3,,False,True,consistent across both Chrome and Firefox,unknown,unknown,False,True,Linux,configuration_change,True,high,False,unknown,False,unknown,unknown,High,,timeout,one-time,timeout,high,multiple systems
+250,1,,,True,unknown,unknown,unknown,,True,unknown,unknown,,unknown,,unknown,True,unknown,unknown,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,inventory_module
+250,2,,,True,,,,,False,,unknown,,,True,,True,,,,,,,,,
+250,3,False,True,False,consistent across both Chrome and Firefox,,,False,False,unknown,no recent changes,False,,False,3.5.2,True,unknown,3.5.2,unknown,,database_connection_failed,recurring,database_connection_failed,high,multiple systems
+250,4,,,False,consistent across both Chrome and Firefox,unknown,unknown,,True,unknown,unknown,,unknown,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+251,1,,,True,consistent across both Chrome and Firefox,,,False,False,,software_update,True,,False,3.2.1,True,unknown,3.2.1,Medium,,timeout,one-time,timeout,high,multiple systems
+251,2,False,,True,unknown,117,Chrome,,,unknown,configuration_change,True,,,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,critical,unknown
+251,3,,,True,consistent across both Chrome and Firefox,,Edge,False,False,,configuration_change,True,,,,True,4.2.0,,,,,recurring,,critical,crm_system
+251,4,True,,True,unknown,,,,True,,unknown,True,high,,,,,,unknown,,unknown,unknown,unknown,critical,multiple systems
+252,1,,True,False,consistent across both Chrome and Firefox,,unknown,,False,unknown,no recent changes,,unknown,False,CRM Pro v3.2.4,False,4.2.1,CRM Pro v3.2.4,Medium,,database_connection_failed,recurring,database_connection_failed,high,crm_system
+252,2,False,,True,consistent across both Chrome and Firefox,,,False,False,,No recent changes,False,,False,,False,,,,,,,,,
+252,3,,,False,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,False,False,windows_10,hardware_upgrade,True,,,unknown,,,unknown,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,medium,multiple systems
+252,4,,,True,unknown,unknown,unknown,,True,unknown,unknown,,unknown,False,unknown,True,unknown,unknown,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,high,single system
+253,1,False,True,False,consistent across both Chrome and Firefox,Chrome 112,Chrome,False,True,unknown,unknown,False,unknown,False,unknown,False,4.2.1,unknown,Medium,,Database connection failed,one-time,Database connection failed,critical,single system
+253,2,,,True,unknown,,unknown,,True,unknown,unknown,,unknown,,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+254,1,False,True,False,consistent across both Chrome and Firefox,Chrome 110.0.5481.178,Chrome,False,False,unknown,unknown,False,unknown,False,4.2.1,True,4.2.1,4.2.1,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,single system
+254,2,False,,False,consistent across both Chrome and Firefox,,,False,False,,No recent changes,,,,,False,,,Medium,,,one-time,,high,single system
+254,3,,,False,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,No recent changes,False,,,unknown,False,,unknown,,,unknown_error,unknown,unknown_error,medium,single system
+254,4,,,True,unknown,,unknown,False,True,unknown,configuration_change,,unknown,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,single system
+254,5,,,False,consistent across both Chrome and Firefox,unknown,unknown,True,False,unknown,unknown,False,unknown,,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,high,single system
+255,1,,,,unknown,unknown,unknown,,False,unknown,software_update,True,unknown,,4.2.3,True,4.2.3,4.2.3,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,critical,multiple systems
+255,2,,False,True,unknown,unknown,unknown,False,False,unknown,unknown,False,unknown,False,unknown,False,unknown,unknown,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,high,inventory_module
+255,3,False,True,True,consistent across both Chrome and Firefox,109.0.5414.74,Chrome,False,False,unknown,configuration_change,True,high,False,4.2.3,True,unknown,4.2.3,High,,unknown_error,recurring,unknown_error,critical,multiple systems
+255,4,,,True,consistent across both Chrome and Firefox,,Chrome,False,True,,configuration_change,False,high,True,CRM Pro v3.2.4,True,,CRM Pro v3.2.4,High,,unknown_error,recurring,unknown_error,critical,multiple systems
+255,5,,,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,True,,unknown,unknown,,high,,CRM Pro v3.2.4,True,unknown,CRM Pro v3.2.4,High,,503: Service Unavailable,unknown,503: Service Unavailable,critical,crm_system
+255,6,False,,False,unknown,unknown,unknown,False,True,unknown,unknown,,,False,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,medium,single system
+258,1,False,True,False,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,unknown,False,unknown,False,4.2.1,False,4.2.1,4.2.1,unknown,,database_connection_failed,recurring,database_connection_failed,critical,single system
+258,2,False,,True,consistent across both Chrome and Firefox,,,,False,,configuration_change,,,,,False,,,,,database_connection_failed,one-time,database_connection_failed,,single system
+259,1,,,False,unknown,,,False,True,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,high,multiple systems
+259,2,,,True,unknown,unknown,unknown,,False,unknown,unknown,,,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+259,3,,,False,unknown,110.0.5481.178,Google Chrome,,False,unknown,No recent changes,False,unknown,,2.5.3,False,2.5.3,2.5.3,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,high,unknown
+259,4,,False,True,,,,,False,,,,,False,,True,,,,,,,,,
+259,5,False,True,False,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,False,False,unknown,unknown,False,,False,unknown,False,unknown,unknown,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,high,single system
+259,6,,,True,unknown,unknown,unknown,,False,unknown,unknown,,high,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+261,1,,,True,consistent across both Chrome and Firefox,,,False,True,unknown,software_update,True,,,CRM Pro v4.2.1,True,4.2.1,CRM Pro v4.2.1,High,,Database connection timeout,recurring,Database connection timeout,critical,multiple systems
+261,2,,,True,unknown,,unknown,,False,unknown,unknown,,high,False,unknown,,unknown,unknown,unknown,,database_connection_timeout,unknown,database_connection_timeout,high,single system
+261,3,,,True,consistent across both Chrome and Firefox,,unknown,,,unknown,software_update,True,unknown,,unknown,True,unknown,unknown,Medium,,database_connection_timeout,unknown,database_connection_timeout,critical,multiple systems
+261,4,True,,False,,,,False,False,,configuration_change,True,,,4.2.1,False,,4.2.1,,,database_connection_timeout_exception,,database_connection_timeout_exception,high,single system
+262,1,False,,True,consistent across both Chrome and Firefox,,unknown,False,True,unknown,software_update,True,,False,3.4.1,True,unknown,3.4.1,High,,Timeout exception,recurring,Timeout exception,critical,multiple systems
+262,2,,,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,,True,unknown,configuration_change,True,high,True,unknown,True,unknown,unknown,High,,configuration_error,recurring,configuration_error,critical,multiple systems
+262,3,True,,False,consistent across both Chrome and Firefox,,Chrome,False,True,windows_10,unknown,True,,,v3.3,True,,v3.3,High,,503: Service Unavailable,one-time,503: Service Unavailable,critical,multiple systems
+262,4,True,,True,,,,,,,configuration_change,True,,,,True,,,Medium,,configuration_error,one-time,configuration_error,high,multiple systems
+262,5,,,True,consistent across both Chrome and Firefox,unknown,unknown,,,unknown,unknown,,unknown,,unknown,True,unknown,unknown,unknown,,unknown_error,unknown,unknown_error,high,multiple systems
+264,1,False,,False,unknown,Chrome 109,Chrome,False,False,unknown,unknown,False,critical,False,v3.2.1,False,unknown,v3.2.1,High,,Database connection failed,unknown,Database connection failed,critical,inventory_module
+264,2,,True,False,unknown,unknown,unknown,False,False,unknown,unknown,,unknown,,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+264,3,,True,False,consistent across both Chrome and Firefox,,,False,False,,software_update,True,,,,True,,,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+264,4,,,True,unknown,unknown,unknown,,False,unknown,unknown,,unknown,True,unknown,True,unknown,unknown,unknown,,unknown,unknown,unknown,high,single system
+265,1,,,True,consistent across both Chrome and Firefox,,,,True,windows_10,configuration_change,True,high,,v7.3,True,4.1.8,v7.3,High,,configuration_error,recurring,configuration_error,critical,single system
+265,2,,,True,consistent across both Chrome and Firefox,,,False,True,,No recent changes,False,high,True,,True,,,High,20.0,API timeout after webhook validation fails,,API timeout after webhook validation fails,critical,multiple systems
+265,3,,,True,consistent across both Chrome and Firefox,,,,True,,,,,,,True,,,,,database_connection_timeout_exception,,database_connection_timeout_exception,high,multiple systems
+266,1,,,False,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,hardware_upgrade,True,high,False,unknown,False,unknown,unknown,Medium,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,inventory_module
+266,2,,True,False,unknown,,unknown,,False,unknown,unknown,True,,,,,,,,,unknown,,unknown,,
+266,3,False,,True,consistent across both Chrome and Firefox,,Chrome,False,,windows_10,software_update,True,,,CRM Pro v3.2.4,False,,CRM Pro v3.2.4,Medium,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,high,single system
+266,4,,,True,unknown,,,,False,,unknown,,unknown,False,,True,,,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,high,multiple systems
+266,5,False,,True,,,,,False,,,,,,,,,,,,,,,,
+266,6,False,,True,consistent across both Chrome and Firefox,unknown,unknown,,,unknown,unknown,False,high,,3.4.2,,unknown,3.4.2,Medium,,unknown_error,unknown,unknown_error,medium,single system
+268,1,,,False,consistent across both Chrome and Firefox,,unknown,,False,unknown,unknown,False,,,unknown,,unknown,unknown,unknown,,database_connection_failed,unknown,database_connection_failed,high,single system
+268,2,,,False,,,,,True,,,,,,,True,,,,,,,,,
+268,3,,,,,,,,,,,,,,,,,,,,,,,,
+268,4,False,,True,consistent across both Chrome and Firefox,,,,True,,no recent changes,,,,,,,,Medium,,unknown_error,one-time,unknown_error,high,single system
+269,1,,True,False,unknown,Chrome 112.0.0.1,Chrome,,False,unknown,unknown,False,,False,4.2.1,True,unknown,4.2.1,unknown,,timeout,unknown,timeout,critical,inventory_module
+269,2,,,False,unknown,unknown,unknown,,False,unknown,unknown,False,,,unknown,False,unknown,unknown,unknown,,unknown,unknown,unknown,critical,unknown
+269,3,,,True,consistent across both Chrome and Firefox,"98.0.4758.102, Chrome 122","Chrome, Edge",,,"Windows Server 2019, windows_10, windows_11","configuration_change, software_update, yes",True,,,v3.14.2,True,,v3.14.2,High,,"503: Service Unavailable, API timeout after webhook validation fails, Database connection timeout, Database migration conflict, Other, database_connection_timeout_exception, system_error",recurring,"503: Service Unavailable, API timeout after webhook validation fails, Database connection timeout, Database migration conflict, Other, database_connection_timeout_exception, system_error",critical,multiple systems
+269,4,,,True,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,unknown,False,high,True,unknown,True,unknown,unknown,High,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,inventory_module
+269,5,,,True,,,,,,,,,,,,,,,,,,,,critical,single system
+270,1,False,,False,consistent across both Chrome and Firefox,,,,False,,no recent changes,True,,False,NexusCRM v3.8.2,True,,NexusCRM v3.8.2,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+270,2,False,,True,consistent across both Chrome and Firefox,,,False,True,,yes,True,high,False,CRM Pro v3.2.4,True,unknown,CRM Pro v3.2.4,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,single system
+272,1,True,True,True,consistent across both Chrome and Firefox,unknown,unknown,,True,unknown,configuration_change,True,high,,CRM Pro v3.2.4,True,unknown,CRM Pro v3.2.4,High,,configuration_error,one-time,configuration_error,critical,multiple systems
+272,2,,,True,consistent across both Chrome and Firefox,,,False,False,,configuration_change,False,,False,,True,,,Medium,,configuration_error,one-time,configuration_error,high,single system
+272,3,,,True,consistent across both Chrome and Firefox,,Chrome,,True,unknown,configuration_change,True,high,,3.2.1,True,unknown,3.2.1,High,,configuration_error,recurring,configuration_error,critical,multiple systems
+272,4,False,,True,consistent across both Chrome and Firefox,,Chrome,False,False,,no recent changes,False,,False,CRM Pro v3.2.4,False,,CRM Pro v3.2.4,,,database_connection_timeout_exception,,database_connection_timeout_exception,high,single system
+272,5,,,True,consistent across both Chrome and Firefox,,,,False,,configuration_change,True,,,3.2.1,True,unknown,3.2.1,High,,unknown_error,recurring,unknown_error,high,crm_system
+273,1,True,True,True,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,configuration_change,True,high,True,CRM v5.2.1,True,unknown,CRM v5.2.1,High,,timeout,one-time,timeout,critical,single system
+273,2,,,True,unknown,,,,False,,unknown,,,,,True,,,,,unknown_error,,unknown_error,,unknown
+273,3,False,,True,consistent across both Chrome and Firefox,unknown,unknown,,,windows_10,no recent changes,False,high,,v3.8.4,True,unknown,v3.8.4,High,,system_error,one-time,system_error,critical,single system
+273,4,,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,,high,,,,,,Medium,,API throttling due to concurrent requests,one-time,API throttling due to concurrent requests,critical,multiple systems
+274,1,,True,True,,Chrome 120,Chrome,,,,unknown,True,,,,,,,,,,recurring,,high,multiple systems
+274,2,,,True,unknown,unknown,unknown,,True,unknown,unknown,False,high,False,unknown,False,unknown,unknown,unknown,,timeout,unknown,timeout,critical,multiple systems
+278,1,,True,True,consistent across both Chrome and Firefox,Chrome 118,Chrome,False,True,unknown,configuration_change,False,high,,v4.3.0,True,4.3.0,v4.3.0,Medium,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+278,2,False,,True,consistent across both Chrome and Firefox,,unknown,,False,unknown,unknown,,,False,unknown,,unknown,unknown,unknown,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+278,3,,,True,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,unknown,True,unknown,,v2.1.8,True,unknown,v2.1.8,unknown,,503: Service Unavailable,unknown,503: Service Unavailable,medium,single system
+279,1,False,True,True,consistent across both Chrome and Firefox,Chrome 119.0.0,Chrome,False,False,unknown,hardware_upgrade,True,high,False,unknown,True,unknown,unknown,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+279,2,True,,True,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,configuration_change,True,high,True,unknown,True,unknown,unknown,Medium,,unknown_error,one-time,unknown_error,critical,single system
+279,3,True,,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,True,False,unknown,configuration_change,True,high,False,CRM Pro v3.2.4,False,unknown,CRM Pro v3.2.4,High,,configuration_error,recurring,configuration_error,critical,multiple systems
+279,4,True,,True,consistent across both Chrome and Firefox,,,,True,,hardware_upgrade,True,,,3.8,False,,3.8,High,,configuration_error,one-time,configuration_error,critical,multiple systems
+280,1,,,True,consistent across both Chrome and Firefox,,,,,unknown,software_update,True,,,2.1.8,True,,2.1.8,Medium,,API timeout after webhook validation fails,recurring,API timeout after webhook validation fails,high,multiple systems
+280,2,False,,False,consistent across both Chrome and Firefox,,,False,True,,configuration_change,True,,True,,True,,,,,configuration_error,one-time,configuration_error,high,multiple systems
+281,1,,True,False,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,False,unknown,software_update,True,high,False,Nosco CRM v4.2.1,True,4.2.1,Nosco CRM v4.2.1,High,,503: Service Unavailable,one-time,503: Service Unavailable,critical,inventory_module
+281,2,,,True,consistent across both Chrome and Firefox,,unknown,,True,unknown,configuration_change,True,high,True,v4.2.1,True,unknown,v4.2.1,Medium,4.0,503: Service Unavailable,recurring,503: Service Unavailable,critical,single system
+281,3,,,True,consistent across both Chrome and Firefox,,,,True,,no recent changes,,high,,,True,,,,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+283,1,True,,True,,,,,,,configuration_change,True,high,,unknown,True,,unknown,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+283,2,,,True,consistent across both Chrome and Firefox,unknown,Chrome,,True,unknown,software_update,True,high,True,CRM Pro v3.2.4,True,4.3.5,CRM Pro v3.2.4,High,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+283,3,,,True,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,configuration_change,True,high,,4.3.5,True,unknown,4.3.5,Medium,,timeout,recurring,timeout,high,multiple systems
+284,1,,,True,consistent across both Chrome and Firefox,98.0.4758.102,Chrome,,,windows_10,configuration_change,True,,,,,,,High,,timeout,one-time,timeout,high,multiple systems
+284,2,False,,True,consistent across both Chrome and Firefox,Chrome 120+,Chrome,,True,unknown,software_update,True,critical,,v3.2.1,,unknown,v3.2.1,Medium,,timeout,unknown,timeout,critical,single system
+284,3,False,,False,consistent across both Chrome and Firefox,,Chrome,False,False,windows_10,configuration_change,True,high,False,v3.1.9,False,unknown,v3.1.9,Medium,,timeout,recurring,timeout,high,multiple systems
+284,4,False,,True,,,,,False,,software_update,True,,False,v3.2.1,False,,v3.2.1,Medium,,,,,,
+286,1,False,,True,consistent across both Chrome and Firefox,"98.0.4758.102, Chrome 122",,False,True,CentOS 8,configuration_change,True,,False,v5.1.8,True,,v5.1.8,High,,timeout,recurring,timeout,critical,single system
+286,2,False,,True,unknown,,,,True,unknown,configuration_change,True,high,True,v5.1.8,True,unknown,v5.1.8,high,30.0,TLS handshake failures,unknown,TLS handshake failures,critical,multiple systems
+287,1,,,True,unknown,,,,False,unknown,unknown,,,,,True,,,High,,API timeout after webhook validation fails,unknown,API timeout after webhook validation fails,critical,inventory_module
+287,2,,,False,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,unknown,,high,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,critical,multiple systems
+287,3,False,True,False,consistent across both Chrome and Firefox,,Chrome,,False,,unknown,True,,False,,True,,,unknown,,504: Service Unavailable,recurring,504: Service Unavailable,critical,multiple systems
+287,4,,,True,consistent across both Chrome and Firefox,,,True,False,,configuration_change,True,,,v10.3.2.1,False,,v10.3.2.1,High,,timeout,recurring,timeout,high,multiple systems
+287,5,,,True,consistent across both Chrome and Firefox,unknown,unknown,False,False,unknown,configuration_change,True,unknown,,10.3.2.1,True,unknown,10.3.2.1,Medium,,configuration_error,recurring,configuration_error,high,multiple systems
+287,6,True,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,,high,,,True,,,High,,,,,critical,multiple systems
+289,1,False,False,True,consistent across both Chrome and Firefox,Chrome 122,Chrome,False,False,windows_10,unknown,False,high,False,unknown,False,unknown,unknown,Medium,,timeout,unknown,timeout,critical,single system
+289,2,,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,True,high,,v3.14.2,True,,v3.14.2,,,timeout,,timeout,critical,multiple systems
+289,3,,,True,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,software_update,True,high,,v4.5.2,True,v4.5.2,v4.5.2,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+290,1,,True,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,,True,unknown,software_update,True,high,False,Nosco CRM v2.3.1,True,2.5.3,Nosco CRM v2.3.1,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,single system
+290,2,,,True,consistent across both Chrome and Firefox,,,,True,,No recent changes,False,high,True,,True,,,High,24.0,configuration_error,one-time,configuration_error,high,multiple systems
+290,3,,,True,consistent across both Chrome and Firefox,,,,,,configuration_change,True,,,,,,,,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+291,1,False,True,True,consistent across both Chrome and Firefox,Chrome 125,Chrome,,True,unknown,configuration_change,False,high,False,v3.14.2,True,unknown,v3.14.2,High,,database_connection_failed,one-time,database_connection_failed,critical,multiple systems
+291,2,,,True,,,,,True,,software_update,True,,True,v3.4.2,True,,v3.4.2,,,,,,high,crm_system
+291,3,,,False,,,,False,True,,yes,True,,,,True,,,High,,API timeout after webhook validation fails,,API timeout after webhook validation fails,critical,Stripe gateway
+291,4,True,,False,consistent across both Chrome and Firefox,unknown,unknown,,False,unknown,configuration_change,True,high,False,v3.4.2,False,unknown,v3.4.2,Medium,,configuration_error,one-time,configuration_error,high,multiple systems
+291,5,True,,False,unknown,unknown,unknown,False,False,unknown,configuration_change,True,high,False,unknown,False,unknown,unknown,Medium,,configuration_error,one-time,configuration_error,high,multiple systems
+292,1,,True,True,consistent across both Chrome and Firefox,,,False,False,,configuration_change,True,,False,3.2.1,True,3.2.1,3.2.1,High,,database_connection_timeout_exception,one-time,database_connection_timeout_exception,critical,multiple systems
+292,2,,,True,unknown,unknown,unknown,,True,unknown,configuration_change,True,high,,unknown,,unknown,unknown,Medium,24.0,database_connection_timeout_exception,recurring,database_connection_timeout_exception,high,multiple systems
+292,3,,,True,consistent across both Chrome and Firefox,,unknown,False,False,unknown,hardware_upgrade,True,high,,unknown,True,unknown,unknown,High,,503: Service Unavailable,recurring,503: Service Unavailable,critical,multiple systems
+293,1,True,True,False,consistent across both Chrome and Firefox,unknown,unknown,False,True,unknown,software_update,True,high,False,4.27.1,True,unknown,4.27.1,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,multiple systems
+293,2,False,,True,consistent across both Chrome and Firefox,,unknown,False,False,unknown,configuration_change,True,,False,unknown,False,unknown,unknown,Medium,,unknown_error,one-time,unknown_error,medium,multiple systems
+295,1,True,True,False,consistent across both Chrome and Firefox,Chrome 118,Chrome,,,unknown,configuration_change,True,high,,v3.14.2,True,2.1.5,v3.14.2,Medium,,timeout,recurring,timeout,critical,multiple systems
+295,2,,,True,,,,,True,,unknown,,,,CRM Pro v3.2.4,True,,CRM Pro v3.2.4,,4.0,database_connection_timeout_exception,,database_connection_timeout_exception,high,multiple systems
+296,1,,True,False,consistent across both Chrome and Edge,Chrome 120,Chrome,,False,Windows,software_update,True,high,,v3.7.2,True,,v3.7.2,High,,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,inventory_module
+296,2,,,True,consistent across both Chrome and Firefox,,,,True,,configuration_change,True,high,True,,True,,,High,120.0,database_connection_timeout_exception,recurring,database_connection_timeout_exception,critical,single system
+296,3,,,True,consistent across both Chrome and Firefox,unknown,unknown,False,,unknown,unknown,,,,unknown,,unknown,unknown,unknown,,database_connection_timeout_exception,unknown,database_connection_timeout_exception,critical,multiple systems
+299,1,,,True,consistent across both Chrome and Firefox,,,,False,,configuration_change,True,high,,3.2.1,True,,3.2.1,High,,database_connection_failed,recurring,database_connection_failed,critical,inventory_module
+299,2,,,True,consistent across both Chrome and Firefox,,,,True,,No recent changes,,high,,unknown,,,unknown,High,,timeout,recurring,timeout,critical,single system
+299,3,True,,True,consistent across both Chrome and Firefox,Chrome 120,Chrome,,,unknown,hardware_upgrade,True,high,,unknown,True,unknown,unknown,High,12.0,timeout,recurring,timeout,critical,multiple systems
+300,1,,,False,consistent across both Chrome and Firefox,,,False,False,,software_update,True,,,,False,,,,,503: Service Unavailable,one-time,503: Service Unavailable,critical,multiple systems
+300,2,,,True,unknown,unknown,unknown,,False,unknown,unknown,,unknown,,unknown,,unknown,unknown,unknown,,unknown,unknown,unknown,unknown,unknown
+300,3,,,False,consistent across both Chrome and Firefox,Chrome 120,Chrome,False,False,,unknown,False,,False,v2.3.1,False,,v2.3.1,,,Timeout exception at /api/payment/v2/handle,unknown,Timeout exception at /api/payment/v2/handle,critical,single system
+300,4,,,True,consistent across both Chrome and Firefox,,,,False,,software_update,True,,False,,True,,,High,,503: Service Unavailable,,503: Service Unavailable,high,multiple systems
+300,5,,,False,unknown,,unknown,,,,unknown,,unknown,,unknown,True,,unknown,unknown,90.0,database_connection_failed,unknown,database_connection_failed,critical,single system

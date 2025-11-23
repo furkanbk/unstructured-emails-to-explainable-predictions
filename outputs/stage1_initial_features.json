@@ -1,0 +1,2486 @@
+[
+  {
+    "name": "error_type",
+    "type": "categorical",
+    "description": "The type of error encountered by the customer",
+    "values": [
+      "database_connection_failed",
+      "unknown",
+      "other"
+    ],
+    "source_thread_id": 1
+  },
+  {
+    "name": "crm_version",
+    "type": "categorical",
+    "description": "The version of the CRM system being used",
+    "values": [
+      "4.2.1",
+      "4.2.0",
+      "4.1.9",
+      "other"
+    ],
+    "source_thread_id": 1
+  },
+  {
+    "name": "os_type",
+    "type": "categorical",
+    "description": "The type of operating system being used by the customer",
+    "values": [
+      "windows_10",
+      "windows_11",
+      "linux",
+      "macos"
+    ],
+    "source_thread_id": 1
+  },
+  {
+    "name": "reboot_status",
+    "type": "boolean",
+    "description": "Whether the customer has tried rebooting their system",
+    "values": [],
+    "source_thread_id": 1
+  },
+  {
+    "name": "cache_clear_status",
+    "type": "boolean",
+    "description": "Whether the customer has tried clearing the cache",
+    "values": [],
+    "source_thread_id": 1
+  },
+  {
+    "name": "business_criticality",
+    "type": "categorical",
+    "description": "The level of business impact due to the issue",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 1
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "The level of urgency required to resolve the issue",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 1
+  },
+  {
+    "name": "multi_step_resolution",
+    "type": "boolean",
+    "description": "Whether the issue requires a multi-step resolution process",
+    "values": [],
+    "source_thread_id": 1
+  },
+  {
+    "name": "previous_incidents",
+    "type": "boolean",
+    "description": "Whether there have been previous incidents of similar nature",
+    "values": [],
+    "source_thread_id": 1
+  },
+  {
+    "name": "issue_category",
+    "type": "categorical",
+    "description": "The type of issue (e.g. database, network, configuration)",
+    "values": [
+      "database",
+      "network",
+      "configuration"
+    ],
+    "source_thread_id": 2
+  },
+  {
+    "name": "impact_level",
+    "type": "numerical",
+    "description": "The severity of the business impact",
+    "source_thread_id": 2
+  },
+  {
+    "name": "resolution_steps",
+    "type": "categorical",
+    "description": "The number of steps required to resolve the issue",
+    "values": [
+      "single",
+      "multi"
+    ],
+    "source_thread_id": 2
+  },
+  {
+    "name": "technical_complexity",
+    "type": "categorical",
+    "description": "The level of technical expertise required to resolve the issue",
+    "values": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "source_thread_id": 2
+  },
+  {
+    "name": "historical_recurrence",
+    "type": "boolean",
+    "description": "Whether the issue has occurred before",
+    "source_thread_id": 2
+  },
+  {
+    "name": "business_criticality",
+    "type": "categorical",
+    "description": "The importance of the system or process affected by the issue",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 2
+  },
+  {
+    "name": "time_sensitivity",
+    "type": "numerical",
+    "description": "The urgency of the issue",
+    "source_thread_id": 2
+  },
+  {
+    "name": "customer_impact",
+    "type": "categorical",
+    "description": "The type of impact on the customer",
+    "values": [
+      "production",
+      "revenue",
+      "other"
+    ],
+    "source_thread_id": 2
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "The type of issue being reported (e.g., technical, functional, etc.)",
+    "values": [
+      "database_connectivity",
+      "inventory_module_access",
+      "upgrade_issue"
+    ],
+    "source_thread_id": 3
+  },
+  {
+    "name": "business_impact",
+    "type": "categorical",
+    "description": "The potential impact of the issue on the customer's business operations",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 3
+  },
+  {
+    "name": "urgency",
+    "type": "categorical",
+    "description": "The level of urgency required to resolve the issue",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 3
+  },
+  {
+    "name": "technical_complexity",
+    "type": "categorical",
+    "description": "The level of technical expertise required to resolve the issue",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 3
+  },
+  {
+    "name": "resolution_steps",
+    "type": "numerical",
+    "description": "The number of steps required to resolve the issue",
+    "values": [],
+    "source_thread_id": 3
+  },
+  {
+    "name": "upgrade_related",
+    "type": "boolean",
+    "description": "Whether the issue is related to a recent upgrade or not",
+    "values": [],
+    "source_thread_id": 3
+  },
+  {
+    "name": "rollback_required",
+    "type": "boolean",
+    "description": "Whether a rollback is required to resolve the issue",
+    "values": [],
+    "source_thread_id": 3
+  },
+  {
+    "name": "historical_pattern",
+    "type": "categorical",
+    "description": "Whether the issue is part of a known historical pattern or not",
+    "values": [
+      "known",
+      "unknown"
+    ],
+    "source_thread_id": 3
+  },
+  {
+    "name": "issue_severity",
+    "type": "categorical",
+    "description": "The level of severity of the issue, indicating the impact on the business or users.",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 5
+  },
+  {
+    "name": "system_version",
+    "type": "categorical",
+    "description": "The version of the CRM system being used.",
+    "values": [
+      "2.5.3"
+    ],
+    "source_thread_id": 5
+  },
+  {
+    "name": "issue_recency",
+    "type": "numerical",
+    "description": "The time elapsed since the issue started.",
+    "values": [],
+    "source_thread_id": 5
+  },
+  {
+    "name": "issue_duration",
+    "type": "numerical",
+    "description": "The duration of the issue, which can indicate the complexity of the resolution.",
+    "values": [],
+    "source_thread_id": 5
+  },
+  {
+    "name": "multi_step_resolution",
+    "type": "boolean",
+    "description": "Whether the resolution of the issue requires multiple steps or interactions.",
+    "values": [],
+    "source_thread_id": 5
+  },
+  {
+    "name": "escalation_status",
+    "type": "categorical",
+    "description": "Whether the issue has been escalated to a higher-level support team.",
+    "values": [
+      "escalated",
+      "not escalated"
+    ],
+    "source_thread_id": 5
+  },
+  {
+    "name": "recent_changes",
+    "type": "categorical",
+    "description": "Whether there have been any recent changes or updates made to the system.",
+    "values": [
+      "yes",
+      "no"
+    ],
+    "source_thread_id": 5
+  },
+  {
+    "name": "user_impact",
+    "type": "categorical",
+    "description": "The number of users affected by the issue.",
+    "values": [
+      "multiple users",
+      "single user"
+    ],
+    "source_thread_id": 5
+  },
+  {
+    "name": "production_affect",
+    "type": "boolean",
+    "description": "Whether the issue is affecting production operations.",
+    "values": [],
+    "source_thread_id": 5
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "The type of issue being reported",
+    "values": [
+      "database_connection",
+      "application_access",
+      "service_failure"
+    ],
+    "source_thread_id": 6
+  },
+  {
+    "name": "error_message",
+    "type": "categorical",
+    "description": "The specific error message received by the customer",
+    "values": [
+      "Database connection failed",
+      "Error 503",
+      "The service did not respond to the start or control request in a timely fashion"
+    ],
+    "source_thread_id": 6
+  },
+  {
+    "name": "crm_version",
+    "type": "categorical",
+    "description": "The version of the CRM system being used",
+    "values": [
+      "3.2.1"
+    ],
+    "source_thread_id": 6
+  },
+  {
+    "name": "operating_system",
+    "type": "categorical",
+    "description": "The operating system on which the CRM system is running",
+    "values": [
+      "Windows 10"
+    ],
+    "source_thread_id": 6
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "The level of urgency reported by the customer",
+    "values": [
+      "high",
+      "critical"
+    ],
+    "source_thread_id": 6
+  },
+  {
+    "name": "business_impact",
+    "type": "categorical",
+    "description": "The impact of the issue on the customer's business",
+    "values": [
+      "production_line",
+      "operations"
+    ],
+    "source_thread_id": 6
+  },
+  {
+    "name": "resolution_steps",
+    "type": "numerical",
+    "description": "The number of steps required to resolve the issue",
+    "source_thread_id": 6
+  },
+  {
+    "name": "escalation_status",
+    "type": "categorical",
+    "description": "Whether the issue has been escalated to a higher level of support",
+    "values": [
+      "yes",
+      "no"
+    ],
+    "source_thread_id": 6
+  },
+  {
+    "name": "historical_context",
+    "type": "categorical",
+    "description": "Whether the issue has occurred before",
+    "values": [
+      "yes",
+      "no"
+    ],
+    "source_thread_id": 6
+  },
+  {
+    "name": "technical_complexity",
+    "type": "categorical",
+    "description": "The technical complexity of the issue",
+    "values": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "source_thread_id": 6
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "Type of issue (e.g. technical, access, connectivity)",
+    "values": [
+      "database_connectivity",
+      "inventory_module_access"
+    ],
+    "source_thread_id": 9
+  },
+  {
+    "name": "technical_complexity",
+    "type": "categorical",
+    "description": "Level of technical expertise required to resolve the issue",
+    "values": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "source_thread_id": 9
+  },
+  {
+    "name": "business_impact",
+    "type": "categorical",
+    "description": "Severity of impact on business operations",
+    "values": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "source_thread_id": 9
+  },
+  {
+    "name": "resolution_steps",
+    "type": "numerical",
+    "description": "Number of steps required to resolve the issue",
+    "source_thread_id": 9
+  },
+  {
+    "name": "historical_context",
+    "type": "categorical",
+    "description": "Whether the issue has occurred before and if so, how it was resolved",
+    "values": [
+      "first_occurrence",
+      "previous_occurrence",
+      "unknown"
+    ],
+    "source_thread_id": 9
+  },
+  {
+    "name": "multi_step_resolution",
+    "type": "boolean",
+    "description": "Whether the issue requires multiple steps to resolve",
+    "source_thread_id": 9
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "Urgency of the issue (e.g. immediate, within hours, within days)",
+    "values": [
+      "immediate",
+      "within_hours",
+      "within_days"
+    ],
+    "source_thread_id": 9
+  },
+  {
+    "name": "system_affected",
+    "type": "categorical",
+    "description": "The system or platform affected by the issue",
+    "values": [
+      "CRM platform",
+      "Stripe gateway",
+      "B2B platform"
+    ],
+    "source_thread_id": 10
+  },
+  {
+    "name": "issue_severity",
+    "type": "categorical",
+    "description": "The level of impact and criticality of the issue",
+    "values": [
+      "critical",
+      "high",
+      "low"
+    ],
+    "source_thread_id": 10
+  },
+  {
+    "name": "business_impact",
+    "type": "numerical",
+    "description": "The estimated financial impact of the issue on the business",
+    "values": [],
+    "source_thread_id": 10
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "The time sensitivity and urgency of resolving the issue",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 10
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "The type of issue, e.g., technical, configuration, or integration problem",
+    "values": [
+      "technical",
+      "configuration",
+      "integration"
+    ],
+    "source_thread_id": 10
+  },
+  {
+    "name": "multi_step_resolution",
+    "type": "boolean",
+    "description": "Whether the resolution requires multiple steps or actions",
+    "values": [],
+    "source_thread_id": 10
+  },
+  {
+    "name": "historical_context",
+    "type": "categorical",
+    "description": "Whether the issue has occurred previously or is a new incident",
+    "values": [
+      "new",
+      "recurring"
+    ],
+    "source_thread_id": 10
+  },
+  {
+    "name": "technical_complexity",
+    "type": "categorical",
+    "description": "The level of technical expertise and resources required to resolve the issue",
+    "values": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "source_thread_id": 10
+  },
+  {
+    "name": "number_of_affected_customers",
+    "type": "numerical",
+    "description": "The number of customers impacted by the issue",
+    "values": [],
+    "source_thread_id": 10
+  },
+  {
+    "name": "estimated_resolution_time",
+    "type": "numerical",
+    "description": "The estimated time required to resolve the issue",
+    "values": [],
+    "source_thread_id": 10
+  },
+  {
+    "name": "error_type",
+    "type": "categorical",
+    "description": "Type of error encountered by the customer",
+    "values": [
+      "database connectivity",
+      "unknown"
+    ],
+    "source_thread_id": 12
+  },
+  {
+    "name": "system_version",
+    "type": "categorical",
+    "description": "Version of the CRM system being used",
+    "values": [
+      "4.8.2"
+    ],
+    "source_thread_id": 12
+  },
+  {
+    "name": "browser_type",
+    "type": "categorical",
+    "description": "Type of web browser used by the customer",
+    "values": [
+      "Edge",
+      "Chrome"
+    ],
+    "source_thread_id": 12
+  },
+  {
+    "name": "reboot_status",
+    "type": "boolean",
+    "description": "Whether the customer has tried rebooting the server",
+    "source_thread_id": 12
+  },
+  {
+    "name": "cache_clear_status",
+    "type": "boolean",
+    "description": "Whether the customer has cleared browser cache",
+    "source_thread_id": 12
+  },
+  {
+    "name": "multi_step_resolution",
+    "type": "boolean",
+    "description": "Whether the resolution requires multiple steps",
+    "source_thread_id": 12
+  },
+  {
+    "name": "urgent_attention_needed",
+    "type": "boolean",
+    "description": "Whether the issue requires urgent attention",
+    "source_thread_id": 12
+  },
+  {
+    "name": "business_impact_level",
+    "type": "categorical",
+    "description": "Level of business impact due to the issue",
+    "values": [
+      "production_line",
+      "order_processing"
+    ],
+    "source_thread_id": 12
+  },
+  {
+    "name": "technical_support_needed",
+    "type": "boolean",
+    "description": "Whether technical support is needed to resolve the issue",
+    "source_thread_id": 12
+  },
+  {
+    "name": "diagnostic_session_required",
+    "type": "boolean",
+    "description": "Whether a remote diagnostic session is required",
+    "source_thread_id": 12
+  },
+  {
+    "name": "hardware_inspection_required",
+    "type": "boolean",
+    "description": "Whether a hardware inspection is required",
+    "source_thread_id": 12
+  },
+  {
+    "name": "ticket_priority",
+    "type": "categorical",
+    "description": "Priority level assigned to the ticket",
+    "values": [
+      "high"
+    ],
+    "source_thread_id": 12
+  },
+  {
+    "name": "ticket_id",
+    "type": "numerical",
+    "description": "Unique identifier assigned to the ticket",
+    "source_thread_id": 12
+  },
+  {
+    "name": "customer_industry",
+    "type": "categorical",
+    "description": "Industry type of the customer",
+    "values": [
+      "machinery_parts_distributor"
+    ],
+    "source_thread_id": 12
+  },
+  {
+    "name": "system_outage_status",
+    "type": "categorical",
+    "description": "Status of system outage (if any)",
+    "values": [
+      "no_regional_outages"
+    ],
+    "source_thread_id": 12
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "The type of issue encountered",
+    "values": [
+      "database_connectivity",
+      "configuration",
+      "application"
+    ],
+    "source_thread_id": 13
+  },
+  {
+    "name": "business_impact",
+    "type": "categorical",
+    "description": "The level of business impact caused by the issue",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 13
+  },
+  {
+    "name": "technical_complexity",
+    "type": "categorical",
+    "description": "The level of technical expertise required to resolve the issue",
+    "values": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "source_thread_id": 13
+  },
+  {
+    "name": "resolution_steps",
+    "type": "numerical",
+    "description": "The number of steps required to resolve the issue",
+    "source_thread_id": 13
+  },
+  {
+    "name": "escalation_needed",
+    "type": "boolean",
+    "description": "Whether the issue required escalation to a technical team",
+    "source_thread_id": 13
+  },
+  {
+    "name": "historical_context",
+    "type": "categorical",
+    "description": "The relevance of the issue to previous similar issues",
+    "values": [
+      "new",
+      "similar",
+      "known"
+    ],
+    "source_thread_id": 13
+  },
+  {
+    "name": "software_version",
+    "type": "categorical",
+    "description": "The version of the CRM software",
+    "values": [
+      "2.5.3"
+    ],
+    "source_thread_id": 13
+  },
+  {
+    "name": "issue_duration",
+    "type": "numerical",
+    "description": "The duration of the issue",
+    "source_thread_id": 13
+  },
+  {
+    "name": "issue_frequency",
+    "type": "categorical",
+    "description": "The frequency of similar issues",
+    "values": [
+      "one-time",
+      "recurring"
+    ],
+    "source_thread_id": 13
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "Type of issue reported (e.g. database connectivity, software update, etc.)",
+    "values": [
+      "database_connectivity",
+      "software_update",
+      "other"
+    ],
+    "source_thread_id": 14
+  },
+  {
+    "name": "business_impact",
+    "type": "numerical",
+    "description": "Magnitude of business impact due to the issue (e.g. revenue loss, production halt, etc.)",
+    "source_thread_id": 14
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "Level of urgency of the issue (e.g. high, medium, low)",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 14
+  },
+  {
+    "name": "resolution_steps",
+    "type": "numerical",
+    "description": "Number of steps required to resolve the issue (e.g. 1, 2, 3, etc.)",
+    "source_thread_id": 14
+  },
+  {
+    "name": "issue_history",
+    "type": "categorical",
+    "description": "Whether the issue is a recurring problem or a one-time occurrence",
+    "values": [
+      "recurring",
+      "one-time"
+    ],
+    "source_thread_id": 14
+  },
+  {
+    "name": "software_version",
+    "type": "categorical",
+    "description": "Version of the CRM software involved in the issue",
+    "values": [
+      "3.1.0",
+      "3.2.1",
+      "other"
+    ],
+    "source_thread_id": 14
+  },
+  {
+    "name": "recent_changes",
+    "type": "boolean",
+    "description": "Whether recent changes or updates were made to the system before the issue occurred",
+    "source_thread_id": 14
+  },
+  {
+    "name": "escalation_required",
+    "type": "boolean",
+    "description": "Whether the issue requires escalation to a higher-level support team or technical expert",
+    "source_thread_id": 14
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "The type of technical issue reported",
+    "values": [
+      "API error",
+      "CRM integration issue",
+      "Firmware mismatch",
+      "Database lock"
+    ],
+    "source_thread_id": 15
+  },
+  {
+    "name": "affected_systems",
+    "type": "categorical",
+    "description": "Systems or components affected by the issue",
+    "values": [
+      "CRM",
+      "API",
+      "CNC equipment",
+      "Database"
+    ],
+    "source_thread_id": 15
+  },
+  {
+    "name": "urgency_level",
+    "type": "numerical",
+    "description": "The level of urgency and business impact",
+    "source_thread_id": 15
+  },
+  {
+    "name": "business_impact",
+    "type": "numerical",
+    "description": "The financial impact of the issue",
+    "source_thread_id": 15
+  },
+  {
+    "name": "repeated_issue",
+    "type": "boolean",
+    "description": "Whether the issue has recurred after attempted resolutions",
+    "source_thread_id": 15
+  },
+  {
+    "name": "resolution_steps",
+    "type": "categorical",
+    "description": "The number of steps required to resolve the issue",
+    "values": [
+      "single-step",
+      "multi-step"
+    ],
+    "source_thread_id": 15
+  },
+  {
+    "name": "historical_context",
+    "type": "categorical",
+    "description": "Whether the issue has occurred before and was previously resolved",
+    "values": [
+      "new",
+      "historical"
+    ],
+    "source_thread_id": 15
+  },
+  {
+    "name": "escalation_required",
+    "type": "boolean",
+    "description": "Whether the issue requires escalation to a higher level of support",
+    "source_thread_id": 15
+  },
+  {
+    "name": "error_type",
+    "type": "categorical",
+    "description": "Type of error encountered (e.g. database connection failure, timeout)",
+    "values": [
+      "database connection failure",
+      "timeout",
+      "unknown"
+    ],
+    "source_thread_id": 17
+  },
+  {
+    "name": "affected_modules",
+    "type": "categorical",
+    "description": "Modules or functionalities impacted by the issue",
+    "values": [
+      "inventory management",
+      "reporting",
+      "unknown"
+    ],
+    "source_thread_id": 17
+  },
+  {
+    "name": "upgrade_related",
+    "type": "boolean",
+    "description": "Whether the issue is related to a software upgrade",
+    "values": [],
+    "source_thread_id": 17
+  },
+  {
+    "name": "business_impact",
+    "type": "categorical",
+    "description": "Impact of the issue on business operations",
+    "values": [
+      "blocking critical orders",
+      "impacting customer experience",
+      "no significant impact"
+    ],
+    "source_thread_id": 17
+  },
+  {
+    "name": "technical_complexity",
+    "type": "categorical",
+    "description": "Level of technical expertise required to resolve the issue",
+    "values": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "source_thread_id": 17
+  },
+  {
+    "name": "multi_step_resolution",
+    "type": "boolean",
+    "description": "Whether the issue requires multiple steps or iterations to resolve",
+    "values": [],
+    "source_thread_id": 17
+  },
+  {
+    "name": "historical_context",
+    "type": "boolean",
+    "description": "Whether the issue has occurred before or has a historical pattern",
+    "values": [],
+    "source_thread_id": 17
+  },
+  {
+    "name": "affected_systems",
+    "type": "categorical",
+    "description": "Number of systems or components impacted by the issue",
+    "values": [
+      "single system",
+      "multiple systems",
+      "unknown"
+    ],
+    "source_thread_id": 17
+  },
+  {
+    "name": "urgency",
+    "type": "categorical",
+    "description": "Level of urgency required to resolve the issue",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 17
+  },
+  {
+    "name": "software_version",
+    "type": "categorical",
+    "description": "Version of the software or system impacted by the issue",
+    "values": [
+      "CRM Pro v3.2.4",
+      "PostgreSQL 12.7+",
+      "unknown"
+    ],
+    "source_thread_id": 17
+  },
+  {
+    "name": "user_actions_taken",
+    "type": "categorical",
+    "description": "Actions taken by the user to attempt to resolve the issue",
+    "values": [
+      "server restart",
+      "cache clearing",
+      "unknown"
+    ],
+    "source_thread_id": 17
+  },
+  {
+    "name": "error_type",
+    "type": "categorical",
+    "description": "Type of error encountered",
+    "values": [
+      "503: Service Unavailable",
+      "Database migration conflict",
+      "API timeout after webhook validation fails"
+    ],
+    "source_thread_id": 18
+  },
+  {
+    "name": "issue_impact",
+    "type": "categorical",
+    "description": "Impact of the issue on business operations",
+    "values": [
+      "revenue loss",
+      "order fulfillment disruption",
+      "cancellation of a large order"
+    ],
+    "source_thread_id": 18
+  },
+  {
+    "name": "rollback_status",
+    "type": "categorical",
+    "description": "Result of attempted rollback",
+    "values": [
+      "successful",
+      "failed with error",
+      "failed with database migration conflict"
+    ],
+    "source_thread_id": 18
+  },
+  {
+    "name": "resolution_steps",
+    "type": "categorical",
+    "description": "Number of steps required to resolve the issue",
+    "values": [
+      "1",
+      "2"
+    ],
+    "source_thread_id": 18
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "Level of urgency required to resolve the issue",
+    "values": [
+      "high",
+      "immediate"
+    ],
+    "source_thread_id": 18
+  },
+  {
+    "name": "historical_context",
+    "type": "categorical",
+    "description": "Whether the issue has occurred before",
+    "values": [
+      "no",
+      "yes (previous version of CRM software)"
+    ],
+    "source_thread_id": 18
+  },
+  {
+    "name": "business_deadline",
+    "type": "numerical",
+    "description": "Time-sensitive deadline for resolving the issue",
+    "values": [],
+    "source_thread_id": 18
+  },
+  {
+    "name": "remote_session_required",
+    "type": "boolean",
+    "description": "Whether a remote session is required to resolve the issue",
+    "values": [],
+    "source_thread_id": 18
+  },
+  {
+    "name": "prioritized_ticket",
+    "type": "boolean",
+    "description": "Whether the ticket is marked as high priority",
+    "values": [],
+    "source_thread_id": 18
+  },
+  {
+    "name": "error_message",
+    "type": "categorical",
+    "description": "Type of error message received",
+    "values": [
+      "Database connection failed"
+    ],
+    "source_thread_id": 20
+  },
+  {
+    "name": "affected_module",
+    "type": "categorical",
+    "description": "Module affected by the issue",
+    "values": [
+      "inventory management module"
+    ],
+    "source_thread_id": 20
+  },
+  {
+    "name": "system_urgency",
+    "type": "categorical",
+    "description": "Urgency level of the issue based on business impact",
+    "values": [
+      "production line blocked"
+    ],
+    "source_thread_id": 20
+  },
+  {
+    "name": "system_impact",
+    "type": "categorical",
+    "description": "Type of business impact caused by the issue",
+    "values": [
+      "inventory levels cannot be tracked"
+    ],
+    "source_thread_id": 20
+  },
+  {
+    "name": "system_change",
+    "type": "categorical",
+    "description": "Recent changes made to the system",
+    "values": [
+      "no recent changes"
+    ],
+    "source_thread_id": 20
+  },
+  {
+    "name": "device_consistency",
+    "type": "categorical",
+    "description": "Consistency of the issue across different devices",
+    "values": [
+      "consistent across both Chrome and Firefox"
+    ],
+    "source_thread_id": 20
+  },
+  {
+    "name": "browser_consistency",
+    "type": "categorical",
+    "description": "Consistency of the issue across different browsers",
+    "values": [
+      "consistent across both Chrome and Firefox"
+    ],
+    "source_thread_id": 20
+  },
+  {
+    "name": "log_analysis",
+    "type": "boolean",
+    "description": "Whether server logs have been analyzed",
+    "source_thread_id": 20
+  },
+  {
+    "name": "database_health_check",
+    "type": "boolean",
+    "description": "Whether a database health check has been performed",
+    "source_thread_id": 20
+  },
+  {
+    "name": "escalation_status",
+    "type": "categorical",
+    "description": "Status of issue escalation to technical team",
+    "values": [
+      "escalated"
+    ],
+    "source_thread_id": 20
+  },
+  {
+    "name": "resolution_steps",
+    "type": "numerical",
+    "description": "Number of steps required for resolution",
+    "source_thread_id": 20
+  },
+  {
+    "name": "error_type",
+    "type": "categorical",
+    "description": "Type of error encountered",
+    "values": [
+      "Database connection timeout",
+      "Other"
+    ],
+    "source_thread_id": 21
+  },
+  {
+    "name": "software_version",
+    "type": "categorical",
+    "description": "Version of the CRM software",
+    "values": [
+      "v3.14.2"
+    ],
+    "source_thread_id": 21
+  },
+  {
+    "name": "browser_version",
+    "type": "categorical",
+    "description": "Version of the browser used",
+    "values": [
+      "Chrome 122"
+    ],
+    "source_thread_id": 21
+  },
+  {
+    "name": "resolution_steps",
+    "type": "categorical",
+    "description": "Number of steps required to resolve the issue",
+    "values": [
+      "1",
+      "2",
+      "Multiple"
+    ],
+    "source_thread_id": 21
+  },
+  {
+    "name": "business_impact",
+    "type": "categorical",
+    "description": "Impact of the issue on the business",
+    "values": [
+      "Production delays",
+      "Other"
+    ],
+    "source_thread_id": 21
+  },
+  {
+    "name": "urgency",
+    "type": "categorical",
+    "description": "Urgency of the issue",
+    "values": [
+      "High",
+      "Medium",
+      "Low"
+    ],
+    "source_thread_id": 21
+  },
+  {
+    "name": "technical_complexity",
+    "type": "categorical",
+    "description": "Technical complexity of the issue",
+    "values": [
+      "High",
+      "Medium",
+      "Low"
+    ],
+    "source_thread_id": 21
+  },
+  {
+    "name": "reproduction_status",
+    "type": "boolean",
+    "description": "Whether the issue has been reproduced in a staging environment",
+    "source_thread_id": 21
+  },
+  {
+    "name": "diagnostics_required",
+    "type": "boolean",
+    "description": "Whether diagnostics from production systems are required to resolve the issue",
+    "source_thread_id": 21
+  },
+  {
+    "name": "historical_pattern",
+    "type": "categorical",
+    "description": "Whether the issue has occurred before",
+    "values": [
+      "Yes",
+      "No"
+    ],
+    "source_thread_id": 21
+  },
+  {
+    "name": "critical_system_involved",
+    "type": "boolean",
+    "description": "Whether a critical system (e.g. inventory module) is involved",
+    "source_thread_id": 21
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "Type of issue (e.g., database connection, application crash)",
+    "values": [
+      "database_connection",
+      "application_crash",
+      "other"
+    ],
+    "source_thread_id": 22
+  },
+  {
+    "name": "software_version",
+    "type": "categorical",
+    "description": "Version of the software experiencing the issue",
+    "values": [
+      "3.2.1",
+      "3.2.2",
+      "3.3.0"
+    ],
+    "source_thread_id": 22
+  },
+  {
+    "name": "error_code",
+    "type": "categorical",
+    "description": "Error code associated with the issue",
+    "values": [
+      "1040",
+      "1050",
+      "1060"
+    ],
+    "source_thread_id": 22
+  },
+  {
+    "name": "server_os",
+    "type": "categorical",
+    "description": "Operating system of the server experiencing the issue",
+    "values": [
+      "Windows Server 2019",
+      "Linux",
+      "macOS"
+    ],
+    "source_thread_id": 22
+  },
+  {
+    "name": "database_type",
+    "type": "categorical",
+    "description": "Type of database experiencing the issue",
+    "values": [
+      "SQL Server 2017",
+      "MySQL",
+      "PostgreSQL"
+    ],
+    "source_thread_id": 22
+  },
+  {
+    "name": "business_impact",
+    "type": "numerical",
+    "description": "Level of business impact (e.g., revenue loss, production downtime)",
+    "values": [],
+    "source_thread_id": 22
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "Urgency level of the issue (e.g., critical, high, medium)",
+    "values": [
+      "critical",
+      "high",
+      "medium"
+    ],
+    "source_thread_id": 22
+  },
+  {
+    "name": "resolution_steps",
+    "type": "numerical",
+    "description": "Number of steps required to resolve the issue",
+    "values": [],
+    "source_thread_id": 22
+  },
+  {
+    "name": "multi_step_resolution",
+    "type": "boolean",
+    "description": "Whether the issue requires multiple steps to resolve",
+    "values": [],
+    "source_thread_id": 22
+  },
+  {
+    "name": "historical_context",
+    "type": "boolean",
+    "description": "Whether the issue has a historical pattern or context",
+    "values": [],
+    "source_thread_id": 22
+  },
+  {
+    "name": "previous_support_interactions",
+    "type": "boolean",
+    "description": "Whether the customer has had previous support interactions related to this issue",
+    "values": [],
+    "source_thread_id": 22
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "The type of issue being reported",
+    "values": [
+      "database_connectivity",
+      "software_update",
+      "service_unavailability"
+    ],
+    "source_thread_id": 23
+  },
+  {
+    "name": "software_version",
+    "type": "categorical",
+    "description": "The version of the CRM software being used",
+    "values": [
+      "2.5.3"
+    ],
+    "source_thread_id": 23
+  },
+  {
+    "name": "error_message",
+    "type": "categorical",
+    "description": "The specific error message being displayed",
+    "values": [
+      "Database connection failed",
+      "Error 503: Service Unavailable"
+    ],
+    "source_thread_id": 23
+  },
+  {
+    "name": "affected_users",
+    "type": "categorical",
+    "description": "The number of users affected by the issue",
+    "values": [
+      "multiple",
+      "single"
+    ],
+    "source_thread_id": 23
+  },
+  {
+    "name": "business_impact",
+    "type": "categorical",
+    "description": "The level of business impact due to the issue",
+    "values": [
+      "high",
+      "low"
+    ],
+    "source_thread_id": 23
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "The level of urgency required to resolve the issue",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 23
+  },
+  {
+    "name": "resolution_steps",
+    "type": "numerical",
+    "description": "The number of steps required to resolve the issue",
+    "source_thread_id": 23
+  },
+  {
+    "name": "historical_context",
+    "type": "boolean",
+    "description": "Whether the issue is a recurring problem or a one-time occurrence",
+    "source_thread_id": 23
+  },
+  {
+    "name": "recent_changes",
+    "type": "boolean",
+    "description": "Whether there have been any recent changes or updates that may be related to the issue",
+    "source_thread_id": 23
+  },
+  {
+    "name": "error_code",
+    "type": "categorical",
+    "description": "Error code received by the customer",
+    "values": [
+      "Error 503"
+    ],
+    "source_thread_id": 24
+  },
+  {
+    "name": "error_message",
+    "type": "categorical",
+    "description": "Error message received by the customer",
+    "values": [
+      "Database connection failed"
+    ],
+    "source_thread_id": 24
+  },
+  {
+    "name": "application_version",
+    "type": "categorical",
+    "description": "Version of the CRM platform being used",
+    "values": [
+      "2.5.3"
+    ],
+    "source_thread_id": 24
+  },
+  {
+    "name": "browser_type",
+    "type": "categorical",
+    "description": "Type of browser being used by the customer",
+    "values": [
+      "Google Chrome",
+      "Firefox",
+      "Microsoft Edge"
+    ],
+    "source_thread_id": 24
+  },
+  {
+    "name": "browser_version",
+    "type": "categorical",
+    "description": "Version of the browser being used by the customer",
+    "values": [
+      "98.0.4758.102"
+    ],
+    "source_thread_id": 24
+  },
+  {
+    "name": "customer_impact",
+    "type": "categorical",
+    "description": "Impact of the issue on the customer's business",
+    "values": [
+      "Production line on hold",
+      "Urgent"
+    ],
+    "source_thread_id": 24
+  },
+  {
+    "name": "multi_step_resolution",
+    "type": "boolean",
+    "description": "Whether the resolution requires multiple steps",
+    "source_thread_id": 24
+  },
+  {
+    "name": "historical_pattern",
+    "type": "boolean",
+    "description": "Whether the issue has occurred before",
+    "source_thread_id": 24
+  },
+  {
+    "name": "escalation_required",
+    "type": "boolean",
+    "description": "Whether the issue requires escalation to a higher-level support team",
+    "source_thread_id": 24
+  },
+  {
+    "name": "estimated_resolution_time",
+    "type": "numerical",
+    "description": "Estimated time for resolution",
+    "source_thread_id": 24
+  },
+  {
+    "name": "error_message_type",
+    "type": "categorical",
+    "description": "Type of error message received by the customer",
+    "values": [
+      "Database connection failed",
+      "Error 1045"
+    ],
+    "source_thread_id": 26
+  },
+  {
+    "name": "crm_software_version",
+    "type": "categorical",
+    "description": "Version of the CRM software being used",
+    "values": [
+      "4.2.1"
+    ],
+    "source_thread_id": 26
+  },
+  {
+    "name": "recent_changes",
+    "type": "boolean",
+    "description": "Whether any recent changes or updates were made to the system",
+    "values": [],
+    "source_thread_id": 26
+  },
+  {
+    "name": "issue_resolution_steps",
+    "type": "numerical",
+    "description": "Number of steps taken to resolve the issue",
+    "values": [],
+    "source_thread_id": 26
+  },
+  {
+    "name": "business_impact",
+    "type": "categorical",
+    "description": "Impact of the issue on the customer's business",
+    "values": [
+      "production_line_halted",
+      "urgent"
+    ],
+    "source_thread_id": 26
+  },
+  {
+    "name": "escalation_level",
+    "type": "categorical",
+    "description": "Level of escalation required to resolve the issue",
+    "values": [
+      "technical_team_involved",
+      "senior_technical_team_involved"
+    ],
+    "source_thread_id": 26
+  },
+  {
+    "name": "resolution_timeframe",
+    "type": "numerical",
+    "description": "Timeframe within which the issue is expected to be resolved",
+    "values": [
+      "1 hour"
+    ],
+    "source_thread_id": 26
+  },
+  {
+    "name": "historical_context",
+    "type": "categorical",
+    "description": "Whether the issue has occurred before",
+    "values": [
+      "first_occurrence",
+      "recurring_issue"
+    ],
+    "source_thread_id": 26
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "Technical complexity and nature of the issue",
+    "values": [
+      "database_connection_timeout",
+      "system_down",
+      "hardware_failure"
+    ],
+    "source_thread_id": 28
+  },
+  {
+    "name": "business_impact",
+    "type": "categorical",
+    "description": "Urgency and business impact",
+    "values": [
+      "high",
+      "low",
+      "medium"
+    ],
+    "source_thread_id": 28
+  },
+  {
+    "name": "resolution_steps",
+    "type": "numerical",
+    "description": "Multi-step resolution requirements",
+    "source_thread_id": 28
+  },
+  {
+    "name": "previous_occurrence",
+    "type": "boolean",
+    "description": "Historical patterns and context",
+    "source_thread_id": 28
+  },
+  {
+    "name": "support_required",
+    "type": "boolean",
+    "description": "Whether support intervention is required",
+    "source_thread_id": 28
+  },
+  {
+    "name": "priority",
+    "type": "categorical",
+    "description": "Priority level of the issue",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 28
+  },
+  {
+    "name": "related_systems",
+    "type": "categorical",
+    "description": "Systems or equipment related to the issue",
+    "values": [
+      "crm",
+      "inventory_module",
+      "industrial_equipment_monitoring_systems"
+    ],
+    "source_thread_id": 28
+  },
+  {
+    "name": "error_type",
+    "type": "categorical",
+    "description": "Type of error encountered",
+    "values": [
+      "database_connection_timeout_exception",
+      "system_error"
+    ],
+    "source_thread_id": 28
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "The type of technical issue encountered",
+    "values": [
+      "API version conflict",
+      "Inventory sync failure",
+      "TLS handshake failure",
+      "Platform update failure"
+    ],
+    "source_thread_id": 30
+  },
+  {
+    "name": "impact_level",
+    "type": "categorical",
+    "description": "The level of business impact due to the issue",
+    "values": [
+      "Critical",
+      "High",
+      "Medium",
+      "Low"
+    ],
+    "source_thread_id": 30
+  },
+  {
+    "name": "technical_complexity",
+    "type": "categorical",
+    "description": "The technical complexity of the issue",
+    "values": [
+      "High",
+      "Medium",
+      "Low"
+    ],
+    "source_thread_id": 30
+  },
+  {
+    "name": "multi_step_resolution",
+    "type": "boolean",
+    "description": "Whether the resolution requires multiple steps",
+    "source_thread_id": 30
+  },
+  {
+    "name": "historical_pattern",
+    "type": "boolean",
+    "description": "Whether the issue is part of a recurring pattern",
+    "source_thread_id": 30
+  },
+  {
+    "name": "previous_updates_failure",
+    "type": "boolean",
+    "description": "Whether previous platform updates have failed",
+    "source_thread_id": 30
+  },
+  {
+    "name": "business_risk",
+    "type": "categorical",
+    "description": "The level of business risk due to the issue",
+    "values": [
+      "High",
+      "Medium",
+      "Low"
+    ],
+    "source_thread_id": 30
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "The level of urgency to resolve the issue",
+    "values": [
+      "Urgent",
+      "High",
+      "Medium",
+      "Low"
+    ],
+    "source_thread_id": 30
+  },
+  {
+    "name": "resolution_options",
+    "type": "categorical",
+    "description": "The number of resolution options available",
+    "values": [
+      "Single",
+      "Multiple"
+    ],
+    "source_thread_id": 30
+  },
+  {
+    "name": "dependencies",
+    "type": "categorical",
+    "description": "The number of dependent systems affected by the issue",
+    "values": [
+      "Single",
+      "Multiple"
+    ],
+    "source_thread_id": 30
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "Type of issue (e.g., technical, connectivity, access)",
+    "values": [
+      "database_connectivity",
+      "server_side",
+      "access_issue"
+    ],
+    "source_thread_id": 31
+  },
+  {
+    "name": "business_impact",
+    "type": "categorical",
+    "description": "Impact of the issue on the customer's business operations",
+    "values": [
+      "production_line",
+      "inventory_management",
+      "customer_experience"
+    ],
+    "source_thread_id": 31
+  },
+  {
+    "name": "urgency",
+    "type": "categorical",
+    "description": "Urgency level of the issue (e.g., high, medium, low)",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 31
+  },
+  {
+    "name": "resolution_steps",
+    "type": "numerical",
+    "description": "Number of steps required to resolve the issue",
+    "values": [],
+    "source_thread_id": 31
+  },
+  {
+    "name": "historical_context",
+    "type": "categorical",
+    "description": "Previous similar issues or known patterns",
+    "values": [
+      "known_issue",
+      "similar_issue",
+      "no_previous_issues"
+    ],
+    "source_thread_id": 31
+  },
+  {
+    "name": "technical_complexity",
+    "type": "categorical",
+    "description": "Technical complexity of the issue (e.g., simple, complex, high-level)",
+    "values": [
+      "simple",
+      "complex",
+      "high-level"
+    ],
+    "source_thread_id": 31
+  },
+  {
+    "name": "multi_device_issue",
+    "type": "boolean",
+    "description": "Whether the issue affects multiple devices or browsers",
+    "values": [],
+    "source_thread_id": 31
+  },
+  {
+    "name": "issue_start_time",
+    "type": "numerical",
+    "description": "Time when the issue started",
+    "values": [],
+    "source_thread_id": 31
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "Type of issue being reported",
+    "values": [
+      "database_connectivity",
+      "software_update_conflict"
+    ],
+    "source_thread_id": 34
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "Urgency level of the issue",
+    "values": [
+      "high",
+      "low"
+    ],
+    "source_thread_id": 34
+  },
+  {
+    "name": "business_impact",
+    "type": "categorical",
+    "description": "Impact of the issue on business operations",
+    "values": [
+      "high",
+      "low",
+      "critical"
+    ],
+    "source_thread_id": 34
+  },
+  {
+    "name": "resolution_steps",
+    "type": "numerical",
+    "description": "Number of steps required to resolve the issue",
+    "source_thread_id": 34
+  },
+  {
+    "name": "issue_history",
+    "type": "boolean",
+    "description": "Whether the issue has occurred before",
+    "source_thread_id": 34
+  },
+  {
+    "name": "recent_system_changes",
+    "type": "categorical",
+    "description": "Recent changes made to the system",
+    "values": [
+      "software_update",
+      "configuration_change",
+      "none"
+    ],
+    "source_thread_id": 34
+  },
+  {
+    "name": "support_team_involvement",
+    "type": "boolean",
+    "description": "Whether the support team is already involved in the issue",
+    "source_thread_id": 34
+  },
+  {
+    "name": "issue_reproduction",
+    "type": "categorical",
+    "description": "Whether the issue can be reproduced",
+    "values": [
+      "yes",
+      "no",
+      "unknown"
+    ],
+    "source_thread_id": 34
+  },
+  {
+    "name": "support_channel",
+    "type": "categorical",
+    "description": "Channel through which the issue was reported",
+    "values": [
+      "email",
+      "phone",
+      "chat"
+    ],
+    "source_thread_id": 34
+  },
+  {
+    "name": "error_message",
+    "type": "categorical",
+    "description": "The specific error message encountered by the customer",
+    "values": [
+      "Database connection failed"
+    ],
+    "source_thread_id": 35
+  },
+  {
+    "name": "crm_version",
+    "type": "categorical",
+    "description": "The version of the CRM system being used",
+    "values": [
+      "4.2.1"
+    ],
+    "source_thread_id": 35
+  },
+  {
+    "name": "recent_changes",
+    "type": "categorical",
+    "description": "Whether any recent changes or updates were made to the CRM system",
+    "values": [
+      "No recent changes"
+    ],
+    "source_thread_id": 35
+  },
+  {
+    "name": "issue_start_time",
+    "type": "numerical",
+    "description": "The time at which the issue started",
+    "source_thread_id": 35
+  },
+  {
+    "name": "issue_impact",
+    "type": "categorical",
+    "description": "The business impact of the issue on the customer's operations",
+    "values": [
+      "Significant delays",
+      "Halted production line"
+    ],
+    "source_thread_id": 35
+  },
+  {
+    "name": "resolution_steps",
+    "type": "categorical",
+    "description": "The number of steps required to resolve the issue",
+    "values": [
+      "1",
+      "2"
+    ],
+    "source_thread_id": 35
+  },
+  {
+    "name": "escalation_required",
+    "type": "boolean",
+    "description": "Whether the issue required escalation to a higher-level support team",
+    "values": [],
+    "source_thread_id": 35
+  },
+  {
+    "name": "historical_context",
+    "type": "categorical",
+    "description": "Any historical context or previous issues related to the CRM system",
+    "values": [
+      "None mentioned"
+    ],
+    "source_thread_id": 35
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "The level of urgency of the issue based on the customer's request",
+    "values": [
+      "Urgent",
+      "High"
+    ],
+    "source_thread_id": 35
+  },
+  {
+    "name": "support_team_response_time",
+    "type": "numerical",
+    "description": "The time taken by the support team to respond to the customer",
+    "source_thread_id": 35
+  },
+  {
+    "name": "resolution_time",
+    "type": "numerical",
+    "description": "The time taken to resolve the issue",
+    "source_thread_id": 35
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "The type of issue (e.g. technical, configuration, etc.)",
+    "values": [
+      "Technical"
+    ],
+    "source_thread_id": 35
+  },
+  {
+    "name": "machine_model",
+    "type": "categorical",
+    "description": "Type of CNC machine model involved",
+    "values": [
+      "Haas VF-2SSY"
+    ],
+    "source_thread_id": 38
+  },
+  {
+    "name": "crm_version",
+    "type": "categorical",
+    "description": "Version of CRM platform installed",
+    "values": [
+      "v3.2.1"
+    ],
+    "source_thread_id": 38
+  },
+  {
+    "name": "api_version",
+    "type": "categorical",
+    "description": "Version of manufacturing module API",
+    "values": [
+      "v4.7.2"
+    ],
+    "source_thread_id": 38
+  },
+  {
+    "name": "server_os",
+    "type": "categorical",
+    "description": "Type of operating system running on the server",
+    "values": [
+      "Windows Server 2019"
+    ],
+    "source_thread_id": 38
+  },
+  {
+    "name": "error_code",
+    "type": "categorical",
+    "description": "Error code received from API integration",
+    "values": [
+      "API-503"
+    ],
+    "source_thread_id": 38
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "Severity of the issue and its impact on business",
+    "values": [
+      "critical"
+    ],
+    "source_thread_id": 38
+  },
+  {
+    "name": "production_impact",
+    "type": "numerical",
+    "description": "Estimated loss of revenue per hour due to production halt",
+    "source_thread_id": 38
+  },
+  {
+    "name": "resolution_steps",
+    "type": "numerical",
+    "description": "Number of steps required to resolve the issue",
+    "source_thread_id": 38
+  },
+  {
+    "name": "hotfix_availability",
+    "type": "boolean",
+    "description": "Availability of a pre-prepared hotfix",
+    "source_thread_id": 38
+  },
+  {
+    "name": "remote_access_required",
+    "type": "boolean",
+    "description": "Need for remote access to the customer's environment",
+    "source_thread_id": 38
+  },
+  {
+    "name": "previous_patches_applied",
+    "type": "boolean",
+    "description": "Application of previous patches and maintenance",
+    "source_thread_id": 38
+  },
+  {
+    "name": "historical_context",
+    "type": "categorical",
+    "description": "Whether the issue has occurred before and if so, its recurrence pattern",
+    "values": [
+      "known_issue",
+      "new_issue"
+    ],
+    "source_thread_id": 38
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "The type of issue being reported (e.g. database connectivity, API endpoint, etc.)",
+    "values": [
+      "database_connectivity",
+      "API_endpoint",
+      "config_change",
+      "custom_integration"
+    ],
+    "source_thread_id": 39
+  },
+  {
+    "name": "error_code",
+    "type": "categorical",
+    "description": "The specific error code reported by the customer (e.g. Error 503 Service Unavailable)",
+    "values": [
+      "503",
+      "500",
+      "404",
+      "502"
+    ],
+    "source_thread_id": 39
+  },
+  {
+    "name": "business_impact",
+    "type": "numerical",
+    "description": "The estimated business impact of the issue (e.g. revenue loss, delayed shipments, etc.)",
+    "values": [],
+    "source_thread_id": 39
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "The level of urgency reported by the customer (e.g. high, medium, low)",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 39
+  },
+  {
+    "name": "technical_complexity",
+    "type": "categorical",
+    "description": "The technical complexity of the issue (e.g. simple, complex, multi-step resolution)",
+    "values": [
+      "simple",
+      "complex",
+      "multi_step"
+    ],
+    "source_thread_id": 39
+  },
+  {
+    "name": "resolution_required",
+    "type": "boolean",
+    "description": "Whether a multi-step resolution is required (e.g. hotfix patch, remote diagnostics, etc.)",
+    "values": [],
+    "source_thread_id": 39
+  },
+  {
+    "name": "historical_context",
+    "type": "boolean",
+    "description": "Whether the issue has occurred previously or is a recurring problem",
+    "values": [],
+    "source_thread_id": 39
+  },
+  {
+    "name": "custom_config",
+    "type": "boolean",
+    "description": "Whether custom configurations or integrations are involved",
+    "values": [],
+    "source_thread_id": 39
+  },
+  {
+    "name": "recent_update",
+    "type": "boolean",
+    "description": "Whether the issue occurred after a recent update or change",
+    "values": [],
+    "source_thread_id": 39
+  },
+  {
+    "name": "platform_version",
+    "type": "categorical",
+    "description": "The version of the platform or software being used",
+    "values": [
+      "2.4.2",
+      "2.4.1",
+      "other"
+    ],
+    "source_thread_id": 39
+  },
+  {
+    "name": "impact_on_operations",
+    "type": "categorical",
+    "description": "The impact on business operations (e.g. production halted, shipments delayed, etc.)",
+    "values": [
+      "production_halted",
+      "shipments_delayed",
+      "other"
+    ],
+    "source_thread_id": 39
+  },
+  {
+    "name": "error_message_type",
+    "type": "categorical",
+    "description": "Type of error message received (e.g. database connection failed)",
+    "values": [
+      "database_connection_failed",
+      "unknown_error",
+      "configuration_error"
+    ],
+    "source_thread_id": 41
+  },
+  {
+    "name": "crm_software_version",
+    "type": "numerical",
+    "description": "Version of the CRM software being used",
+    "values": [],
+    "source_thread_id": 41
+  },
+  {
+    "name": "recent_changes",
+    "type": "categorical",
+    "description": "Recent changes or updates made to the system",
+    "values": [
+      "software_update",
+      "configuration_change",
+      "hardware_upgrade"
+    ],
+    "source_thread_id": 41
+  },
+  {
+    "name": "business_impact",
+    "type": "categorical",
+    "description": "Impact of the issue on the customer's business operations",
+    "values": [
+      "blocking_daily_operations",
+      "affecting_multiple_users",
+      "minimal_impact"
+    ],
+    "source_thread_id": 41
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "Level of urgency and priority assigned to the issue",
+    "values": [
+      "high_priority",
+      "medium_priority",
+      "low_priority"
+    ],
+    "source_thread_id": 41
+  },
+  {
+    "name": "multi_step_resolution",
+    "type": "boolean",
+    "description": "Whether the issue requires multiple steps or actions to resolve",
+    "values": [],
+    "source_thread_id": 41
+  },
+  {
+    "name": "historical_context",
+    "type": "categorical",
+    "description": "Whether the issue has occurred before and has a known solution",
+    "values": [
+      "known_issue",
+      "unknown_issue",
+      "recurring_problem"
+    ],
+    "source_thread_id": 41
+  },
+  {
+    "name": "escalation_required",
+    "type": "boolean",
+    "description": "Whether the issue requires escalation to a higher level of support",
+    "values": [],
+    "source_thread_id": 41
+  },
+  {
+    "name": "payment_gateway_type",
+    "type": "categorical",
+    "description": "Type of payment gateway involved in the issue",
+    "values": [
+      "Stripe"
+    ],
+    "source_thread_id": 42
+  },
+  {
+    "name": "error_code",
+    "type": "categorical",
+    "description": "Error code received by the customer",
+    "values": [
+      "403: Invalid API Signature"
+    ],
+    "source_thread_id": 42
+  },
+  {
+    "name": "tls_version",
+    "type": "categorical",
+    "description": "TLS version related to the issue",
+    "values": [
+      "1.3"
+    ],
+    "source_thread_id": 42
+  },
+  {
+    "name": "api_signature_issue",
+    "type": "boolean",
+    "description": "Whether the API signature is the root cause of the issue",
+    "values": [],
+    "source_thread_id": 42
+  },
+  {
+    "name": "backend_certificate_chain_needed",
+    "type": "boolean",
+    "description": "Whether backend certificate chain adjustments are required",
+    "values": [],
+    "source_thread_id": 42
+  },
+  {
+    "name": "remote_access_required",
+    "type": "boolean",
+    "description": "Whether remote access is required to resolve the issue",
+    "values": [],
+    "source_thread_id": 42
+  },
+  {
+    "name": "resolution_complexity",
+    "type": "categorical",
+    "description": "Complexity level of the resolution",
+    "values": [
+      "multi-step"
+    ],
+    "source_thread_id": 42
+  },
+  {
+    "name": "business_impact",
+    "type": "numerical",
+    "description": "Estimated business impact in dollars per hour",
+    "values": [
+      "$5,000/hour"
+    ],
+    "source_thread_id": 42
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "Urgency level of the issue",
+    "values": [
+      "critical"
+    ],
+    "source_thread_id": 42
+  },
+  {
+    "name": "resolution_time_estimate",
+    "type": "numerical",
+    "description": "Estimated time required to resolve the issue",
+    "values": [
+      "15 minutes"
+    ],
+    "source_thread_id": 42
+  },
+  {
+    "name": "historical_context",
+    "type": "categorical",
+    "description": "Whether this issue has occurred before",
+    "values": [
+      "new"
+    ],
+    "source_thread_id": 42
+  },
+  {
+    "name": "issue_type",
+    "type": "categorical",
+    "description": "Type of issue (e.g., database connectivity, server restart, cache clearing)",
+    "values": [
+      "database_connectivity",
+      "server_restart",
+      "cache_clearing"
+    ],
+    "source_thread_id": 43
+  },
+  {
+    "name": "system_affected",
+    "type": "categorical",
+    "description": "System or module affected by the issue",
+    "values": [
+      "inventory_module",
+      "crm_system"
+    ],
+    "source_thread_id": 43
+  },
+  {
+    "name": "error_code",
+    "type": "categorical",
+    "description": "Error code or message received",
+    "values": [
+      "503",
+      "database_connection_failed"
+    ],
+    "source_thread_id": 43
+  },
+  {
+    "name": "impact_level",
+    "type": "categorical",
+    "description": "Business impact level of the issue (e.g., production halted, operations affected)",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 43
+  },
+  {
+    "name": "urgency_level",
+    "type": "categorical",
+    "description": "Urgency level of the issue (e.g., immediate resolution required)",
+    "values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "source_thread_id": 43
+  },
+  {
+    "name": "resolution_steps",
+    "type": "numerical",
+    "description": "Number of steps required to resolve the issue",
+    "values": [],
+    "source_thread_id": 43
+  },
+  {
+    "name": "previous_attempts",
+    "type": "boolean",
+    "description": "Whether previous attempts have been made to resolve the issue",
+    "values": [],
+    "source_thread_id": 43
+  },
+  {
+    "name": "escalation_required",
+    "type": "boolean",
+    "description": "Whether the issue requires escalation to a higher-level technical team",
+    "values": [],
+    "source_thread_id": 43
+  },
+  {
+    "name": "historical_repeats",
+    "type": "boolean",
+    "description": "Whether the issue has occurred previously",
+    "values": [],
+    "source_thread_id": 43
+  }
+]

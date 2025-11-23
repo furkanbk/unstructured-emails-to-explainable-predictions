@@ -1,0 +1,626 @@
+{
+  "n_initial_features": 187,
+  "n_clusters": 47,
+  "n_noise_points": 56,
+  "clusters": [
+    {
+      "cluster_id": -1,
+      "size": 56,
+      "type": "noise",
+      "features": [
+        "issue_category",
+        "customer_impact",
+        "time_sensitivity",
+        "issue_type",
+        "urgency",
+        "production_affect",
+        "operating_system",
+        "escalation_status",
+        "urgency_level",
+        "urgency_level",
+        "issue_type",
+        "urgent_attention_needed",
+        "technical_support_needed",
+        "customer_industry",
+        "system_outage_status",
+        "user_actions_taken",
+        "system_impact",
+        "log_analysis",
+        "escalation_status",
+        "critical_system_involved",
+        "issue_type",
+        "software_version",
+        "database_type",
+        "business_impact",
+        "error_message",
+        "application_version",
+        "customer_impact",
+        "escalation_level",
+        "issue_type",
+        "business_impact",
+        "related_systems",
+        "previous_updates_failure",
+        "business_risk",
+        "dependencies",
+        "support_team_involvement",
+        "issue_reproduction",
+        "support_channel",
+        "recent_changes",
+        "machine_model",
+        "crm_version",
+        "api_version",
+        "error_code",
+        "production_impact",
+        "hotfix_availability",
+        "previous_patches_applied",
+        "error_code",
+        "custom_config",
+        "platform_version",
+        "impact_on_operations",
+        "urgency_level",
+        "payment_gateway_type",
+        "tls_version",
+        "business_impact",
+        "issue_type",
+        "impact_level",
+        "urgency_level"
+      ]
+    },
+    {
+      "cluster_id": 0,
+      "size": 5,
+      "type": "consolidated",
+      "consolidated_name": "database_health_check",
+      "original_names": [
+        "diagnostic_session_required",
+        "remote_session_required",
+        "database_health_check",
+        "remote_access_required",
+        "remote_access_required"
+      ],
+      "feature_type": "boolean"
+    },
+    {
+      "cluster_id": 1,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "rollback_status",
+      "original_names": [
+        "rollback_required",
+        "rollback_status"
+      ],
+      "feature_type": "boolean"
+    },
+    {
+      "cluster_id": 2,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "ticket_id",
+      "original_names": [
+        "ticket_id",
+        "prioritized_ticket"
+      ],
+      "feature_type": "numerical"
+    },
+    {
+      "cluster_id": 3,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "cache_clear_status",
+      "original_names": [
+        "cache_clear_status",
+        "cache_clear_status"
+      ],
+      "feature_type": "boolean"
+    },
+    {
+      "cluster_id": 4,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "reboot_status",
+      "original_names": [
+        "reboot_status",
+        "reboot_status"
+      ],
+      "feature_type": "boolean"
+    },
+    {
+      "cluster_id": 5,
+      "size": 3,
+      "type": "consolidated",
+      "consolidated_name": "historical_pattern",
+      "original_names": [
+        "historical_pattern",
+        "historical_context",
+        "historical_context"
+      ],
+      "feature_type": "boolean"
+    },
+    {
+      "cluster_id": 6,
+      "size": 4,
+      "type": "consolidated",
+      "consolidated_name": "resolution_options",
+      "original_names": [
+        "multi_step_resolution",
+        "multi_step_resolution",
+        "resolution_options",
+        "resolution_required"
+      ],
+      "feature_type": "boolean"
+    },
+    {
+      "cluster_id": 7,
+      "size": 3,
+      "type": "consolidated",
+      "consolidated_name": "device_consistency",
+      "original_names": [
+        "device_consistency",
+        "browser_consistency",
+        "multi_device_issue"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 8,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "browser_type",
+      "original_names": [
+        "browser_type",
+        "browser_version"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 9,
+      "size": 4,
+      "type": "consolidated",
+      "consolidated_name": "repeated_issue",
+      "original_names": [
+        "repeated_issue",
+        "resolution_timeframe",
+        "issue_start_time",
+        "resolution_time_estimate"
+      ],
+      "feature_type": "numerical"
+    },
+    {
+      "cluster_id": 10,
+      "size": 3,
+      "type": "consolidated",
+      "consolidated_name": "os_type",
+      "original_names": [
+        "os_type",
+        "server_os",
+        "server_os"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 11,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "upgrade_related",
+      "original_names": [
+        "upgrade_related",
+        "upgrade_related"
+      ],
+      "feature_type": "boolean"
+    },
+    {
+      "cluster_id": 12,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "user_impact",
+      "original_names": [
+        "user_impact",
+        "affected_users"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 13,
+      "size": 3,
+      "type": "consolidated",
+      "consolidated_name": "escalation_needed",
+      "original_names": [
+        "escalation_needed",
+        "escalation_required",
+        "escalation_required"
+      ],
+      "feature_type": "boolean"
+    },
+    {
+      "cluster_id": 14,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "system_change",
+      "original_names": [
+        "system_change",
+        "recent_system_changes"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 15,
+      "size": 5,
+      "type": "consolidated",
+      "consolidated_name": "recent_update",
+      "original_names": [
+        "recent_changes",
+        "recent_changes",
+        "recent_changes",
+        "recent_changes",
+        "recent_update"
+      ],
+      "feature_type": "boolean"
+    },
+    {
+      "cluster_id": 16,
+      "size": 4,
+      "type": "consolidated",
+      "consolidated_name": "technical_complexity",
+      "original_names": [
+        "technical_complexity",
+        "technical_complexity",
+        "technical_complexity",
+        "technical_complexity"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 17,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "escalation_required",
+      "original_names": [
+        "escalation_required",
+        "escalation_required"
+      ],
+      "feature_type": "boolean"
+    },
+    {
+      "cluster_id": 18,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "escalation_required",
+      "original_names": [
+        "escalation_required",
+        "escalation_required"
+      ],
+      "feature_type": "boolean"
+    },
+    {
+      "cluster_id": 19,
+      "size": 5,
+      "type": "consolidated",
+      "consolidated_name": "crm_version",
+      "original_names": [
+        "crm_version",
+        "system_version",
+        "crm_version",
+        "system_version",
+        "crm_version"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 20,
+      "size": 5,
+      "type": "consolidated",
+      "consolidated_name": "software_version",
+      "original_names": [
+        "software_version",
+        "software_version",
+        "software_version",
+        "software_version",
+        "crm_software_version"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 21,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "error_type",
+      "original_names": [
+        "error_type",
+        "error_message_type"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 22,
+      "size": 3,
+      "type": "consolidated",
+      "consolidated_name": "system_affected",
+      "original_names": [
+        "system_affected",
+        "affected_systems",
+        "system_affected"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 23,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "affected_module",
+      "original_names": [
+        "affected_modules",
+        "affected_module"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 24,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "issue_severity",
+      "original_names": [
+        "issue_severity",
+        "issue_severity"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 25,
+      "size": 3,
+      "type": "consolidated",
+      "consolidated_name": "error_type",
+      "original_names": [
+        "error_type",
+        "error_type",
+        "error_type"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 26,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "error_code",
+      "original_names": [
+        "error_code",
+        "error_code"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 27,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "error_code",
+      "original_names": [
+        "error_code",
+        "error_code"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 28,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "issue_type",
+      "original_names": [
+        "issue_type",
+        "issue_type"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 29,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "error_type",
+      "original_names": [
+        "error_type",
+        "error_type"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 30,
+      "size": 5,
+      "type": "consolidated",
+      "consolidated_name": "error_message",
+      "original_names": [
+        "error_message",
+        "error_message",
+        "error_message",
+        "error_message_type",
+        "error_message"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 31,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "issue_type",
+      "original_names": [
+        "issue_type",
+        "issue_type"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 32,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "business_criticality",
+      "original_names": [
+        "business_criticality",
+        "business_criticality"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 33,
+      "size": 4,
+      "type": "consolidated",
+      "consolidated_name": "issue_type",
+      "original_names": [
+        "issue_type",
+        "issue_type",
+        "issue_type",
+        "issue_type"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 34,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "issue_type",
+      "original_names": [
+        "issue_type",
+        "issue_type"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 35,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "urgency_level",
+      "original_names": [
+        "system_urgency",
+        "urgency_level"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 36,
+      "size": 3,
+      "type": "consolidated",
+      "consolidated_name": "urgency_level",
+      "original_names": [
+        "urgency_level",
+        "urgency_level",
+        "urgency_level"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 37,
+      "size": 3,
+      "type": "consolidated",
+      "consolidated_name": "urgency",
+      "original_names": [
+        "urgency_level",
+        "urgency_level",
+        "urgency"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 38,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "business_impact",
+      "original_names": [
+        "business_impact",
+        "business_impact"
+      ],
+      "feature_type": "numerical"
+    },
+    {
+      "cluster_id": 39,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "issue_impact",
+      "original_names": [
+        "issue_impact",
+        "issue_impact"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 40,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "urgency_level",
+      "original_names": [
+        "urgency_level",
+        "urgency_level"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 41,
+      "size": 4,
+      "type": "consolidated",
+      "consolidated_name": "urgency_level",
+      "original_names": [
+        "urgency_level",
+        "urgency_level",
+        "urgency_level",
+        "urgency_level"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 42,
+      "size": 3,
+      "type": "consolidated",
+      "consolidated_name": "business_impact",
+      "original_names": [
+        "business_impact",
+        "business_impact",
+        "business_impact"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 43,
+      "size": 4,
+      "type": "consolidated",
+      "consolidated_name": "business_impact",
+      "original_names": [
+        "business_impact",
+        "business_impact",
+        "business_impact",
+        "business_impact"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 44,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "impact_level",
+      "original_names": [
+        "business_impact_level",
+        "impact_level"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 45,
+      "size": 3,
+      "type": "consolidated",
+      "consolidated_name": "business_impact",
+      "original_names": [
+        "business_impact",
+        "business_impact",
+        "business_impact"
+      ],
+      "feature_type": "categorical"
+    },
+    {
+      "cluster_id": 46,
+      "size": 2,
+      "type": "consolidated",
+      "consolidated_name": "business_impact",
+      "original_names": [
+        "business_impact",
+        "business_impact"
+      ],
+      "feature_type": "categorical"
+    }
+  ],
+  "n_consolidated_features": 103,
+  "reduction_percentage": 44.919786096256686
+}

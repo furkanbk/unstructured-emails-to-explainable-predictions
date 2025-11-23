@@ -1,0 +1,36 @@
+# Core Dependencies for Unstructured Emails to Explainable Predictions Pipeline
+
+# LLM and NLP
+sentence-transformers>=2.2.0
+python-dotenv>=1.0.0  # For loading environment variables
+
+# Machine Learning
+scikit-learn>=1.3.0
+catboost>=1.2.0
+xgboost>=2.0.0
+lightgbm>=4.0.0
+interpret>=0.5.0  # For Explainable Boosting Machine (EBM)
+
+# Clustering
+hdbscan>=0.8.33
+umap-learn>=0.5.4
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Explainability
+shap>=0.44.0
+
+# Utilities
+requests>=2.31.0
+tqdm>=4.65.0
+
+# Jupyter
+jupyter>=1.0.0
+ipykernel>=6.25.0
+ipywidgets>=8.1.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
